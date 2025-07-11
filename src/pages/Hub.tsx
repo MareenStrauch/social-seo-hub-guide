@@ -15,33 +15,33 @@ const Hub = () => {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <GuideCard 
               slug="youtube-seo" 
-              title="YouTube-SEO Masterclass"
-              text="Vollständiger Guide zu YouTube-Optimierung: Titel, Thumbnails, Beschreibungen und Schema Markup für maximale Reichweite."
+              title="YouTube-SEO"
+              text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10."
             />
             <GuideCard 
               slug="chatgpt-marketing" 
-              title="ChatGPT für Content Marketing"
-              text="Effektive Prompts und Workflows für die Content-Erstellung mit KI. Von Ideenfindung bis zur finalen Umsetzung."
+              title="ChatGPT-Marketing"
+              text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden."
             />
             <GuideCard 
               slug="tiktok-seo" 
-              title="TikTok SEO Strategie"
-              text="Wie du TikTok als Suchmaschine nutzt. Keywords, Hashtags und Algorithmus-Optimierung für viral content."
+              title="TikTok-SEO"
+              text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine."
             />
             <GuideCard 
               slug="ai-overviews" 
-              title="AI Overview Optimierung"
-              text="Deine Inhalte in Google's AI-Antworten platzieren. Strukturierte Daten und Answer Engine Optimization."
+              title="AI Overviews"
+              text="90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle."
             />
             <GuideCard 
               slug="zero-click-seo" 
-              title="Zero-Click SEO"
-              text="Sichtbarkeit ohne Klicks maximieren. Featured Snippets, Knowledge Panels und Direct Answers erobern."
+              title="Zero-Click Search"
+              text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit."
             />
             <GuideCard 
               slug="social-media-seo" 
-              title="Social Media SEO"
-              text="Cross-Platform Optimierung für Instagram, LinkedIn und Co. Hashtag-Strategien und Plattform-spezifische Tipps."
+              title="Social Search"
+              text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO."
             />
           </div>
         </div>
