@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
@@ -9,7 +10,7 @@ interface GuideCardProps {
 
 export function GuideCard({ slug, title, text }: GuideCardProps) {
   return (
-    <Card className="group hover:shadow-float transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm hover:scale-[1.02]">
+    <Card className="group hover:shadow-float transition-all duration-300 border-0 bg-background/70 backdrop-blur-sm hover:scale-[1.02] shadow-md">
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-4">
           <h3 className="font-headline text-xl font-semibold text-secondary group-hover:text-primary transition-colors">
