@@ -10,13 +10,13 @@ interface GuideCardProps {
 
 export function GuideCard({ slug, title, text }: GuideCardProps) {
   return (
-    <Card className="group hover:shadow-float transition-all duration-300 border-2 border-primary/20 bg-gradient-to-br from-background/90 to-tertiary/30 backdrop-blur-sm hover:scale-[1.02] shadow-md hover:border-primary/40">
+    <Card className="group hover:shadow-lg transition-all duration-300 border border-border hover:border-secondary/50 bg-gradient-to-br from-card to-muted/20 backdrop-blur-sm hover:scale-[1.02] shadow-md">
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-4">
-          <h3 className="font-headline text-xl font-semibold text-secondary group-hover:text-primary transition-colors">
+          <h3 className="font-headline text-xl font-semibold text-foreground group-hover:text-secondary transition-colors">
             {title}
           </h3>
-          <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+          <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-secondary group-hover:translate-x-1 transition-all" />
         </div>
         <p className="text-muted-foreground leading-relaxed">
           {text}
