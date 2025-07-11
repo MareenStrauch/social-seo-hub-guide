@@ -47,15 +47,17 @@ const TikTokSeo = () => {
               </div>
 
               {/* Video Placeholder */}
-              <figure className="my-8 bg-muted rounded-soft p-8 text-center">
-                <div className="aspect-video bg-muted-foreground/10 rounded flex items-center justify-center mb-4">
-                  <svg className="w-16 h-16 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
+              <figure className="my-8 bg-muted rounded-soft p-8 flex justify-center">
+                <div className="max-w-xs">
+                  <div className="aspect-[9/16] bg-muted-foreground/10 rounded flex items-center justify-center mb-4">
+                    <svg className="w-16 h-16 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <figcaption className="text-sm text-muted-foreground text-center">
+                    Video: TikTok SEO in 3 Schritten (Placeholder für id="tiktok-seo-3steps")
+                  </figcaption>
                 </div>
-                <figcaption className="text-sm text-muted-foreground">
-                  Video: TikTok SEO in 3 Schritten (Placeholder für id="tiktok-seo-3steps")
-                </figcaption>
               </figure>
 
               {/* FAQ Section */}

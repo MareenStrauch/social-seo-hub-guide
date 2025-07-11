@@ -1,3 +1,4 @@
+
 interface VideoMasonryProps {
   count: number | "all";
   lazy?: boolean;
@@ -52,11 +53,11 @@ export function VideoMasonry({ count, lazy = true }: VideoMasonryProps) {
   const displayVideos = count === "all" ? mockVideos : mockVideos.slice(0, count);
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {displayVideos.map((video) => (
         <div key={video.id} className="group cursor-pointer">
           <a href={`/videos/${video.slug}`} className="block">
-            <div className="relative aspect-video bg-muted rounded-soft overflow-hidden mb-3 group-hover:shadow-float transition-all duration-300">
+            <div className="relative aspect-[9/16] bg-muted rounded-soft overflow-hidden mb-3 group-hover:shadow-float transition-all duration-300">
               <img 
                 src={video.thumbnail}
                 alt={video.title}
