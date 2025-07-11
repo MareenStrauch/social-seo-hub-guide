@@ -47,7 +47,7 @@ const Index = () => {
       {/* Awareness Section */}
       <section className="bg-background/60 backdrop-blur-sm px-4 sm:px-6 lg:px-8 py-[44px]">
         <div className="max-w-6xl mx-auto">
-          <div className="backdrop-blur-sm rounded-[2rem] p-8 mb-10 shadow-float px-[22px] py-[22px] bg-transparent">
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-10 shadow-float px-[22px] py-[22px]">
             <div className="flex flex-col items-center">
               <Search className="w-24 h-24 text-secondary mb-6" />
               <h2 className="text-2xl font-headline font-bold text-secondary">So hat sich Suche verändert</h2>
@@ -79,7 +79,7 @@ const Index = () => {
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background/60 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto">
-          <div className="backdrop-blur-sm rounded-[2rem] p-8 mb-8 shadow-float">
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-8 shadow-float">
             <h2 className="text-2xl font-headline font-bold text-secondary text-center">Häufig gefragt</h2>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
