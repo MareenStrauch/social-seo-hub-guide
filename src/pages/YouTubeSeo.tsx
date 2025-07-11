@@ -10,9 +10,9 @@ const YouTubeSeo = () => {
       
       <article itemScope itemType="https://schema.org/Article" className="pt-24">
         {/* Hero Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-tertiary to-background">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-tertiary to-background border-b border-border">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-headline font-bold text-secondary mb-6">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground mb-6">
               YouTube-SEO 2025: So ranken deine Videos in Google & Shorts
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
@@ -24,11 +24,11 @@ const YouTubeSeo = () => {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             
             {/* Section 1: Titel optimieren */}
-            <section id="titel-optimieren" className="prose prose-lg max-w-none mt-16 scroll-mt-20">
+            <section id="titel-optimieren" className="prose prose-lg max-w-none scroll-mt-20">
               <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
                 Wie optimiere ich YouTube-Titel für SEO?
               </h2>
