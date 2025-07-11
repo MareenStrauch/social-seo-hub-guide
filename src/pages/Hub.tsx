@@ -1,16 +1,22 @@
+
 import { Navigation } from "@/components/layout/navigation";
 import { GuideCard } from "@/components/ui/guide-card";
 
 const Hub = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/20">
       <Navigation />
       
       <section className="py-16 px-4 sm:px-6 lg:px-8 pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl font-headline font-bold text-secondary text-center mb-10">
-            Alle Guides auf einen Blick
-          </h1>
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-12 shadow-float">
+            <h1 className="text-3xl font-headline font-bold text-secondary text-center mb-4">
+              Alle Guides auf einen Blick
+            </h1>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto">
+              Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.
+            </p>
+          </div>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <GuideCard 
