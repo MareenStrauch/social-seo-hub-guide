@@ -48,8 +48,10 @@ const Index = () => {
       <section className="bg-background/60 backdrop-blur-sm px-4 sm:px-6 lg:px-8 py-[44px]">
         <div className="max-w-6xl mx-auto">
           <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-10 shadow-float px-[22px] py-[22px]">
-            <div className="flex flex-col items-center">
-              <Search className="w-24 h-24 text-secondary mb-6" />
+            <div className="flex items-center justify-center gap-3">
+              <div className="p-3 rounded-full gradient-primary">
+                <Search className="w-6 h-6 text-white" />
+              </div>
               <h2 className="text-2xl font-headline font-bold text-secondary">So hat sich Suche verändert</h2>
             </div>
           </div>
