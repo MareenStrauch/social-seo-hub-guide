@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Hub from "./pages/Hub";
 import Videos from "./pages/Videos";
 import YouTubeSeo from "./pages/YouTubeSeo";
+import ChatGptMarketing from "./pages/ChatGptMarketing";
+import TikTokSeo from "./pages/TikTokSeo";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/hub" element={<Hub />} />
           <Route path="/hub/youtube-seo" element={<YouTubeSeo />} />
+          <Route path="/hub/chatgpt-marketing" element={<ChatGptMarketing />} />
+          <Route path="/hub/tiktok-seo" element={<TikTokSeo />} />
           <Route path="/hub/videos" element={<Videos />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
