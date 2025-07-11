@@ -7,7 +7,7 @@ import { SocialIcons } from "@/components/ui/social-icons";
 import { FAQ } from "@/components/ui/faq";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Search, Download } from "lucide-react";
+import { Search, Download, Brain, MousePointer, Smartphone } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/30">
       <Navigation />
@@ -56,9 +56,9 @@ const Index = () => {
             </div>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            <InfoTile title="AI Overviews" text="90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle." />
-            <InfoTile title="Zero-Click" text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit." />
-            <InfoTile title="Social Search" text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO." />
+            <InfoTile icon={Brain} title="AI Overviews" text="90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle." />
+            <InfoTile icon={MousePointer} title="Zero-Click" text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit." />
+            <InfoTile icon={Smartphone} title="Social Search" text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO." />
           </div>
         </div>
       </section>
