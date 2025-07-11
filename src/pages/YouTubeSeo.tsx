@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/layout/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
@@ -9,7 +10,7 @@ const YouTubeSeo = () => {
       
       <article itemScope itemType="https://schema.org/Article" className="pt-24">
         {/* Hero Section */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-muted/60 to-background/95 border-b border-border">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-tertiary to-background border-b border-border">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground mb-6">
               YouTube-SEO 2025: So ranken deine Videos in Google & Shorts
