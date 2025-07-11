@@ -13,11 +13,14 @@ const TikTokSeo = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-tertiary to-background">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-secondary mb-6">
-              TikTok-SEO: Caption-Keyword, CC-Index & Clips nutzen
+              TikTok-SEO 2025: Ranken in der In-App-Suche & in Google Perspectives
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              So wird TikTok zur Suchmaschine für deine Zielgruppe – Keyword-Strategien für maximale Reichweite.
+              Keyword-Caption, Auto-Untertitel & Frage-Hook – die 3 Sofort-Hebel für mehr Sichtbarkeit deiner Clips.
             </p>
+            <div className="mt-6 text-lg text-foreground max-w-3xl mx-auto">
+              TikTok wird zur Suchmaschine. Dieser Guide zeigt dir, wie deine Kurzvideos oben erscheinen – auch in Googles Perspectives-Tab.
+            </div>
             <meta itemProp="author" content="Mareen Musterfrau" />
             <meta itemProp="dateModified" content="2025-07-30" />
           </div>
@@ -27,27 +30,19 @@ const TikTokSeo = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             
-            {/* Section 1: TikTok Keywords */}
-            <section id="tiktok-keywords" className="prose prose-lg max-w-none mt-16 scroll-mt-20">
+            {/* Section 1: Ranking Hebel */}
+            <section id="ranking-hebel" className="prose prose-lg max-w-none mt-16 scroll-mt-20">
               <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
-                Wie optimiere ich TikTok-Videos für die Suche?
+                Wie bringe ich mein TikTok-Video in die In-App-Suche?
               </h2>
               
               <p className="font-semibold text-lg text-foreground mb-6" data-ai-summary>
-                **Caption-Keywords in den ersten 3 Sekunden, CC-Index durch Untertitel und Clip-Struktur** – so wird dein Content in TikToks Suchfunktion gefunden.
+                <strong>Drei Schritte reichen:</strong> Keyword in die ersten 60 Caption-Zeichen, Auto-Untertitel aktivieren und mit einer Frage-Hook starten.
               </p>
               
               <div className="text-foreground leading-relaxed space-y-4">
                 <p>
-                  Platziere das <strong>Haupt-Keyword in der Caption</strong> und sprich es in den ersten 3 Sekunden aus. 
-                  Nutze <strong>Untertitel-Features</strong> für bessere Indexierung und strukturiere Videos in 
-                  kurze <strong>Clips mit eigenständigen Themen</strong>. TikTok wird zur Suchmaschine – 
-                  deine Videos brauchen SEO-Optimierung.
-                </p>
-                
-                <p>
-                  Hashtags ergänzen, aber <code className="bg-muted px-2 py-1 rounded text-sm">#trending</code> vermeiden. 
-                  Setze auf <code className="bg-muted px-2 py-1 rounded text-sm">#nischenkeyword</code> statt Masse.
+                  Platziere dein Haupt-Keyword am Beginn der Caption (≤60 Zeichen). Schalte Auto-Untertitel ein: TikTok indexiert jedes Wort, Google übernimmt sie häufig binnen 48 h. Starte das Video mit einer Frage – das trifft Such-Intent und erhöht die Watch-Time. Hinterlege das Video zusätzlich als <code className="bg-muted px-2 py-1 rounded text-sm">VideoObject</code> auf der Watch-Page, um Chancen im Google-Video-Karussell zu maximieren.
                 </p>
               </div>
 
@@ -59,7 +54,7 @@ const TikTokSeo = () => {
                   </svg>
                 </div>
                 <figcaption className="text-sm text-muted-foreground">
-                  Video: TikTok-Keyword-Strategie (Placeholder für id="tiktok-keywords")
+                  Video: TikTok SEO in 3 Schritten (Placeholder für id="tiktok-seo-3steps")
                 </figcaption>
               </figure>
 
@@ -70,16 +65,12 @@ const TikTokSeo = () => {
                 </h3>
                 <Accordion type="single" collapsible className="w-full">
                   <FAQ 
-                    q="Wie viele Hashtags sollte ich verwenden?" 
-                    a="3-5 relevante Hashtags sind optimal – Qualität vor Quantität." 
+                    q="Wie viele Hashtags sind ideal?" 
+                    a="Zwei bis drei präzise Nischen-Hashtags; zu viele wirken spammy." 
                   />
                   <FAQ 
-                    q="Muss ich Trends mitmachen?" 
-                    a="Nur wenn sie zu deiner Nische passen – authentischer Content rankt langfristig besser." 
-                  />
-                  <FAQ 
-                    q="Sind Untertitel wichtig für SEO?" 
-                    a="Ja, sie helfen TikToks Algorithmus beim Verstehen deines Contents." 
+                    q="Brauche ich eine zusätzliche Beschreibung?" 
+                    a="Ja, 200–300 Zeichen reichen – wichtig für Google Perspectives." 
                   />
                 </Accordion>
               </div>
