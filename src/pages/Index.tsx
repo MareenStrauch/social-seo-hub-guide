@@ -66,9 +66,14 @@ const Index = () => {
       {/* Awareness Section */}
       <section className="py-16 bg-background/60 backdrop-blur-sm px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-10 shadow-float">
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-4 mb-10 shadow-float">
             <div className="flex flex-col items-center">
-              <Search className="w-24 h-24 text-secondary mb-6" />
+              <Search className="w-24 h-24 gradient-primary mb-6" style={{
+                background: 'linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }} />
               <h2 className="text-2xl font-headline font-bold text-secondary">So hat sich Suche verändert</h2>
             </div>
           </div>
