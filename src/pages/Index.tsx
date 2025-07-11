@@ -18,7 +18,7 @@ const Index = () => {
       {/* Hero Section */}
       <header className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="py-20 bg-gradient-to-br from-background via-neutral-50 to-secondary/5 rounded-b-[3rem] text-center px-8 shadow-float border border-border">
+          <div className="py-20 gradient-peach rounded-b-[3rem] text-center px-8 shadow-float border border-border">
             <img 
               src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" 
               alt="Mareen" 
@@ -30,7 +30,7 @@ const Index = () => {
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
               Social SEO & Video-Strategien für Nischen-Creator*innen und Marketing-Teams.
             </p>
-            <Button asChild variant="default" className="mt-8 px-6 py-3 font-semibold rounded-md shadow-lg">
+            <Button asChild variant="gradient" className="mt-8 px-6 py-3 font-semibold rounded-md shadow-lg">
               <a href="/dl/social-seo-checkliste.pdf" className="inline-flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 🚀 SEO-Checkliste gratis herunterladen
@@ -64,7 +64,7 @@ const Index = () => {
       </section>
 
       {/* Awareness Section */}
-      <section className="py-16 bg-gradient-to-l from-muted/30 to-background px-4 sm:px-6 lg:px-8">
+      <section className="py-16 gradient-primary px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-card to-muted/20 backdrop-blur-sm rounded-2xl p-8 mb-10 shadow-lg border border-border">
             <div className="flex flex-col items-center">
@@ -90,7 +90,7 @@ const Index = () => {
       </section>
 
       {/* Videos Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-background to-muted/20">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 gradient-peach">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-card to-muted/20 backdrop-blur-sm rounded-2xl p-8 mb-8 shadow-lg border border-border">
             <h2 className="text-2xl font-headline font-bold text-foreground text-center">Video-Sammlung</h2>
@@ -107,8 +107,8 @@ const Index = () => {
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-l from-muted/30 to-background">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-card to-muted/20 backdrop-blur-sm rounded-2xl p-8 mb-8 shadow-lg border border-border">
-            <h2 className="text-2xl font-headline font-bold text-foreground text-center">Häufig gefragt</h2>
+          <div className="gradient-primary rounded-2xl p-8 mb-8 shadow-lg border border-border">
+            <h2 className="text-2xl font-headline font-bold text-white text-center">Häufig gefragt</h2>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
             <FAQ 
@@ -128,7 +128,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-muted/40 to-background backdrop-blur-sm py-12 mt-16 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <footer className="gradient-peach backdrop-blur-sm py-12 mt-16 px-4 sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2">
           <div>
             <div className="flex items-center gap-2 mb-4">
