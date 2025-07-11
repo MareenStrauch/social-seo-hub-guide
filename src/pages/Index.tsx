@@ -12,25 +12,25 @@ import { Search, Download } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-background to-neutral-50">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/30">
       <Navigation />
       
       {/* Hero Section */}
       <header className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="py-20 gradient-peach rounded-b-[3rem] text-center px-8 shadow-float border border-border">
+          <div className="py-20 gradient-peach rounded-b-[3rem] text-center px-8 shadow-float">
             <img 
               src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" 
               alt="Mareen" 
-              className="w-32 h-32 mx-auto rounded-full shadow-lg ring-4 ring-secondary/30 object-cover border-2 border-border"
+              className="w-32 h-32 mx-auto rounded-full shadow-float ring-4 ring-primary object-cover"
             />
-            <h1 className="mt-6 text-4xl md:text-5xl font-headline font-bold leading-snug text-foreground max-w-4xl mx-auto">
+            <h1 className="mt-6 text-4xl md:text-5xl font-headline font-bold leading-snug text-secondary max-w-4xl mx-auto">
               Social SEO, Video SEO & KI-Content-Strategien für Creator und Marketing-Teams
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+            <p className="mt-4 text-lg text-neutral-900 max-w-xl mx-auto">
               Social SEO & Video-Strategien für Nischen-Creator*innen und Marketing-Teams.
             </p>
-            <Button asChild variant="gradient" className="mt-8 px-6 py-3 font-semibold rounded-md shadow-lg">
+            <Button asChild variant="gradient" className="mt-8 px-6 py-3 font-semibold rounded-soft shadow-float">
               <a href="/dl/social-seo-checkliste.pdf" className="inline-flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 🚀 SEO-Checkliste gratis herunterladen
@@ -41,7 +41,7 @@ const Index = () => {
       </header>
 
       {/* Content Hub Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-neutral-50 to-background">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 md:grid-cols-3">
             <GuideCard 
@@ -64,12 +64,12 @@ const Index = () => {
       </section>
 
       {/* Awareness Section */}
-      <section className="py-16 gradient-primary px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-background/60 backdrop-blur-sm px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-card to-muted/20 backdrop-blur-sm rounded-2xl p-8 mb-10 shadow-lg border border-border">
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-10 shadow-float">
             <div className="flex flex-col items-center">
               <Search className="w-24 h-24 text-secondary mb-6" />
-              <h2 className="text-2xl font-headline font-bold text-foreground">So hat sich Suche verändert</h2>
+              <h2 className="text-2xl font-headline font-bold text-secondary">So hat sich Suche verändert</h2>
             </div>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -90,10 +90,10 @@ const Index = () => {
       </section>
 
       {/* Videos Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 gradient-peach">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-card to-muted/20 backdrop-blur-sm rounded-2xl p-8 mb-8 shadow-lg border border-border">
-            <h2 className="text-2xl font-headline font-bold text-foreground text-center">Video-Sammlung</h2>
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-8 shadow-float">
+            <h2 className="text-2xl font-headline font-bold text-secondary text-center">Video-Sammlung</h2>
           </div>
           <VideoMasonry count={6} lazy={true} />
           <div className="text-center mt-8">
@@ -105,10 +105,10 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-l from-muted/30 to-background">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background/60 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto">
-          <div className="gradient-primary rounded-2xl p-8 mb-8 shadow-lg border border-border">
-            <h2 className="text-2xl font-headline font-bold text-white text-center">Häufig gefragt</h2>
+          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-8 shadow-float">
+            <h2 className="text-2xl font-headline font-bold text-secondary text-center">Häufig gefragt</h2>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
             <FAQ 
@@ -128,7 +128,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="gradient-peach backdrop-blur-sm py-12 mt-16 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <footer className="bg-background/80 backdrop-blur-sm py-12 mt-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2">
           <div>
             <div className="flex items-center gap-2 mb-4">
