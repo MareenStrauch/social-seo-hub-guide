@@ -15,10 +15,10 @@
     --brand-neutral-050: 0 0% 98%;    /* #FAFAFA */
 
     /* Design System Colors */
-    --background: 0 0% 98%;           /* Haupthintergrund */
+    --background: 0 0% 94%;           /* Graulicher Haupthintergrund */
     --foreground: 0 0% 10%;
 
-    --card: 0 0% 100%;                /* Card-Hintergrund */
+    --card: 0 0% 100%;                /* Weißer Card-Hintergrund */
     --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
