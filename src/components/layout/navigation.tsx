@@ -11,7 +11,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <a href="/" className="flex items-center gap-2">
-              <img src="/lovable-uploads/8c51aaad-523b-424a-b6bf-8fa8f23fdb37.png" alt="MareenSocialUp" className="w-8 h-8" />
+              <img src="/lovable-uploads/8c51aaad-523b-424a-b6bf-8fa8f23fdb37.png" alt="MareenSocialUp" className="h-8 w-auto" />
               <span className="font-headline text-xl font-bold text-secondary">MareenSocialUp</span>
             </a>
           </div>
