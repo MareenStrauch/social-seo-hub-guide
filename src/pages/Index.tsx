@@ -107,11 +107,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background/60 backdrop-blur-sm">
+      {/* FAQ Section with Schema */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-tertiary/20 to-background" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-8 shadow-float">
-            <h2 className="text-2xl font-headline font-bold text-secondary text-center">Häufig gefragt</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-secondary mb-3">
+              Häufig gestellte Fragen
+            </h2>
+            <p className="text-muted-foreground">
+              Alles, was du über Social SEO und Video-Optimierung wissen musst
+            </p>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
             <FAQ q="Was ist Social SEO?" a="Social SEO optimiert deine Videos und Posts so, dass Algorithmen von Google, TikTok und KI-Bots sie als beste Antwort wählen." />
@@ -119,25 +124,89 @@ const Index = () => {
             <FAQ q="Warum brauchen Creator jetzt AEO?" a="Answer-Engine-Optimierung bringt deine Inhalte gezielt in AI-Overviews & Chatbots – klassisches SEO reicht nicht mehr." />
           </Accordion>
         </div>
+        
+        {/* JSON-LD Structured Data for FAQ */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Was ist Social SEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Social SEO optimiert deine Videos und Posts so, dass Algorithmen von Google, TikTok und KI-Bots sie als beste Antwort wählen."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie starte ich YouTube-SEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keyword vorn in den Titel, VideoObject-Schema & Kapitelzeitstempel ergänzen. Die gratis Checkliste hilft Schritt für Schritt."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Warum brauchen Creator jetzt AEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Answer-Engine-Optimierung bringt deine Inhalte gezielt in AI-Overviews & Chatbots – klassisches SEO reicht nicht mehr."
+                }
+              }
+            ]
+          })
+        }} />
       </section>
 
-      {/* Footer */}
-      <footer className="bg-background/80 backdrop-blur-sm py-12 mt-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/lovable-uploads/8c51aaad-523b-424a-b6bf-8fa8f23fdb37.png" alt="MareenSocialUp" className="w-8 h-8" />
-              <span className="font-headline text-xl font-bold text-secondary">MareenSocialUp</span>
+      {/* Footer with SEO Structure */}
+      <footer className="bg-secondary text-secondary-foreground py-16 mt-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-10 md:grid-cols-4 mb-12">
+            {/* Brand Section */}
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-2 mb-4">
+                <img src="/lovable-uploads/8c51aaad-523b-424a-b6bf-8fa8f23fdb37.png" alt="MareenSocialUp Logo" className="w-10 h-10" />
+                <span className="font-headline text-xl font-bold">MareenSocialUp</span>
+              </div>
+              <p className="text-secondary-foreground/80 mb-6 max-w-md">
+                Deine Expertin für Social SEO, Video-Optimierung und KI-gestütztes Content Marketing. 
+                Hilft Creator*innen und Marketing-Teams, in Google, TikTok und AI-Overviews gefunden zu werden.
+              </p>
+              <SocialIcons />
             </div>
-            <p className="text-muted-foreground">Mareen hilft Creator*innen, in Google, TikTok und AI-Overviews gefunden zu werden.</p>
-            <SocialIcons />
+            
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-headline text-lg font-bold mb-4">SEO Guides</h3>
+              <nav aria-label="SEO Guides Navigation">
+                <ul className="space-y-3">
+                  <li><a href="/hub/youtube-seo" className="text-secondary-foreground/80 hover:text-primary transition-colors">YouTube SEO Guide</a></li>
+                  <li><a href="/hub/chatgpt-marketing" className="text-secondary-foreground/80 hover:text-primary transition-colors">ChatGPT Marketing</a></li>
+                  <li><a href="/hub/tiktok-seo" className="text-secondary-foreground/80 hover:text-primary transition-colors">TikTok SEO Tipps</a></li>
+                  <li><a href="/hub/videos" className="text-secondary-foreground/80 hover:text-primary transition-colors">Video-Sammlung</a></li>
+                </ul>
+              </nav>
+            </div>
+            
+            {/* Legal & Info */}
+            <div>
+              <h3 className="font-headline text-lg font-bold mb-4">Rechtliches</h3>
+              <nav aria-label="Legal Navigation">
+                <ul className="space-y-3">
+                  <li><a href="/impressum" className="text-secondary-foreground/80 hover:text-primary transition-colors">Impressum</a></li>
+                  <li><a href="/datenschutz" className="text-secondary-foreground/80 hover:text-primary transition-colors">Datenschutz</a></li>
+                  <li><a href="/hub" className="text-secondary-foreground/80 hover:text-primary transition-colors">Alle Guides</a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
-          <ul className="space-y-2 text-secondary font-medium">
-            <li><a href="/hub" className="hover:text-primary transition-colors">Guides</a></li>
-            <li><a href="/hub/videos" className="hover:text-primary transition-colors">Videos</a></li>
-            <li><a href="/impressum" className="hover:text-primary transition-colors">Impressum</a></li>
-            <li><a href="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</a></li>
-          </ul>
+          
+          {/* Copyright */}
+          <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm text-secondary-foreground/60">
+            <p>&copy; {new Date().getFullYear()} MareenSocialUp. Alle Rechte vorbehalten.</p>
+          </div>
         </div>
       </footer>
 
