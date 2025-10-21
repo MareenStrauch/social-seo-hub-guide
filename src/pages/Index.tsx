@@ -24,9 +24,11 @@ const Index = () => {
               Social SEO & Video-Strategien für Nischen-Creator*innen und Marketing-Teams.
             </p>
             <Button asChild variant="gradient" className="mt-8 px-6 py-3 font-semibold rounded-soft shadow-float">
-              <a href="/dl/social-seo-checkliste.pdf" className="inline-flex items-center gap-2">
+              <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
                 <Download className="w-5 h-5" />
-                🚀 SEO-Checkliste gratis herunterladen
+                <span className="text-center">
+                  🚀 SEO-Checkliste<br />gratis herunterladen
+                </span>
               </a>
             </Button>
           </div>
