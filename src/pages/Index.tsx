@@ -71,15 +71,20 @@ const Index = () => {
       </section>
 
       {/* Awareness Section */}
-      <section className="bg-background/60 backdrop-blur-sm px-4 sm:px-6 lg:px-8 py-[44px]">
+      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-background to-tertiary/20">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-10 shadow-float px-[22px] py-[22px]">
-            <div className="flex items-center justify-center gap-3">
-              <div className="p-3 rounded-full gradient-primary">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center gap-3 mb-4">
+              <div className="p-3 rounded-full gradient-primary shadow-glow">
                 <Search className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl font-headline font-bold text-secondary">So hat sich Suche verändert</h2>
             </div>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-secondary mb-3">
+              So hat sich Suche verändert
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Die Suchlandschaft entwickelt sich rasant – bleib sichtbar mit den richtigen Strategien
+            </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <InfoTile icon={Brain} title="AI Overviews" text="90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle." />
