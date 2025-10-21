@@ -23,7 +23,7 @@ const Index = () => {
             <p className="mt-4 text-lg text-neutral-900 max-w-xl mx-auto">
               Social SEO & Video-Strategien für Nischen-Creator*innen und Marketing-Teams.
             </p>
-            <Button asChild variant="gradient" className="mt-8 px-6 py-8 font-semibold rounded-soft shadow-float w-full sm:w-auto">
+            <Button asChild variant="gradient" className="mt-8 px-6 py-10 font-semibold rounded-soft shadow-float w-full sm:w-auto">
               <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
                 <Download className="w-5 h-5" />
                 <span className="text-center">
