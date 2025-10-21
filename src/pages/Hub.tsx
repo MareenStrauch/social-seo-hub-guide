@@ -1,6 +1,7 @@
 
 import { Navigation } from "@/components/layout/navigation";
 import { GuideCard } from "@/components/ui/guide-card";
+import { Youtube, MessageSquare, TrendingUp, Brain, MousePointer, Smartphone } from "lucide-react";
 
 const Hub = () => {
   return (
@@ -23,31 +24,43 @@ const Hub = () => {
               slug="youtube-seo" 
               title="YouTube-SEO"
               text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10."
+              icon={Youtube}
+              iconBgColor="bg-red-100"
             />
             <GuideCard 
               slug="chatgpt-marketing" 
               title="ChatGPT-Marketing"
               text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden."
+              icon={MessageSquare}
+              iconBgColor="bg-blue-100"
             />
             <GuideCard 
               slug="tiktok-seo" 
               title="TikTok-SEO"
               text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine."
+              icon={TrendingUp}
+              iconBgColor="bg-orange-100"
             />
             <GuideCard 
               slug="ai-overviews" 
               title="AI Overviews"
               text="90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle."
+              icon={Brain}
+              iconBgColor="bg-purple-100"
             />
             <GuideCard 
               slug="zero-click-seo" 
               title="Zero-Click Search"
               text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit."
+              icon={MousePointer}
+              iconBgColor="bg-green-100"
             />
             <GuideCard 
               slug="social-media-seo" 
               title="Social Search"
               text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO."
+              icon={Smartphone}
+              iconBgColor="bg-pink-100"
             />
           </div>
         </div>

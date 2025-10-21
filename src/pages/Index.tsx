@@ -7,7 +7,7 @@ import { SocialIcons } from "@/components/ui/social-icons";
 import { FAQ } from "@/components/ui/faq";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Search, Download, Brain, MousePointer, Smartphone } from "lucide-react";
+import { Search, Download, Brain, MousePointer, Smartphone, Youtube, MessageSquare, TrendingUp } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/30">
       <Navigation />
@@ -36,10 +36,34 @@ const Index = () => {
       {/* Content Hub Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-headline font-bold text-center text-primary mb-4">
+            Google & TikTok suchen jetzt anders
+          </h2>
+          <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+            AI Overviews, Zero-Click, Social-as-Search: Wenn du nicht antwortest, wirst du übersprungen.
+          </p>
           <div className="grid gap-8 md:grid-cols-3">
-            <GuideCard slug="youtube-seo" title="YouTube-SEO" text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." />
-            <GuideCard slug="chatgpt-marketing" title="ChatGPT-Marketing" text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." />
-            <GuideCard slug="tiktok-seo" title="TikTok-SEO" text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." />
+            <GuideCard 
+              slug="youtube-seo" 
+              title="YouTube SEO" 
+              text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." 
+              icon={Youtube}
+              iconBgColor="bg-red-100"
+            />
+            <GuideCard 
+              slug="chatgpt-marketing" 
+              title="ChatGPT Marketing" 
+              text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." 
+              icon={MessageSquare}
+              iconBgColor="bg-blue-100"
+            />
+            <GuideCard 
+              slug="tiktok-seo" 
+              title="TikTok SEO" 
+              text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." 
+              icon={TrendingUp}
+              iconBgColor="bg-orange-100"
+            />
           </div>
         </div>
       </section>
