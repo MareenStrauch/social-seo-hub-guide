@@ -18,7 +18,7 @@ const Index = () => {
           <div className="py-20 gradient-peach rounded-b-[3rem] text-center px-8 shadow-float">
             <img src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen" className="w-32 h-32 mx-auto rounded-full shadow-float ring-4 ring-primary object-cover" />
             <h1 className="mt-6 text-4xl md:text-5xl font-headline font-bold leading-snug text-secondary max-w-4xl mx-auto">
-              Social SEO, Video SEO & KI-Content-Strategien
+              Social SEO & Video Visibility – damit dein Content über Plattformgrenzen hinweg gefunden wird.
             </h1>
             <p className="mt-4 text-lg text-neutral-900 max-w-xl mx-auto">
               Social SEO & Video-Strategien für Nischen-Creator*innen und Marketing-Teams.
