@@ -47,7 +47,7 @@ const Index = () => {
           <div className="grid gap-8 md:grid-cols-3">
             <GuideCard 
               slug="youtube-seo" 
-              title="Generative Engine Optimization (GEO) Check" 
+              title="YouTube SEO" 
               text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." 
               icon={Youtube}
               iconBgColor="bg-red-100"
