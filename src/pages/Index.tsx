@@ -23,7 +23,7 @@ const Index = () => {
               <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
                 <Download className="w-5 h-5" />
                 <span className="text-center">
-                  🚀 SEO-Checkliste<br />gratis herunterladen
+                  KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern
                 </span>
               </a>
             </Button>
