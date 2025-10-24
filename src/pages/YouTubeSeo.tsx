@@ -66,8 +66,8 @@ const YouTubeSeo = () => {
                   {/* VideoObject Structured Data */}
                   <meta itemProp="name" content="R-O-I Promptformel: Rolle → Output → Input" />
                   <meta itemProp="description" content="Mit dieser 3-Schritt-Struktur versteht ChatGPT deine Aufgabe sofort – ohne endloses Nach-Prompten. In 60 Sekunden erfährst du, wie du mit klaren Rollen, präzisem Output-Format und gezieltem Input einen kompletten Content-Plan generierst." />
-                  <meta itemProp="uploadDate" content="2025-01-15" />
-                  <meta itemProp="duration" content="PT1M" />
+                  <meta itemProp="uploadDate" content="2025-07-21" />
+                  <meta itemProp="duration" content="PT43S" />
                   <meta itemProp="thumbnailUrl" content="https://i.ytimg.com/vi/AjXVOQ2P7jQ/maxresdefault.jpg" />
                   <meta itemProp="contentUrl" content="https://youtube.com/shorts/AjXVOQ2P7jQ" />
                   <meta itemProp="embedUrl" content="https://www.youtube.com/embed/AjXVOQ2P7jQ" />
@@ -83,10 +83,11 @@ const YouTubeSeo = () => {
                   "name": "R-O-I Promptformel: Rolle → Output → Input",
                   "description": "Mit dieser 3-Schritt-Struktur versteht ChatGPT deine Aufgabe sofort – ohne endloses Nach-Prompten. In 60 Sekunden erfährst du, wie du mit klaren Rollen, präzisem Output-Format und gezieltem Input einen kompletten Content-Plan generierst.",
                   "thumbnailUrl": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/maxresdefault.jpg",
-                  "uploadDate": "2025-01-15",
-                  "duration": "PT1M",
+                  "uploadDate": "2025-07-21",
+                  "duration": "PT43S",
                   "contentUrl": "https://youtube.com/shorts/AjXVOQ2P7jQ",
                   "embedUrl": "https://www.youtube.com/embed/AjXVOQ2P7jQ",
+                  "transcript": "Chatp ist das absolute Wundermittel und es liefert, wenn du richtig briefst. Hier der Shortcut dazu. Merke dir R o I. R wie Rolle. Z.B. du bist Performance Marketer für eine Modemarke, dann weiß die KI, wer sprechen soll. O für Output. Gebe mir 20 Meterite und Meterbeschreibung in einer Tabelle. Das ist der Output. Und damit hat ich kein Rätselraten mehr. I für Input. Gebe der KI Tonalität, Zielgruppe und vielleicht alte Post. Je mehr Input, desto weniger Nacharbeit für dich selber. Einmal richtig gebrief und du musst nicht fünf mal mehr am Pompte. jetzt das Prom Playbook immer hab, gönnt den Workflow Turbo.",
                   "interactionStatistic": {
                     "@type": "InteractionCounter",
                     "interactionType": { "@type": "WatchAction" },
