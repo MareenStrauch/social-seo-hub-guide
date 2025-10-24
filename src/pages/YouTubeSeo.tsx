@@ -47,19 +47,53 @@ const YouTubeSeo = () => {
                 </p>
               </div>
 
-              {/* Video Placeholder */}
-              <figure className="my-8 bg-muted rounded-soft p-8 flex justify-center">
-                <div className="max-w-xs">
-                  <div className="aspect-[9/16] bg-muted-foreground/10 rounded flex items-center justify-center mb-4">
-                    <svg className="w-16 h-16 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+              {/* YouTube Shorts Video */}
+              <figure className="my-8 bg-muted rounded-soft p-8 flex justify-center" itemScope itemType="https://schema.org/VideoObject">
+                <div className="max-w-xs w-full">
+                  <div className="aspect-[9/16] rounded overflow-hidden mb-4">
+                    <iframe
+                      src="https://www.youtube.com/embed/AjXVOQ2P7jQ"
+                      title="R-O-I Promptformel: Rolle → Output → Input"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
                   </div>
                   <figcaption className="text-sm text-muted-foreground text-center">
-                    Video: YouTube Titel-Hack (Placeholder für id="yt-title-hack")
+                    Video: R-O-I Promptformel für ChatGPT
                   </figcaption>
+                  
+                  {/* VideoObject Structured Data */}
+                  <meta itemProp="name" content="R-O-I Promptformel: Rolle → Output → Input" />
+                  <meta itemProp="description" content="Mit dieser 3-Schritt-Struktur versteht ChatGPT deine Aufgabe sofort – ohne endloses Nach-Prompten. In 60 Sekunden erfährst du, wie du mit klaren Rollen, präzisem Output-Format und gezieltem Input einen kompletten Content-Plan generierst." />
+                  <meta itemProp="uploadDate" content="2025-01-15" />
+                  <meta itemProp="duration" content="PT1M" />
+                  <meta itemProp="thumbnailUrl" content="https://i.ytimg.com/vi/AjXVOQ2P7jQ/maxresdefault.jpg" />
+                  <meta itemProp="contentUrl" content="https://youtube.com/shorts/AjXVOQ2P7jQ" />
+                  <meta itemProp="embedUrl" content="https://www.youtube.com/embed/AjXVOQ2P7jQ" />
+                  <link itemProp="url" href="https://youtube.com/shorts/AjXVOQ2P7jQ" />
                 </div>
               </figure>
+              
+              {/* JSON-LD VideoObject */}
+              <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "VideoObject",
+                  "name": "R-O-I Promptformel: Rolle → Output → Input",
+                  "description": "Mit dieser 3-Schritt-Struktur versteht ChatGPT deine Aufgabe sofort – ohne endloses Nach-Prompten. In 60 Sekunden erfährst du, wie du mit klaren Rollen, präzisem Output-Format und gezieltem Input einen kompletten Content-Plan generierst.",
+                  "thumbnailUrl": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/maxresdefault.jpg",
+                  "uploadDate": "2025-01-15",
+                  "duration": "PT1M",
+                  "contentUrl": "https://youtube.com/shorts/AjXVOQ2P7jQ",
+                  "embedUrl": "https://www.youtube.com/embed/AjXVOQ2P7jQ",
+                  "interactionStatistic": {
+                    "@type": "InteractionCounter",
+                    "interactionType": { "@type": "WatchAction" },
+                    "userInteractionCount": 0
+                  }
+                })
+              }} />
 
               {/* FAQ Section */}
               <div className="mt-12">
