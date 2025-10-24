@@ -4,12 +4,13 @@ import { LucideIcon } from "lucide-react";
 interface GuideCardProps {
   slug: string;
   title: string;
+  subhead?: string;
   text: string;
   icon: LucideIcon;
   iconBgColor?: string;
 }
 
-export function GuideCard({ slug, title, text, icon: Icon, iconBgColor = "bg-primary/10" }: GuideCardProps) {
+export function GuideCard({ slug, title, subhead, text, icon: Icon, iconBgColor = "bg-primary/10" }: GuideCardProps) {
   return (
     <a href={`/hub/${slug}`}>
       <Card className="group hover:shadow-float transition-all duration-300 border border-border/50 bg-card backdrop-blur-sm hover:scale-[1.02] shadow-sm h-full">
@@ -22,6 +23,11 @@ export function GuideCard({ slug, title, text, icon: Icon, iconBgColor = "bg-pri
           <h3 className="font-headline text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
             {title}
           </h3>
+          {subhead && (
+            <p className="text-lg font-semibold text-primary mb-4">
+              {subhead}
+            </p>
+          )}
           <p className="text-muted-foreground leading-relaxed">
             {text}
           </p>
