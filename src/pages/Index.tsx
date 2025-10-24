@@ -42,7 +42,7 @@ const Index = () => {
             Discovery & Trust: Deshalb ranken deine Videos nicht in der Suche.
           </h2>
           <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
-            AI Overviews, Zero-Click, Social-as-Search: Wenn du nicht antwortest, wirst du übersprungen.
+            KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).
           </p>
           <div className="grid gap-8 md:grid-cols-3">
             <GuideCard 
