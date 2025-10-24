@@ -39,7 +39,7 @@ const Index = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-headline font-bold text-center text-primary mb-4">
-            Google & TikTok suchen jetzt anders
+            Discovery & Trust: Deshalb ranken deine Videos nicht in der Suche.
           </h2>
           <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
             AI Overviews, Zero-Click, Social-as-Search: Wenn du nicht antwortest, wirst du übersprungen.
