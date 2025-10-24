@@ -17,12 +17,8 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="py-20 gradient-peach rounded-b-[3rem] text-center px-8 shadow-float">
             <img src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen" className="w-32 h-32 mx-auto rounded-full shadow-float ring-4 ring-primary object-cover" />
-            <h1 className="mt-6 text-4xl md:text-5xl font-headline font-bold leading-snug text-secondary max-w-4xl mx-auto">
-              Social SEO & Video Visibility – damit dein Content über Plattformgrenzen hinweg gefunden wird.
-            </h1>
-            <p className="mt-4 text-lg text-neutral-900 max-w-xl mx-auto">
-              Social SEO & Video-Strategien für Nischen-Creator*innen und Marketing-Teams.
-            </p>
+            <h1 className="mt-6 text-4xl md:text-5xl font-headline font-bold leading-snug text-secondary max-w-4xl mx-auto">Technical Video SEO &amp; GEO Readiness: Die Audits für Creator und Marketing-Teams</h1>
+            <p className="mt-4 text-lg text-neutral-900 max-w-xl mx-auto">Wir beweisen den ROI deines Contents: Optimiere deine Profile technisch für Google Video SERPs und die Zitatfähigkeit in AI Overviews.</p>
             <Button asChild variant="gradient" className="mt-8 px-6 py-10 font-semibold rounded-soft shadow-float w-full sm:w-auto">
               <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
                 <Download className="w-5 h-5" />
@@ -45,27 +41,9 @@ const Index = () => {
             KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).
           </p>
           <div className="grid gap-8 md:grid-cols-3">
-            <GuideCard 
-              slug="youtube-seo" 
-              title="YouTube SEO" 
-              text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." 
-              icon={Youtube}
-              iconBgColor="bg-red-100"
-            />
-            <GuideCard 
-              slug="chatgpt-marketing" 
-              title="Generative Engine Optimization (GEO) Check" 
-              text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." 
-              icon={MessageSquare}
-              iconBgColor="bg-blue-100"
-            />
-            <GuideCard 
-              slug="tiktok-seo" 
-              title="TikTok SEO" 
-              text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." 
-              icon={TrendingUp}
-              iconBgColor="bg-orange-100"
-            />
+            <GuideCard slug="youtube-seo" title="YouTube SEO" text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." icon={Youtube} iconBgColor="bg-red-100" />
+            <GuideCard slug="chatgpt-marketing" title="Generative Engine Optimization (GEO) Check" text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." icon={MessageSquare} iconBgColor="bg-blue-100" />
+            <GuideCard slug="tiktok-seo" title="TikTok SEO" text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." icon={TrendingUp} iconBgColor="bg-orange-100" />
           </div>
         </div>
       </section>
@@ -127,37 +105,33 @@ const Index = () => {
         
         {/* JSON-LD Structured Data for FAQ */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Was ist Social SEO?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Social SEO optimiert deine Videos und Posts so, dass Algorithmen von Google, TikTok und KI-Bots sie als beste Antwort wählen."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Wie starte ich YouTube-SEO?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Keyword vorn in den Titel, VideoObject-Schema & Kapitelzeitstempel ergänzen. Die gratis Checkliste hilft Schritt für Schritt."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Warum brauchen Creator jetzt AEO?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Answer-Engine-Optimierung bringt deine Inhalte gezielt in AI-Overviews & Chatbots – klassisches SEO reicht nicht mehr."
-                }
-              }
-            ]
-          })
-        }} />
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Was ist Social SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Social SEO optimiert deine Videos und Posts so, dass Algorithmen von Google, TikTok und KI-Bots sie als beste Antwort wählen."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Wie starte ich YouTube-SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keyword vorn in den Titel, VideoObject-Schema & Kapitelzeitstempel ergänzen. Die gratis Checkliste hilft Schritt für Schritt."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Warum brauchen Creator jetzt AEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Answer-Engine-Optimierung bringt deine Inhalte gezielt in AI-Overviews & Chatbots – klassisches SEO reicht nicht mehr."
+            }
+          }]
+        })
+      }} />
       </section>
 
       {/* Footer with SEO Structure */}
