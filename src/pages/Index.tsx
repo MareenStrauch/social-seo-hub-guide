@@ -54,7 +54,7 @@ const Index = () => {
             />
             <GuideCard 
               slug="chatgpt-marketing" 
-              title="ChatGPT Marketing" 
+              title="Generative Engine Optimization (GEO) Check" 
               text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." 
               icon={MessageSquare}
               iconBgColor="bg-blue-100"
