@@ -167,7 +167,7 @@ const Index = () => {
             {/* Brand Section */}
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <img src="/lovable-uploads/8c51aaad-523b-424a-b6bf-8fa8f23fdb37.png" alt="MareenSocialUp Logo" className="w-10 h-10" />
+                <img src="/lovable-uploads/mareen-logo.png" alt="MareenSocialUp Logo" className="w-10 h-10" />
                 <span className="font-headline text-xl font-bold">MareenSocialUp</span>
               </div>
               <p className="text-secondary-foreground/80 mb-6 max-w-md">
