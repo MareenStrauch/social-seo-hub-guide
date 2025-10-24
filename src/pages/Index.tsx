@@ -41,7 +41,7 @@ const Index = () => {
             KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).
           </p>
           <div className="grid gap-8 md:grid-cols-3">
-            <GuideCard slug="youtube-seo" title="YouTube SEO" subhead="Der Technical Shorts Audit" text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." icon={Youtube} iconBgColor="bg-red-100" />
+            <GuideCard slug="youtube-seo" title="YouTube SEO" text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." icon={Youtube} iconBgColor="bg-red-100" />
             <GuideCard slug="chatgpt-marketing" title="Generative Engine Optimization (GEO) Check" text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." icon={MessageSquare} iconBgColor="bg-blue-100" />
             <GuideCard slug="tiktok-seo" title="TikTok SEO" text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." icon={TrendingUp} iconBgColor="bg-orange-100" />
           </div>
