@@ -18,24 +18,31 @@ const Index = () => {
     description: "Optimiere deine Videos technisch für Google Video SERPs und AI Overviews. Kostenlose Checkliste für YouTube SEO, TikTok SEO & GEO Readiness.",
     canonical: SITE_URL,
   });
-  return <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/30">
+  return <div className="min-h-screen bg-gradient-to-br from-muted to-tertiary/20">
       <Navigation />
       
       {/* Hero Section */}
-      <header className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <header className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="py-20 gradient-peach rounded-b-[3rem] text-center px-8 shadow-float">
-            <img src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen" className="w-32 h-32 mx-auto rounded-full shadow-float ring-4 ring-primary object-cover" />
-            <h1 className="mt-6 text-4xl md:text-5xl font-headline font-bold leading-snug text-secondary max-w-4xl mx-auto">Technical Video SEO &amp; GEO Readiness: Die Audits für Creator und Marketing-Teams</h1>
-            <p className="mt-4 text-lg text-neutral-900 max-w-xl mx-auto">Wir beweisen den ROI deines Contents: Optimiere deine Profile technisch für Google Video SERPs und die Zitatfähigkeit in AI Overviews.</p>
-            <Button asChild variant="gradient" className="mt-8 px-6 py-10 font-semibold rounded-soft shadow-float w-full sm:w-auto">
-              <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
-                <Download className="w-5 h-5" />
-                <span className="text-center">
-                  KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern
-                </span>
-              </a>
-            </Button>
+          <div className="py-24 gradient-peach rounded-[2rem] text-center px-8 shadow-float relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
+            <div className="relative">
+              <img src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen" className="w-28 h-28 mx-auto rounded-full shadow-glow ring-4 ring-primary/80 object-cover" />
+              <h1 className="mt-8 text-4xl md:text-5xl lg:text-[3.25rem] font-headline font-bold leading-[1.15] text-secondary max-w-4xl mx-auto tracking-tight">
+                Technical Video SEO &amp; GEO Readiness: Die Audits für Creator und Marketing-Teams
+              </h1>
+              <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
+                Wir beweisen den ROI deines Contents: Optimiere deine Profile technisch für Google Video SERPs und die Zitatfähigkeit in AI Overviews.
+              </p>
+              <Button asChild variant="gradient" className="mt-10 px-8 py-10 font-semibold rounded-2xl shadow-float hover:shadow-glow transition-all duration-300 w-full sm:w-auto">
+                <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
+                  <Download className="w-5 h-5" />
+                  <span className="text-center">
+                    KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern
+                  </span>
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -43,7 +50,7 @@ const Index = () => {
       {/* Content Hub Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-center text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-headline font-bold text-center text-primary mb-4 tracking-tight">
             Discovery & Trust: Deshalb ranken deine Videos nicht in der Suche.
           </h2>
           <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">

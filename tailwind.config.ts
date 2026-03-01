@@ -78,12 +78,13 @@ export default {
 				soft: 'var(--radius-soft)'
 			},
 			fontFamily: {
-				headline: ['Inter', 'system-ui', 'sans-serif'],
+				headline: ['Outfit', 'Space Grotesk', 'system-ui', 'sans-serif'],
 				body: ['Inter', 'system-ui', 'sans-serif'],
 				numbers: ['Space Grotesk', 'monospace']
 			},
 			boxShadow: {
-				float: 'var(--shadow-float)'
+				float: 'var(--shadow-float)',
+				glow: 'var(--shadow-glow)'
 			},
 			keyframes: {
 				'accordion-down': {
