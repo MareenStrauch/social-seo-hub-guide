@@ -12,17 +12,18 @@ interface GuideCardProps {
 export function GuideCard({ slug, title, text, icon: Icon, iconBgColor = "bg-primary/10" }: GuideCardProps) {
   return (
     <a href={`/hub/${slug}`}>
-      <Card className="group hover:shadow-float transition-all duration-300 border border-border/50 bg-card backdrop-blur-sm hover:scale-[1.02] shadow-sm h-full">
-        <CardContent className="p-8 text-center">
+      <Card className="group relative overflow-hidden hover:shadow-glow transition-all duration-500 border border-border/40 bg-card/80 backdrop-blur-md hover:scale-[1.03] hover:-translate-y-1 shadow-float h-full">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <CardContent className="relative p-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className={`${iconBgColor} rounded-full p-6 group-hover:scale-110 transition-transform`}>
+            <div className={`${iconBgColor} rounded-2xl p-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-sm`}>
               <Icon className="w-8 h-8 text-primary" />
             </div>
           </div>
-          <h3 className="font-headline text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+          <h3 className="font-headline text-2xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed text-[0.95rem]">
             {text}
           </p>
         </CardContent>
