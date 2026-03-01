@@ -2,8 +2,17 @@
 import { Navigation } from "@/components/layout/navigation";
 import { GuideCard } from "@/components/ui/guide-card";
 import { Youtube, MessageSquare, TrendingUp, Brain, MousePointer, Smartphone } from "lucide-react";
+import { useSeo } from "@/hooks/use-seo";
+
+const SITE_URL = "https://social-seo-hub-guide.lovable.app";
 
 const Hub = () => {
+  useSeo({
+    title: "Social SEO Guides – YouTube, TikTok & GEO Readiness",
+    description: "Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube. Technical Video SEO & GEO Audits.",
+    canonical: `${SITE_URL}/hub`,
+  });
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/20">
       <Navigation />
@@ -20,51 +29,27 @@ const Hub = () => {
           </div>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <GuideCard 
-              slug="youtube-seo" 
-              title="YouTube-SEO"
-              text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10."
-              icon={Youtube}
-              iconBgColor="bg-red-100"
-            />
-            <GuideCard 
-              slug="chatgpt-marketing" 
-              title="ChatGPT-Marketing"
-              text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden."
-              icon={MessageSquare}
-              iconBgColor="bg-blue-100"
-            />
-            <GuideCard 
-              slug="tiktok-seo" 
-              title="TikTok-SEO"
-              text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine."
-              icon={TrendingUp}
-              iconBgColor="bg-orange-100"
-            />
-            <GuideCard 
-              slug="ai-overviews" 
-              title="AI Overviews"
-              text="90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle."
-              icon={Brain}
-              iconBgColor="bg-purple-100"
-            />
-            <GuideCard 
-              slug="zero-click-seo" 
-              title="Zero-Click Search"
-              text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit."
-              icon={MousePointer}
-              iconBgColor="bg-green-100"
-            />
-            <GuideCard 
-              slug="social-media-seo" 
-              title="Social Search"
-              text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO."
-              icon={Smartphone}
-              iconBgColor="bg-pink-100"
-            />
+            <GuideCard slug="youtube-seo" title="YouTube-SEO" text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." icon={Youtube} iconBgColor="bg-red-100" />
+            <GuideCard slug="chatgpt-marketing" title="ChatGPT-Marketing" text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." icon={MessageSquare} iconBgColor="bg-blue-100" />
+            <GuideCard slug="tiktok-seo" title="TikTok-SEO" text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." icon={TrendingUp} iconBgColor="bg-orange-100" />
+            <GuideCard slug="ai-overviews" title="AI Overviews" text="90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle." icon={Brain} iconBgColor="bg-purple-100" />
+            <GuideCard slug="zero-click-seo" title="Zero-Click Search" text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit." icon={MousePointer} iconBgColor="bg-green-100" />
+            <GuideCard slug="social-media-seo" title="Social Search" text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO." icon={Smartphone} iconBgColor="bg-pink-100" />
           </div>
         </div>
       </section>
+
+      {/* BreadcrumbList Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL}/hub` }
+          ]
+        })
+      }} />
     </div>
   );
 };

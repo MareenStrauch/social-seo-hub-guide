@@ -2,8 +2,17 @@
 import { Navigation } from "@/components/layout/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
+import { useSeo } from "@/hooks/use-seo";
+
+const SITE_URL = "https://social-seo-hub-guide.lovable.app";
 
 const TikTokSeo = () => {
+  useSeo({
+    title: "TikTok-SEO 2025: Ranken in der In-App-Suche & Google",
+    description: "Keyword-Caption, Auto-Untertitel & Frage-Hook – die 3 Sofort-Hebel für mehr Sichtbarkeit deiner TikTok-Clips.",
+    canonical: `${SITE_URL}/hub/tiktok-seo`,
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -21,8 +30,11 @@ const TikTokSeo = () => {
             <div className="mt-6 text-lg text-foreground max-w-3xl mx-auto">
               TikTok wird zur Suchmaschine. Dieser Guide zeigt dir, wie deine Kurzvideos oben erscheinen – auch in Googles Perspectives-Tab.
             </div>
-            <meta itemProp="author" content="Mareen Musterfrau" />
+            <meta itemProp="headline" content="TikTok-SEO 2025: Ranken in der In-App-Suche & in Google Perspectives" />
+            <meta itemProp="author" content="Mareen" />
+            <meta itemProp="datePublished" content="2025-07-01" />
             <meta itemProp="dateModified" content="2025-07-30" />
+            <meta itemProp="image" content={`${SITE_URL}/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png`} />
           </div>
         </section>
 
@@ -88,16 +100,57 @@ const TikTokSeo = () => {
                   ← Alle Guides
                 </a>
                 <a 
-                  href="/hub/ai-overviews" 
+                  href="/hub/youtube-seo" 
                   className="inline-flex items-center px-4 py-2 rounded-soft bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
                 >
-                  AI Overviews →
+                  YouTube-SEO →
                 </a>
               </div>
             </section>
           </div>
         </section>
       </article>
+
+      {/* BreadcrumbList Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL}/hub` },
+            { "@type": "ListItem", "position": 3, "name": "TikTok SEO", "item": `${SITE_URL}/hub/tiktok-seo` }
+          ]
+        })
+      }} />
+
+      {/* Article Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "TikTok-SEO 2025: Ranken in der In-App-Suche & in Google Perspectives",
+          "description": "Keyword-Caption, Auto-Untertitel & Frage-Hook – die 3 Sofort-Hebel für mehr Sichtbarkeit deiner TikTok-Clips.",
+          "image": `${SITE_URL}/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png`,
+          "datePublished": "2025-07-01",
+          "dateModified": "2025-07-30",
+          "author": { "@type": "Person", "name": "Mareen", "url": SITE_URL },
+          "publisher": { "@type": "Organization", "name": "MareenSocialUp", "logo": { "@type": "ImageObject", "url": `${SITE_URL}/lovable-uploads/mareen-logo.png` } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/hub/tiktok-seo` }
+        })
+      }} />
+
+      {/* FAQ Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Wie viele Hashtags sind ideal?", "acceptedAnswer": { "@type": "Answer", "text": "Zwei bis drei präzise Nischen-Hashtags; zu viele wirken spammy." } },
+            { "@type": "Question", "name": "Brauche ich eine zusätzliche Beschreibung?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, 200–300 Zeichen reichen – wichtig für Google Perspectives." } }
+          ]
+        })
+      }} />
     </div>
   );
 };
