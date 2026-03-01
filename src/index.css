@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* MareenSocialUp Design System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -127,9 +127,8 @@
 
 @layer components {
   .font-headline {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
   }
   
   .font-body {

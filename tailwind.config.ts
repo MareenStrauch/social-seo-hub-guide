@@ -78,7 +78,7 @@ export default {
 				soft: 'var(--radius-soft)'
 			},
 			fontFamily: {
-				headline: ['Space Grotesk', 'system-ui', 'sans-serif'],
+				headline: ['Inter', 'system-ui', 'sans-serif'],
 				body: ['Inter', 'system-ui', 'sans-serif'],
 				numbers: ['Space Grotesk', 'monospace']
 			},
