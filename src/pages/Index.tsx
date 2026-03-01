@@ -8,7 +8,16 @@ import { FAQ } from "@/components/ui/faq";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Search, Download, Brain, MousePointer, Smartphone, Youtube, MessageSquare, TrendingUp } from "lucide-react";
+import { useSeo } from "@/hooks/use-seo";
+
+const SITE_URL = "https://social-seo-hub-guide.lovable.app";
+
 const Index = () => {
+  useSeo({
+    title: "MareenSocialUp – Technical Video SEO & GEO Audits für Creator",
+    description: "Optimiere deine Videos technisch für Google Video SERPs und AI Overviews. Kostenlose Checkliste für YouTube SEO, TikTok SEO & GEO Readiness.",
+    canonical: SITE_URL,
+  });
   return <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-tertiary/30">
       <Navigation />
       
@@ -183,6 +192,28 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Organization Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "MareenSocialUp",
+          "url": SITE_URL,
+          "logo": `${SITE_URL}/lovable-uploads/mareen-logo.png`,
+          "description": "Technical Video SEO & GEO Readiness Audits für Creator und Marketing-Teams.",
+          "sameAs": [
+            "https://www.youtube.com/@MareenSocialUp",
+            "https://www.tiktok.com/@mareensocialup",
+            "https://www.instagram.com/mareensocialup"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Mareen",
+            "url": SITE_URL
+          }
+        })
+      }} />
 
       {/* Mobile CTA Ribbon */}
       <CTARibbon text="SEO-Checkliste gratis laden" href="/dl/social-seo-checkliste.pdf" />

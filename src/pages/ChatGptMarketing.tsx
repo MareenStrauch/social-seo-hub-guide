@@ -2,8 +2,17 @@
 import { Navigation } from "@/components/layout/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
+import { useSeo } from "@/hooks/use-seo";
+
+const SITE_URL = "https://social-seo-hub-guide.lovable.app";
 
 const ChatGptMarketing = () => {
+  useSeo({
+    title: "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
+    description: "Rolle-Output-Input – die 3-Schritt-Prompt-Formel für effizienten KI-Content ohne Korrekturschleifen.",
+    canonical: `${SITE_URL}/hub/chatgpt-marketing`,
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -21,8 +30,11 @@ const ChatGptMarketing = () => {
             <div className="mt-6 text-lg text-foreground max-w-3xl mx-auto">
               Lerne die <strong>R-O-I-Prompt-Struktur</strong>, um in Minuten statt Stunden einen Content-Plan zu erzeugen – präzise und im richtigen Ton.
             </div>
-            <meta itemProp="author" content="Mareen Musterfrau" />
+            <meta itemProp="headline" content="ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte" />
+            <meta itemProp="author" content="Mareen" />
+            <meta itemProp="datePublished" content="2025-07-01" />
             <meta itemProp="dateModified" content="2025-07-30" />
+            <meta itemProp="image" content={`${SITE_URL}/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png`} />
           </div>
         </section>
 
@@ -98,6 +110,47 @@ const ChatGptMarketing = () => {
           </div>
         </section>
       </article>
+
+      {/* BreadcrumbList Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL}/hub` },
+            { "@type": "ListItem", "position": 3, "name": "ChatGPT Marketing", "item": `${SITE_URL}/hub/chatgpt-marketing` }
+          ]
+        })
+      }} />
+
+      {/* Article Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
+          "description": "Rolle-Output-Input – die 3-Schritt-Prompt-Formel für effizienten KI-Content ohne Korrekturschleifen.",
+          "image": `${SITE_URL}/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png`,
+          "datePublished": "2025-07-01",
+          "dateModified": "2025-07-30",
+          "author": { "@type": "Person", "name": "Mareen", "url": SITE_URL },
+          "publisher": { "@type": "Organization", "name": "MareenSocialUp", "logo": { "@type": "ImageObject", "url": `${SITE_URL}/lovable-uploads/mareen-logo.png` } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/hub/chatgpt-marketing` }
+        })
+      }} />
+
+      {/* FAQ Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Kann ein Prompt zweisprachig sein?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, solange Rolle und Output klar in einer Sprache definiert sind." } },
+            { "@type": "Question", "name": "Wie lang sollte ein Prompt maximal sein?", "acceptedAnswer": { "@type": "Answer", "text": "So kurz wie möglich, so detailliert wie nötig; Bullet-Points helfen bei der Struktur." } }
+          ]
+        })
+      }} />
     </div>
   );
 };

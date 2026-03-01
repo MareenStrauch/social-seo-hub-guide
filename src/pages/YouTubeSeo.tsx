@@ -2,8 +2,17 @@
 import { Navigation } from "@/components/layout/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
+import { useSeo } from "@/hooks/use-seo";
+
+const SITE_URL = "https://social-seo-hub-guide.lovable.app";
 
 const YouTubeSeo = () => {
+  useSeo({
+    title: "YouTube-SEO 2025: Videos in Google & Shorts ranken",
+    description: "Praxisleitfaden: Titel-Formel, Kapitel-Schema & KI-Snippet – der schnelle Weg zu Top-10 & AI Overviews.",
+    canonical: `${SITE_URL}/hub/youtube-seo`,
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -18,8 +27,11 @@ const YouTubeSeo = () => {
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Praxisleitfaden: Titel-Formel, Kapitel-Schema & KI-Snippet – der schnelle Weg zu Top-10 & AI Overviews.
             </p>
-            <meta itemProp="author" content="Mareen Musterfrau" />
+            <meta itemProp="headline" content="YouTube-SEO 2025: So ranken deine Videos in Google & Shorts" />
+            <meta itemProp="author" content="Mareen" />
+            <meta itemProp="datePublished" content="2025-07-01" />
             <meta itemProp="dateModified" content="2025-07-30" />
+            <meta itemProp="image" content={`${SITE_URL}/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png`} />
           </div>
         </section>
 
@@ -65,7 +77,7 @@ const YouTubeSeo = () => {
                   
                   {/* VideoObject Structured Data */}
                   <meta itemProp="name" content="R-O-I Promptformel: Rolle → Output → Input" />
-                  <meta itemProp="description" content="Mit dieser 3-Schritt-Struktur versteht ChatGPT deine Aufgabe sofort – ohne endloses Nach-Prompten. In 60 Sekunden erfährst du, wie du mit klaren Rollen, präzisem Output-Format und gezieltem Input einen kompletten Content-Plan generierst." />
+                  <meta itemProp="description" content="Mit dieser 3-Schritt-Struktur versteht ChatGPT deine Aufgabe sofort – ohne endloses Nach-Prompten." />
                   <meta itemProp="uploadDate" content="2025-07-21" />
                   <meta itemProp="duration" content="PT43S" />
                   <meta itemProp="thumbnailUrl" content="https://i.ytimg.com/vi/AjXVOQ2P7jQ/maxresdefault.jpg" />
@@ -134,6 +146,47 @@ const YouTubeSeo = () => {
           </div>
         </section>
       </article>
+
+      {/* BreadcrumbList Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": `${SITE_URL}/hub` },
+            { "@type": "ListItem", "position": 3, "name": "YouTube SEO", "item": `${SITE_URL}/hub/youtube-seo` }
+          ]
+        })
+      }} />
+
+      {/* Article Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "YouTube-SEO 2025: So ranken deine Videos in Google & Shorts",
+          "description": "Praxisleitfaden: Titel-Formel, Kapitel-Schema & KI-Snippet – der schnelle Weg zu Top-10 & AI Overviews.",
+          "image": `${SITE_URL}/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png`,
+          "datePublished": "2025-07-01",
+          "dateModified": "2025-07-30",
+          "author": { "@type": "Person", "name": "Mareen", "url": SITE_URL },
+          "publisher": { "@type": "Organization", "name": "MareenSocialUp", "logo": { "@type": "ImageObject", "url": `${SITE_URL}/lovable-uploads/mareen-logo.png` } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE_URL}/hub/youtube-seo` }
+        })
+      }} />
+
+      {/* FAQ Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Wie lang darf der Titel sein?", "acceptedAnswer": { "@type": "Answer", "text": "Maximal 60 Zeichen; optimal 40 sichtbare Zeichen." } },
+            { "@type": "Question", "name": "Brauche ich Emojis im Titel?", "acceptedAnswer": { "@type": "Answer", "text": "Nur, wenn sie Thema und Nutzen stärken – sonst kann die CTR leiden." } }
+          ]
+        })
+      }} />
     </div>
   );
 };
