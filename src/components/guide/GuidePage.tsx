@@ -114,10 +114,10 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
           </ul>
         </div>
         {/* Good */}
-        <div className="rounded-soft border border-green-500/30 bg-green-500/5 p-6">
+        <div className="rounded-soft border border-primary/30 bg-primary/5 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <CheckCircle2 className="w-5 h-5 text-green-600" />
-            <span className="font-bold text-green-700">{comparison.good.label}</span>
+            <CheckCircle2 className="w-5 h-5 text-primary" />
+            <span className="font-bold text-primary">{comparison.good.label}</span>
           </div>
           <blockquote className="italic text-foreground/80 border-l-4 border-green-500/30 pl-4 mb-4 text-sm">
             „{comparison.good.example}"
