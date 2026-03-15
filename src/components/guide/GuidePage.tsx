@@ -125,7 +125,7 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
           <ul className="space-y-1">
             {comparison.good.benefits.map((b, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 {b}
               </li>
             ))}
