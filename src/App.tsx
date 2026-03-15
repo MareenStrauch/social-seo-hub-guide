@@ -7,9 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Hub from "./pages/Hub";
 import Videos from "./pages/Videos";
-import YouTubeSeo from "./pages/YouTubeSeo";
-import ChatGptMarketing from "./pages/ChatGptMarketing";
-import TikTokSeo from "./pages/TikTokSeo";
+import GuideYouTubeSeo from "./pages/GuideYouTubeSeo";
+import GuideChatGptMarketing from "./pages/GuideChatGptMarketing";
+import GuideTikTokSeo from "./pages/GuideTikTokSeo";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
@@ -25,12 +25,16 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/hub" element={<Hub />} />
-          <Route path="/hub/youtube-seo" element={<YouTubeSeo />} />
-          <Route path="/hub/chatgpt-marketing" element={<ChatGptMarketing />} />
-          <Route path="/hub/tiktok-seo" element={<TikTokSeo />} />
+          <Route path="/guides/youtube-seo-2025" element={<GuideYouTubeSeo />} />
+          <Route path="/guides/chatgpt-marketing-roi-prompt" element={<GuideChatGptMarketing />} />
+          <Route path="/guides/tiktok-seo-2025" element={<GuideTikTokSeo />} />
           <Route path="/hub/videos" element={<Videos />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          {/* Old routes redirect */}
+          <Route path="/hub/youtube-seo" element={<GuideYouTubeSeo />} />
+          <Route path="/hub/chatgpt-marketing" element={<GuideChatGptMarketing />} />
+          <Route path="/hub/tiktok-seo" element={<GuideTikTokSeo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
