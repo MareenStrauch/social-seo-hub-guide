@@ -119,7 +119,7 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
             <CheckCircle2 className="w-5 h-5 text-primary" />
             <span className="font-bold text-primary">{comparison.good.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-green-500/30 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-primary/30 pl-4 mb-4 text-sm">
             „{comparison.good.example}"
           </blockquote>
           <ul className="space-y-1">
