@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/layout/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
