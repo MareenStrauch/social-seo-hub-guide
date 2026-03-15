@@ -303,34 +303,34 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             <nav className="mt-16 pt-8 border-t border-border">
               <div className="flex flex-wrap gap-4 justify-between">
                 {prevGuide ? (
-                  <a
-                    href={prevGuide.slug}
+                  <Link
+                    to={prevGuide.slug}
                     className="inline-flex items-center px-4 py-2 rounded-soft bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors"
                   >
                     ← {prevGuide.meta.title.split(":")[0]}
-                  </a>
+                  </Link>
                 ) : (
-                  <a
-                    href="/hub"
+                  <Link
+                    to="/hub"
                     className="inline-flex items-center px-4 py-2 rounded-soft bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors"
                   >
                     ← Alle Guides
-                  </a>
+                  </Link>
                 )}
                 {nextGuide ? (
-                  <a
-                    href={nextGuide.slug}
+                  <Link
+                    to={nextGuide.slug}
                     className="inline-flex items-center px-4 py-2 rounded-soft bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
                   >
                     {nextGuide.meta.title.split(":")[0]} →
-                  </a>
+                  </Link>
                 ) : (
-                  <a
-                    href="/hub"
+                  <Link
+                    to="/hub"
                     className="inline-flex items-center px-4 py-2 rounded-soft bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
                   >
                     Alle Guides →
-                  </a>
+                  </Link>
                 )}
               </div>
             </nav>
