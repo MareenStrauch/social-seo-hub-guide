@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://social-seo-hub-guide.lovable.app/sitemap.xml
+Sitemap: https://mareensocialup.de/sitemap.xml
