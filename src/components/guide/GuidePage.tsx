@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useSeo } from "@/hooks/use-seo";
 import { CheckCircle2, XCircle, AlertTriangle, BarChart3 } from "lucide-react";
 
-const SITE_URL = "https://social-seo-hub-guide.lovable.app";
+const SITE_URL = "https://mareensocialup.de";
 
 /* ─── Types ─── */
 interface GuideSection {

@@ -4,13 +4,13 @@ import { GuideCard } from "@/components/ui/guide-card";
 import { Youtube, MessageSquare, TrendingUp, Brain, MousePointer, Smartphone } from "lucide-react";
 import { useSeo } from "@/hooks/use-seo";
 
-const SITE_URL = "https://social-seo-hub-guide.lovable.app";
+const SITE_URL = "https://mareensocialup.de";
 
 const Hub = () => {
   useSeo({
     title: "Social SEO Guides – YouTube, TikTok & GEO Readiness",
     description: "Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube. Technical Video SEO & GEO Audits.",
-    canonical: `${SITE_URL}/hub`,
+    canonical: `${SITE_URL}/guides`,
   });
 
   return (

@@ -4,7 +4,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
 import { useSeo } from "@/hooks/use-seo";
 
-const SITE_URL = "https://social-seo-hub-guide.lovable.app";
+const SITE_URL = "https://mareensocialup.de";
 
 const YouTubeSeo = () => {
   useSeo({

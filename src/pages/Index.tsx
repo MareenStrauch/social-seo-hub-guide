@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Download, Brain, MousePointer, Smartphone, Youtube, MessageSquare, TrendingUp } from "lucide-react";
 import { useSeo } from "@/hooks/use-seo";
 
-const SITE_URL = "https://social-seo-hub-guide.lovable.app";
+const SITE_URL = "https://mareensocialup.de";
 
 const Index = () => {
   useSeo({
