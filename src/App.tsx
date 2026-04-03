@@ -25,7 +25,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/hub" element={<Hub />} />
+          <Route path="/guides" element={<Hub />} />
           <Route path="/guides/youtube-seo-2025" element={<GuideYouTubeSeo />} />
           <Route path="/guides/chatgpt-marketing-roi-prompt" element={<GuideChatGptMarketing />} />
           <Route path="/guides/tiktok-seo-2025" element={<GuideTikTokSeo />} />
