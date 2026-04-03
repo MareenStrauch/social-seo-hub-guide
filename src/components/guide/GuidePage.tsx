@@ -250,7 +250,11 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
 
-
+            {/* Personal Note */}
+            <aside className="my-10 bg-tertiary/40 border border-primary/20 rounded-soft p-6">
+              <p className="text-sm font-semibold text-primary mb-2">{guide.personalNote.label}</p>
+              <PersonalNoteText text={guide.personalNote.text} />
+            </aside>
             {/* Video Embed */}
             <figure className="my-10">
               <div className="max-w-sm mx-auto">
