@@ -187,7 +187,7 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li><a href="/impressum" className="text-secondary-foreground/80 hover:text-primary transition-colors">Impressum</a></li>
                   <li><a href="/datenschutz" className="text-secondary-foreground/80 hover:text-primary transition-colors">Datenschutz</a></li>
-                  <li><a href="/hub" className="text-secondary-foreground/80 hover:text-primary transition-colors">Alle Guides</a></li>
+                  <li><a href="/guides" className="text-secondary-foreground/80 hover:text-primary transition-colors">Alle Guides</a></li>
                 </ul>
               </nav>
             </div>
