@@ -7,7 +7,7 @@
     "contentStandard": "Answer Capsule + Grounding Page v1.5",
     "version": "4.0",
     "lastUpdated": "2026-04-01",
-    "status": "final – complete, ready for Lovable"
+    "status": "final - complete, ready for Lovable"
   },
   "guides": [
     {
@@ -15,54 +15,60 @@
       "slug": "/guides/youtube-seo-2025",
       "meta": {
         "title": "YouTube-SEO 2025: So ranken deine Videos in Google & Shorts",
-        "description": "Titel-Formel, Kapitel-Schema & KI-Snippet – der schnelle Weg zu Top-10 & AI Overviews.",
-        "keywords": ["YouTube SEO 2025", "YouTube Titel optimieren", "40-Zeichen-Formel", "VideoObject Schema", "Shorts ranken"]
+        "description": "Titel-Formel, Kapitel-Schema & KI-Snippet - der schnelle Weg zu Top-10 & AI Overviews.",
+        "keywords": [
+          "YouTube SEO 2025",
+          "YouTube Titel optimieren",
+          "40-Zeichen-Formel",
+          "VideoObject Schema",
+          "Shorts ranken"
+        ]
       },
       "hero": {
         "headline": "YouTube-SEO 2025: So ranken deine Videos in Google & Shorts",
-        "subheadline": "Titel-Formel, Kapitel-Schema & KI-Snippet – der schnelle Weg zu Top-10 & AI Overviews.",
-        "intro": "Dein Titel entscheidet in 40 Zeichen, ob jemand klickt – oder weiterschrollt. Nicht 60, nicht 70. Vierzig. Weil YouTube auf dem Handy danach abbricht. Und weil Google genau diese Zone für sein eigenes Ranking übernimmt."
+        "subheadline": "Titel-Formel, Kapitel-Schema & KI-Snippet - der schnelle Weg zu Top-10 & AI Overviews.",
+        "intro": "Dein Titel entscheidet in 40 Zeichen, ob jemand klickt - oder weiterschrollt. Nicht 60, nicht 70. Vierzig. Weil YouTube auf dem Handy danach abbricht. Und weil Google genau diese Zone für sein eigenes Ranking übernimmt."
       },
       "personalNote": {
         "label": "Von Mareen Strauch",
-        "text": "Aus meiner Zeit als Frontend-Entwicklerin ist mir eine Regel nie aus dem Ohr gegangen: Mobile first. Was auf dem kleinen Screen nicht funktioniert, existiert nicht. Das gilt für Code – und es gilt genauso für deine Videotitel. [ERGÄNZE: 1-2 Sätze – z.B. was du selbst erlebt hast als du einen Titel optimiert hast]"
+        "text": "Aus meiner Zeit als Frontend-Entwicklerin ist mir eine Regel nie aus dem Ohr gegangen: Mobile first. Was auf dem kleinen Screen nicht funktioniert, existiert nicht. Das gilt für Code - und es gilt genauso für deine Videotitel. [ERGÄNZE: 1-2 Sätze - z.B. was du selbst erlebt hast als du einen Titel optimiert hast]"
       },
       "sections": [
         {
           "id": "titelformel",
           "type": "answer_capsule",
-          "heading": "Wie optimiere ich meinen YouTube-Titel fuer SEO?",
-          "capsule": "Platziere dein Haupt-Keyword in die ersten 40 Zeichen und kombiniere es mit einem messbaren Ergebnis. YouTube bewertet genau diese Zone – weil sie auf dem Handy vollständig sichtbar ist.",
-          "body": "Stell dir vor, dein Zuschauer hält sein Handy in der U-Bahn. Er scrollt. Er hat vielleicht zwei Sekunden. Sein Daumen entscheidet – nicht sein Kopf. Was er in dieser Zeit liest, sind die ersten 40 Zeichen deines Titels. Alles danach: unsichtbar.\n\nDas bedeutet konkret: Dein wichtigstes Keyword muss ganz vorne stehen. Kombiniert mit einem Ergebnis, das sofort Nutzen verspricht.\n\nSchlechter Titel: 'Wie du deine YouTube-Videos besser machst und mehr Aufrufe bekommst'\nOptimierter Titel: 'YouTube SEO 2025 – +15% Klickrate mit dieser Formel'\n\nDer zweite Titel ist 36 Zeichen lang. Keyword vorne, Ergebnis direkt danach. Der Zuschauer weiß in einer Sekunde was er bekommt – und der Algorithmus weiß, wofür das Video ranken soll.",
-          "dataPoint": "Videos mit Keyword in Zeichen 1–40 erzielen laut Creators-Analysen bis zu 82% höhere Retention in den ersten Sekunden."
+          "heading": "Wie optimiere ich meinen YouTube-Titel für SEO?",
+          "capsule": "Platziere dein Haupt-Keyword in die ersten 40 Zeichen und kombiniere es mit einem messbaren Ergebnis. YouTube bewertet genau diese Zone - weil sie auf dem Handy vollständig sichtbar ist.",
+          "body": "Stell dir vor, dein Zuschauer hält sein Handy in der U-Bahn. Er scrollt. Er hat vielleicht zwei Sekunden. Sein Daumen entscheidet - nicht sein Kopf. Was er in dieser Zeit liest, sind die ersten 40 Zeichen deines Titels. Alles danach: unsichtbar.\n\nDas bedeutet konkret: Dein wichtigstes Keyword muss ganz vorne stehen. Kombiniert mit einem Ergebnis, das sofort Nutzen verspricht.\n\nSchlechter Titel: 'Wie du deine YouTube-Videos besser machst und mehr Aufrufe bekommst'\nOptimierter Titel: 'YouTube SEO 2025 - +15% Klickrate mit dieser Formel'\n\nDer zweite Titel ist 36 Zeichen lang. Keyword vorne, Ergebnis direkt danach. Der Zuschauer weiß in einer Sekunde was er bekommt - und der Algorithmus weiß, wofür das Video ranken soll.",
+          "dataPoint": "Videos mit Keyword in Zeichen 1-40 erzielen laut Creators-Analysen bis zu 82% höhere Retention in den ersten Sekunden."
         },
         {
           "id": "timestamps",
           "type": "answer_capsule",
-          "heading": "Was bringen YouTube Chapters und Synonyme fuer das Ranking?",
+          "heading": "Was bringen YouTube Chapters und Synonyme für das Ranking?",
           "capsule": "Timestamps in der Beschreibung erzeugen Google Key Moments in den Suchergebnissen. Zwei Synonyme helfen dem Algorithmus, dein Video für verwandte Suchanfragen einzuordnen.",
-          "body": "Wenn du in deiner Beschreibung '0:00 Intro, 0:45 Die Titelformel, 1:30 Praxisbeispiel' einträgst, passiert etwas Interessantes: Google zeigt diese Kapitel direkt in den Suchergebnissen an – als anklickbare Key Moments. Das erhöht deine Klickrate nochmal deutlich, weil der Zuschauer sofort sieht, ob sein gesuchter Moment im Video vorkommt.\n\nDazu kommen zwei Synonyme in der Beschreibung. Wer 'YouTube SEO' sucht, sucht manchmal auch 'Videotitel optimieren' oder 'YouTube Ranking verbessern'. Wenn diese Begriffe in deiner Beschreibung auftauchen, erscheinst du bei mehr Suchanfragen – ohne zusätzlichen Aufwand."
+          "body": "Wenn du in deiner Beschreibung '0:00 Intro, 0:45 Die Titelformel, 1:30 Praxisbeispiel' einträgst, passiert etwas Interessantes: Google zeigt diese Kapitel direkt in den Suchergebnissen an - als anklickbare Key Moments. Das erhöht deine Klickrate nochmal deutlich, weil der Zuschauer sofort sieht, ob sein gesuchter Moment im Video vorkommt.\n\nDazu kommen zwei Synonyme in der Beschreibung. Wer 'YouTube SEO' sucht, sucht manchmal auch 'Videotitel optimieren' oder 'YouTube Ranking verbessern'. Wenn diese Begriffe in deiner Beschreibung auftauchen, erscheinst du bei mehr Suchanfragen - ohne zusätzlichen Aufwand."
         },
         {
           "id": "ai-overviews",
           "type": "answer_capsule",
           "heading": "Wie werde ich mit YouTube-Videos in Google AI Overviews zitiert?",
           "capsule": "Klare Fakten-Sätze im ersten Absatz, VideoObject-Schema und ein aktuelles Upload-Datum erhöhen die Wahrscheinlichkeit, in AI Overviews zitiert zu werden.",
-          "body": "AI Overviews – die KI-Antworten, die Google seit 2024 ganz oben anzeigt – funktionieren nach einem klaren Prinzip: Google sucht nach Inhalten, die eine Frage direkt und präzise beantworten. Lange Einleitungen, vage Formulierungen, fehlende Struktur: alles Gründe, warum dein Content übergangen wird.\n\nWas konkret hilft: Beantworte jede H2-Überschrift in den ersten 1–2 Sätzen direkt. Dann kommt der ausführliche Kontext. Diese Struktur – Frage, kompakte Antwort, Kontext – ist exakt das, was LLMs als Retrieval Unit verarbeiten.\n\nDazu kommt das VideoObject-Schema: Ein JSON-LD-Block im Seitencode, der Google deinen Namen als Autorin, das Veröffentlichungsdatum und den Videoinhalt maschinenlesbar erklärt. Ohne diesen Block fehlt Google der Kontext – egal wie gut dein Video ist."
+          "body": "AI Overviews - die KI-Antworten, die Google seit 2024 ganz oben anzeigt - funktionieren nach einem klaren Prinzip: Google sucht nach Inhalten, die eine Frage direkt und präzise beantworten. Lange Einleitungen, vage Formulierungen, fehlende Struktur: alles Gründe, warum dein Content übergangen wird.\n\nWas konkret hilft: Beantworte jede H2-Überschrift in den ersten 1-2 Sätzen direkt. Dann kommt der ausführliche Kontext. Diese Struktur - Frage, kompakte Antwort, Kontext - ist exakt das, was LLMs als Retrieval Unit verarbeiten.\n\nDazu kommt das VideoObject-Schema: Ein JSON-LD-Block im Seitencode, der Google deinen Namen als Autorin, das Veröffentlichungsdatum und den Videoinhalt maschinenlesbar erklärt. Ohne diesen Block fehlt Google der Kontext - egal wie gut dein Video ist."
         },
         {
           "id": "keyword-recherche",
           "type": "answer_capsule",
-          "heading": "Wie finde ich die richtigen Keywords fuer YouTube SEO?",
-          "capsule": "Die schnellste Methode: YouTube-Suchleiste oeffnen und Begriffe eintippen – die Autocomplete-Vorschlaege zeigen echte Suchanfragen. Tools wie vidIQ oder TubeBuddy liefern zusaetzlich Suchvolumen und Wettbewerbsstaerke direkt im YouTube-Interface.",
-          "body": "Keyword-Recherche fuer YouTube beginnt dort, wo deine Zuschauer suchen: direkt in der YouTube-Suchleiste. Was das Autocomplete vorschlaegt, ist kein Zufall – es sind die meistgesuchten Begriffe in deiner Nische.\n\nFuer tiefere Analyse helfen spezialisierte Tools: vidIQ und TubeBuddy zeigen Suchvolumen, Wettbewerbsstaerke und verwandte Keywords direkt im YouTube-Interface. Google Trends ist nuetzlich, um saisonale Entwicklungen zu erkennen – ob ein Keyword gerade steigt oder faellt.\n\nWichtig: Unterscheide zwischen Haupt-Keyword (Titel, erste 40 Zeichen) und Neben-Keywords (Beschreibung, Tags, gesprochenes Audio). Ein Video kann fuer mehrere verwandte Suchanfragen ranken – wenn alle vier Platzierungsorte konsequent befuellt sind."
+          "heading": "Wie finde ich die richtigen Keywords für YouTube SEO?",
+          "capsule": "Die schnellste Methode: YouTube-Suchleiste öffnen und Begriffe eintippen - die Autocomplete-Vorschläge zeigen echte Suchanfragen. Tools wie vidIQ oder TubeBuddy liefern zusätzlich Suchvolumen und Wettbewerbsstärke direkt im YouTube-Interface.",
+          "body": "Keyword-Recherche für YouTube beginnt dort, wo deine Zuschauer suchen: direkt in der YouTube-Suchleiste. Was das Autocomplete vorschlägt, ist kein Zufall - es sind die meistgesuchten Begriffe in deiner Nische.\n\nFür tiefere Analyse helfen spezialisierte Tools: vidIQ und TubeBuddy zeigen Suchvolumen, Wettbewerbsstärke und verwandte Keywords direkt im YouTube-Interface. Google Trends ist nützlich, um saisonale Entwicklungen zu erkennen - ob ein Keyword gerade steigt oder fällt.\n\nWichtig: Unterscheide zwischen Haupt-Keyword (Titel, erste 40 Zeichen) und Neben-Keywords (Beschreibung, Tags, gesprochenes Audio). Ein Video kann für mehrere verwandte Suchanfragen ranken - wenn alle vier Platzierungsorte konsequent befüllt sind."
         },
         {
           "id": "thumbnails-ctr",
           "type": "answer_capsule",
-          "heading": "Warum sind Custom Thumbnails entscheidend fuer das YouTube Ranking?",
-          "capsule": "90% der meistgeklickten YouTube-Videos nutzen Custom Thumbnails. Die Klickrate (CTR) ist ein direktes Ranking-Signal – ein schlechtes Thumbnail kann ein perfekt optimiertes Video unsichtbar machen.",
-          "body": "YouTube misst, wie oft dein Video angeklickt wird, wenn es in den Suchergebnissen erscheint. Diese Klickrate ist ein direktes Ranking-Signal: Wer nicht klickt, rankt nicht.\n\nCustom Thumbnails mit hohem Kontrast, lesbarem Text und einem klaren Gesichtsausdruck performen laut YouTube-eigenen Daten deutlich besser als automatisch generierte Standbilder. Die Faustregel: Was auf dem Handy in Briefmarkengroesse noch erkennbar ist, funktioniert ueberall.\n\nDazu kommt Watch Time als zweites Kernsignal. Nicht nur der Klick zaehlt – YouTube bewertet, wie lange jemand bleibt. Wer in den ersten 15 Sekunden nicht fesselt, verliert Zuschauer und Ranking gleichzeitig. Das macht die ersten Sekunden zur wichtigsten Investition in jedem Video."
+          "heading": "Warum sind Custom Thumbnails entscheidend für das YouTube Ranking?",
+          "capsule": "90% der meistgeklickten YouTube-Videos nutzen Custom Thumbnails. Die Klickrate (CTR) ist ein direktes Ranking-Signal - ein schlechtes Thumbnail kann ein perfekt optimiertes Video unsichtbar machen.",
+          "body": "YouTube misst, wie oft dein Video angeklickt wird, wenn es in den Suchergebnissen erscheint. Diese Klickrate ist ein direktes Ranking-Signal: Wer nicht klickt, rankt nicht.\n\nCustom Thumbnails mit hohem Kontrast, lesbarem Text und einem klaren Gesichtsausdruck performen laut YouTube-eigenen Daten deutlich besser als automatisch generierte Standbilder. Die Faustregel: Was auf dem Handy in Briefmarkengröße noch erkennbar ist, funktioniert überall.\n\nDazu kommt Watch Time als zweites Kernsignal. Nicht nur der Klick zählt - YouTube bewertet, wie lange jemand bleibt. Wer in den ersten 15 Sekunden nicht fesselt, verliert Zuschauer und Ranking gleichzeitig. Das macht die ersten Sekunden zur wichtigsten Investition in jedem Video."
         }
       ],
       "video": {
@@ -72,30 +78,30 @@
         "title": "YouTube-SEO 2025: 40-Zeichen-Formel (82% Retention)",
         "duration": "PT0M27S",
         "thumbnailUrl": "https://i.ytimg.com/vi/vLrZ988pPRk/hqdefault.jpg",
-        "caption": "In diesem Short erkläre ich, warum die ersten 40 Zeichen deines Titels über Klick und Ranking entscheiden – und wie du die Formel sofort anwendest."
+        "caption": "In diesem Short erkläre ich, warum die ersten 40 Zeichen deines Titels über Klick und Ranking entscheiden - und wie du die Formel sofort anwendest."
       },
       "comparison": {
         "bad": {
           "label": "Ohne 40-Zeichen-Formel",
           "example": "Wie du deine YouTube-Videos besser machst und mehr Aufrufe bekommst",
           "issues": [
-            "68 Zeichen – auf dem Handy abgeschnitten",
+            "68 Zeichen - auf dem Handy abgeschnitten",
             "Keyword fehlt in den ersten 40 Zeichen",
             "Kein messbares Ergebnis sichtbar"
           ]
         },
         "good": {
           "label": "Mit 40-Zeichen-Formel",
-          "example": "YouTube SEO 2025 – +15% Klickrate",
+          "example": "YouTube SEO 2025 - +15% Klickrate",
           "benefits": [
-            "34 Zeichen – vollständig sichtbar auf jedem Handy",
-            "Keyword in Zone 1–40",
+            "34 Zeichen - vollständig sichtbar auf jedem Handy",
+            "Keyword in Zone 1-40",
             "Messbares Ergebnis direkt erkennbar"
           ]
         }
       },
       "checklist": [
-        "Haupt-Keyword in Zeichen 1–40 des Titels platzieren",
+        "Haupt-Keyword in Zeichen 1-40 des Titels platzieren",
         "Titel auf max. 60 Zeichen kürzen",
         "Zwei Synonyme in die Beschreibung schreiben",
         "Timestamps ab 0:00 in Beschreibung eintragen",
@@ -104,46 +110,84 @@
         "Transcript der ersten 30 Sekunden als sichtbaren Text unter Video einbetten"
       ],
       "faq": [
-        { "question": "Wie optimiere ich YouTube-Titel für SEO?", "answer": "Platziere dein Haupt-Keyword in die ersten 40 Zeichen und kombiniere es mit einem messbaren Ergebnis. YouTube bewertet genau diese Zone – weil sie auf dem Handy vollständig sichtbar ist und Google sie direkt für das Ranking übernimmt." },
-        { "question": "Was ist die YouTube SEO 40-Zeichen-Formel?", "answer": "Die 40-Zeichen-Formel bedeutet: Haupt-Keyword plus messbares Ergebnis in Zeichen 1–40. Beispiel: \"YouTube SEO 2025 – +15% Klickrate\" (34 Zeichen). Alles danach ist auf dem Handy unsichtbar – und damit für Klick und Ranking irrelevant." },
-        { "question": "Wie funktionieren YouTube Chapters für das SEO-Ranking?", "answer": "YouTube Chapters – Timestamps ab 0:00 in der Beschreibung – erzeugen Google Key Moments in den Suchergebnissen. Sie erhöhen die Klickrate, weil Zuschauer den gesuchten Moment direkt ansteuern können, und signalisieren Google die Struktur des Videos." },
-        { "question": "Wie ranken YouTube Shorts bei Google?", "answer": "YouTube Shorts erscheinen in eigenen SERP-Platzierungen. Die 40-Zeichen-Formel gilt genauso – Keyword in Zeichen 1–40. Zusätzlich hilft ein VideoObject-Schema auf der eigenen Website für die Google-Indexierung außerhalb von YouTube." },
-        { "question": "Wie werde ich mit YouTube-Videos in Google AI Overviews zitiert?", "answer": "Direkte Fakten-Sätze im ersten Absatz, ein vollständiges VideoObject-Schema mit Autorin und Datum sowie ein aktuelles Upload-Datum sind die drei wichtigsten Signale für AI-Overview-Zitierungen durch Google." },
-        { "question": "Welche Tools helfen bei der YouTube Keyword-Recherche?", "answer": "Die YouTube-Suchleiste mit Autocomplete ist der schnellste Einstieg – sie zeigt echte Suchanfragen. vidIQ und TubeBuddy zeigen Suchvolumen und Wettbewerb direkt im YouTube-Interface. Google Trends eignet sich fuer saisonale Entwicklungen." },
-        { "question": "Wie beeinflusst die Klickrate (CTR) das YouTube Ranking?", "answer": "CTR ist ein direktes Ranking-Signal: Wie oft dein Video angeklickt wird, wenn es erscheint, bestimmt ob YouTube es weiter ausspielt. 90% der meistgeklickten Videos nutzen Custom Thumbnails mit hohem Kontrast und lesbarem Text." }
+        {
+          "question": "Wie optimiere ich YouTube-Titel für SEO?",
+          "answer": "Platziere dein Haupt-Keyword in die ersten 40 Zeichen und kombiniere es mit einem messbaren Ergebnis. YouTube bewertet genau diese Zone - weil sie auf dem Handy vollständig sichtbar ist und Google sie direkt für das Ranking übernimmt."
+        },
+        {
+          "question": "Was ist die YouTube SEO 40-Zeichen-Formel?",
+          "answer": "Die 40-Zeichen-Formel bedeutet: Haupt-Keyword plus messbares Ergebnis in Zeichen 1-40. Beispiel: \"YouTube SEO 2025 - +15% Klickrate\" (34 Zeichen). Alles danach ist auf dem Handy unsichtbar - und damit für Klick und Ranking irrelevant."
+        },
+        {
+          "question": "Wie funktionieren YouTube Chapters für das SEO-Ranking?",
+          "answer": "YouTube Chapters - Timestamps ab 0:00 in der Beschreibung - erzeugen Google Key Moments in den Suchergebnissen. Sie erhöhen die Klickrate, weil Zuschauer den gesuchten Moment direkt ansteuern können, und signalisieren Google die Struktur des Videos."
+        },
+        {
+          "question": "Wie ranken YouTube Shorts bei Google?",
+          "answer": "YouTube Shorts erscheinen in eigenen SERP-Platzierungen. Die 40-Zeichen-Formel gilt genauso - Keyword in Zeichen 1-40. Zusätzlich hilft ein VideoObject-Schema auf der eigenen Website für die Google-Indexierung außerhalb von YouTube."
+        },
+        {
+          "question": "Wie werde ich mit YouTube-Videos in Google AI Overviews zitiert?",
+          "answer": "Direkte Fakten-Sätze im ersten Absatz, ein vollständiges VideoObject-Schema mit Autorin und Datum sowie ein aktuelles Upload-Datum sind die drei wichtigsten Signale für AI-Overview-Zitierungen durch Google."
+        },
+        {
+          "question": "Welche Tools helfen bei der YouTube Keyword-Recherche?",
+          "answer": "Die YouTube-Suchleiste mit Autocomplete ist der schnellste Einstieg - sie zeigt echte Suchanfragen. vidIQ und TubeBuddy zeigen Suchvolumen und Wettbewerb direkt im YouTube-Interface. Google Trends eignet sich für saisonale Entwicklungen."
+        },
+        {
+          "question": "Wie beeinflusst die Klickrate (CTR) das YouTube Ranking?",
+          "answer": "CTR ist ein direktes Ranking-Signal: Wie oft dein Video angeklickt wird, wenn es erscheint, bestimmt ob YouTube es weiter ausspielt. 90% der meistgeklickten Videos nutzen Custom Thumbnails mit hohem Kontrast und lesbarem Text."
+        }
       ],
       "schema": {
         "@context": "https://schema.org",
         "@type": "VideoObject",
         "name": "YouTube-SEO 2025: 40-Zeichen-Formel (82% Retention)",
-        "description": "Wie du mit der 40-Zeichen-Formel dein YouTube-Ranking und deine Klickrate steigerst – erklärt von Mareen Strauch, SEO-Expertin bei MareenSocialUp.",
+        "description": "Wie du mit der 40-Zeichen-Formel dein YouTube-Ranking und deine Klickrate steigerst - erklärt von Mareen Strauch, SEO-Expertin bei MareenSocialUp.",
         "thumbnailUrl": "https://i.ytimg.com/vi/vLrZ988pPRk/hqdefault.jpg",
         "uploadDate": "2025-01-15T08:00:00+01:00",
         "duration": "PT0M27S",
         "embedUrl": "https://www.youtube.com/embed/vLrZ988pPRk",
         "contentUrl": "https://www.youtube.com/shorts/vLrZ988pPRk",
-        "author": { "@type": "Person", "name": "Mareen Strauch", "sameAs": "https://www.youtube.com/@MareenSocialUp" },
-        "publisher": { "@type": "Organization", "name": "MareenSocialUp", "url": "https://mareen-socialup.de" },
+        "author": {
+          "@type": "Person",
+          "name": "Mareen Strauch",
+          "sameAs": "https://www.youtube.com/@MareenSocialUp"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "MareenSocialUp",
+          "url": "https://mareen-socialup.de"
+        },
         "inLanguage": "de"
       },
-      "navigation": { "prev": null, "next": "tiktok-seo-2025" }
+      "navigation": {
+        "prev": null,
+        "next": "tiktok-seo-2025"
+      }
     },
     {
       "id": "tiktok-seo-2025",
       "slug": "/guides/tiktok-seo-2025",
       "meta": {
         "title": "TikTok-SEO 2025: Ranken in der In-App-Suche & Google Perspectives",
-        "description": "Keyword-Caption, Auto-Untertitel & Frage-Hook – 3 Sofort-Hebel für mehr Sichtbarkeit deiner Clips.",
-        "keywords": ["TikTok SEO 2025", "TikTok In-App-Suche", "Google Perspectives TikTok", "TikTok Caption optimieren", "Hashtags TikTok 2025"]
+        "description": "Keyword-Caption, Auto-Untertitel & Frage-Hook - 3 Sofort-Hebel für mehr Sichtbarkeit deiner Clips.",
+        "keywords": [
+          "TikTok SEO 2025",
+          "TikTok In-App-Suche",
+          "Google Perspectives TikTok",
+          "TikTok Caption optimieren",
+          "Hashtags TikTok 2025"
+        ]
       },
       "hero": {
         "headline": "TikTok-SEO 2025: Ranken in der In-App-Suche & Google Perspectives",
-        "subheadline": "Keyword-Caption, Auto-Untertitel & Frage-Hook – 3 Sofort-Hebel für mehr Sichtbarkeit.",
-        "intro": "Wann hast du zuletzt bei Google nach einem Film gesucht? Die Teenager um mich herum tun das schon lange nicht mehr. Die fragen TikTok. Und ich beobachte: Es bleibt nicht bei Filmen. Für eine ganze Generation ist TikTok die erste Suchmaschine – nicht Spaß-App, Anlaufstelle."
+        "subheadline": "Keyword-Caption, Auto-Untertitel & Frage-Hook - 3 Sofort-Hebel für mehr Sichtbarkeit.",
+        "intro": "Wann hast du zuletzt bei Google nach einem Film gesucht? Die Teenager um mich herum tun das schon lange nicht mehr. Die fragen TikTok. Und ich beobachte: Es bleibt nicht bei Filmen. Für eine ganze Generation ist TikTok die erste Suchmaschine - nicht Spaß-App, Anlaufstelle."
       },
       "personalNote": {
         "label": "Von Mareen Strauch",
-        "text": "TikTok stellt sich meiner Meinung nach immer breiter auf – von reiner Bespaßung zur Plattform für Einkaufsentscheidungen, Informationsaustausch und Community rund um die eigenen Interessen. Was mich als Marketing-Profi dabei fasziniert: Diese Plattform belohnt Relevanz schneller als jede andere. Wer das Keyword vorne hat, wird gefunden. Punkt. [ERGÄNZE: Wann wurdest du selbst über die TikTok-Suche gefunden – oder hast du einen Clip, der plötzlich in der Suche auftauchte?]"
+        "text": "TikTok stellt sich meiner Meinung nach immer breiter auf - von reiner Bespaßung zur Plattform für Einkaufsentscheidungen, Informationsaustausch und Community rund um die eigenen Interessen. Was mich als Marketing-Profi dabei fasziniert: Diese Plattform belohnt Relevanz schneller als jede andere. Wer das Keyword vorne hat, wird gefunden. Punkt. [ERGÄNZE: Wann wurdest du selbst über die TikTok-Suche gefunden - oder hast du einen Clip, der plötzlich in der Suche auftauchte?]"
       },
       "sections": [
         {
@@ -151,35 +195,35 @@
           "type": "answer_capsule",
           "heading": "Wie bringe ich mein TikTok-Video in die TikTok In-App-Suche?",
           "capsule": "Drei Schritte reichen: Keyword in die ersten 60 Zeichen der Caption, Auto-Untertitel aktivieren, mit einer Frage starten. TikTok indexiert binnen 48 Stunden.",
-          "body": "Dein Haupt-Keyword gehört ganz nach vorne – in die ersten 60 Zeichen der Caption. Nicht irgendwo. Ganz vorne. Das ist die Zone, die TikTok für die Indexierung primär auswertet. Was danach kommt, ist Kontext.\n\nDann Auto-Untertitel: Einmal im Creator-Studio aktivieren – und TikTok hat ab diesem Moment vollständigen Textinhalt deines Videos. Etwas, das es indexieren kann. Google übernimmt diese Untertitel ebenfalls als Signal. Ohne Untertitel fehlt beiden Suchmaschinen das wichtigste Keyword-Signal überhaupt.\n\nUnd der dritte Hebel ist dein Einstieg ins Video. Starte mit einer Frage. 'Weißt du, warum dein TikTok nicht gefunden wird?' Das trifft den Search Intent, hält die Watch-Time oben und zeigt dem Algorithmus gleichzeitig, worum es geht. Drei Fliegen, ein Satz."
+          "body": "Dein Haupt-Keyword gehört ganz nach vorne - in die ersten 60 Zeichen der Caption. Nicht irgendwo. Ganz vorne. Das ist die Zone, die TikTok für die Indexierung primär auswertet. Was danach kommt, ist Kontext.\n\nDann Auto-Untertitel: Einmal im Creator-Studio aktivieren - und TikTok hat ab diesem Moment vollständigen Textinhalt deines Videos. Etwas, das es indexieren kann. Google übernimmt diese Untertitel ebenfalls als Signal. Ohne Untertitel fehlt beiden Suchmaschinen das wichtigste Keyword-Signal überhaupt.\n\nUnd der dritte Hebel ist dein Einstieg ins Video. Starte mit einer Frage. 'Weißt du, warum dein TikTok nicht gefunden wird?' Das trifft den Search Intent, hält die Watch-Time oben und zeigt dem Algorithmus gleichzeitig, worum es geht. Drei Fliegen, ein Satz."
         },
         {
           "id": "google-perspectives",
           "type": "answer_capsule",
           "heading": "Wie erscheinen TikTok-Videos im Google Perspectives Tab?",
           "capsule": "TikTok-Clips tauchen im Google Perspectives-Tab auf. Wer das Video zusätzlich auf der eigenen Website einbettet und mit Textkontext versieht, verdoppelt seine Sichtbarkeit.",
-          "body": "Was die meisten nicht wissen: TikTok-Videos erscheinen nicht nur in der TikTok-Suche – sie tauchen auch bei Google auf. Im Perspectives-Tab zeigt Google Kurzvideos von echten Menschen zu echten Suchanfragen. Ein gut optimierter Clip kann also gleichzeitig bei TikTok UND bei Google ranken.\n\nDer entscheidende Schritt: Bette dein TikTok-Video auf deiner eigenen Website ein und schreib einen kurzen Textabsatz darunter. Ein Embed allein reicht nicht – Google braucht Textkontext, um zu verstehen worum es geht. Mit einem VideoObject-Schema dazu hast du alles, was Google für die Indexierung benötigt."
+          "body": "Was die meisten nicht wissen: TikTok-Videos erscheinen nicht nur in der TikTok-Suche - sie tauchen auch bei Google auf. Im Perspectives-Tab zeigt Google Kurzvideos von echten Menschen zu echten Suchanfragen. Ein gut optimierter Clip kann also gleichzeitig bei TikTok UND bei Google ranken.\n\nDer entscheidende Schritt: Bette dein TikTok-Video auf deiner eigenen Website ein und schreib einen kurzen Textabsatz darunter. Ein Embed allein reicht nicht - Google braucht Textkontext, um zu verstehen worum es geht. Mit einem VideoObject-Schema dazu hast du alles, was Google für die Indexierung benötigt."
         },
         {
           "id": "hashtags",
           "type": "answer_capsule",
           "heading": "Welche Hashtags helfen bei TikTok SEO wirklich?",
-          "capsule": "3 bis 5 themenrelevante Nischen-Hashtags sind optimal. Breite Tags wie #fyp geben dem Algorithmus keinen Kontext – und zeigen dein Video dem falschen Publikum.",
-          "body": "Das klingt kontraintuitiv: Weniger Hashtags, mehr Reichweite. Aber es macht Sinn, wenn du verstehst wie TikTok denkt. Breite Hashtags wie #fyp oder #viral sagen dem Algorithmus nichts. Er weiß nicht, in welche Nische dein Video gehört – und zeigt es einem zufälligen Publikum statt deiner Zielgruppe.\n\nBesser: #TikTokSEO, #VideoMarketing, #SocialMediaStrategie. Weniger Beiträge insgesamt – aber genau die Augen, die aktiv nach deinem Thema suchen. Qualität schlägt Quantität. Immer."
+          "capsule": "3 bis 5 themenrelevante Nischen-Hashtags sind optimal. Breite Tags wie #fyp geben dem Algorithmus keinen Kontext - und zeigen dein Video dem falschen Publikum.",
+          "body": "Das klingt kontraintuitiv: Weniger Hashtags, mehr Reichweite. Aber es macht Sinn, wenn du verstehst wie TikTok denkt. Breite Hashtags wie #fyp oder #viral sagen dem Algorithmus nichts. Er weiß nicht, in welche Nische dein Video gehört - und zeigt es einem zufälligen Publikum statt deiner Zielgruppe.\n\nBesser: #TikTokSEO, #VideoMarketing, #SocialMediaStrategie. Weniger Beiträge insgesamt - aber genau die Augen, die aktiv nach deinem Thema suchen. Qualität schlägt Quantität. Immer."
         },
         {
           "id": "keyword-recherche",
           "type": "answer_capsule",
-          "heading": "Wie finde ich die richtigen Keywords fuer TikTok SEO?",
-          "capsule": "Die TikTok-Suchleiste ist dein bestes Keyword-Tool: Autocomplete-Vorschlaege zeigen echte Suchanfragen. Creator Search Insights – direkt in TikTok verfuegbar – listet Trending Topics und Content-Luecken in deiner Nische.",
-          "body": "Oeffne die TikTok-App, tippe einen Begriff aus deiner Nische in die Suchleiste – und schau, was das Autocomplete vorschlaegt. Das sind keine Schaetzungen. Das sind echte Suchanfragen anderer Nutzer.\n\nNoch gezielter: Tippe \"Creator Search Insights\" in die TikTok-Suche. Das Tool zeigt dir direkt in der App, welche Keywords in deiner Nische gerade trending sind – und wo Content-Luecken bestehen: Themen mit hoher Nachfrage, aber wenig Angebot.\n\nFuer Desktop-Recherche gibt es das TikTok Creative Center mit Keyword Insights. Dort siehst du Suchvolumen, Trend-Entwicklung und verwandte Begriffe – hilfreich fuer die Content-Planung einer ganzen Woche."
+          "heading": "Wie finde ich die richtigen Keywords für TikTok SEO?",
+          "capsule": "Die TikTok-Suchleiste ist dein bestes Keyword-Tool: Autocomplete-Vorschläge zeigen echte Suchanfragen. Creator Search Insights - direkt in TikTok verfügbar - listet Trending Topics und Content-Lücken in deiner Nische.",
+          "body": "Öffne die TikTok-App, tippe einen Begriff aus deiner Nische in die Suchleiste - und schau, was das Autocomplete vorschlägt. Das sind keine Schätzungen. Das sind echte Suchanfragen anderer Nutzer.\n\nNoch gezielter: Tippe \"Creator Search Insights\" in die TikTok-Suche. Das Tool zeigt dir direkt in der App, welche Keywords in deiner Nische gerade trending sind - und wo Content-Lücken bestehen: Themen mit hoher Nachfrage, aber wenig Angebot.\n\nFür Desktop-Recherche gibt es das TikTok Creative Center mit Keyword Insights. Dort siehst du Suchvolumen, Trend-Entwicklung und verwandte Begriffe - hilfreich für die Content-Planung einer ganzen Woche."
         },
         {
           "id": "vier-keyword-orte",
           "type": "answer_capsule",
           "heading": "An welchen vier Stellen muss das Keyword im TikTok-Video stehen?",
-          "capsule": "TikTok wertet vier Signalquellen aus: gesprochenes Audio (wird transkribiert), On-Screen Text, Caption und Hashtags. Wer alle vier befuellt, rankt fuer deutlich mehr Suchanfragen als wer nur die Caption optimiert.",
-          "body": "Die meisten Creator optimieren nur die Caption. Das ist ein Fehler – denn TikTok liest vier verschiedene Quellen aus.\n\nErstens das gesprochene Audio: TikTok transkribiert dein Video automatisch. Was du sagst, wird indexiert. Sprich dein Haupt-Keyword in den ersten Sekunden aus – natuerlich, nicht aufgesetzt.\n\nZweitens On-Screen Text: Text-Overlays und automatische Closed Captions werden ebenfalls ausgelesen. Dein Keyword in den ersten Sekunden als sichtbarer Text verdoppelt das Signal.\n\nDrittens die Caption: Keyword in die ersten 60 Zeichen.\n\nViertens Hashtags: 3–5 themenrelevante Tags, die den Keyword-Kontext bestaetigen. Alle vier zusammen ergeben ein konsistentes Signal – und konsistente Signale ranken."
+          "capsule": "TikTok wertet vier Signalquellen aus: gesprochenes Audio (wird transkribiert), On-Screen Text, Caption und Hashtags. Wer alle vier befüllt, rankt für deutlich mehr Suchanfragen als wer nur die Caption optimiert.",
+          "body": "Die meisten Creator optimieren nur die Caption. Das ist ein Fehler - denn TikTok liest vier verschiedene Quellen aus.\n\nErstens das gesprochene Audio: TikTok transkribiert dein Video automatisch. Was du sagst, wird indexiert. Sprich dein Haupt-Keyword in den ersten Sekunden aus - natürlich, nicht aufgesetzt.\n\nZweitens On-Screen Text: Text-Overlays und automatische Closed Captions werden ebenfalls ausgelesen. Dein Keyword in den ersten Sekunden als sichtbarer Text verdoppelt das Signal.\n\nDrittens die Caption: Keyword in die ersten 60 Zeichen.\n\nViertens Hashtags: 3-5 themenrelevante Tags, die den Keyword-Kontext bestätigen. Alle vier zusammen ergeben ein konsistentes Signal - und konsistente Signale ranken."
         }
       ],
       "video": {
@@ -189,7 +233,7 @@
         "title": "TikTok SEO 2025: 3 Schritte für die In-App-Suche",
         "duration": "PT0M30S",
         "thumbnailUrl": "https://i.ytimg.com/vi/ruO63jNcTdk/hqdefault.jpg",
-        "caption": "In diesem Short zeige ich dir die 3 Hebel, mit denen deine TikTok-Clips in der Suche erscheinen – auch bei Google."
+        "caption": "In diesem Short zeige ich dir die 3 Hebel, mit denen deine TikTok-Clips in der Suche erscheinen - auch bei Google."
       },
       "comparison": {
         "bad": {
@@ -197,7 +241,7 @@
           "example": "Schau mal dieses coole Video über Social Media und wie man damit Geld verdient #viral #foryou #fyp #trending",
           "issues": [
             "Keyword fehlt in den ersten 60 Zeichen",
-            "Hashtags zu breit – kein Nischen-Kontext",
+            "Hashtags zu breit - kein Nischen-Kontext",
             "Kein Search Intent erkennbar"
           ]
         },
@@ -205,7 +249,7 @@
           "label": "Caption mit TikTok-SEO",
           "example": "TikTok SEO 2025: 3 Schritte für die In-App-Suche #TikTokSEO #VideoMarketing #SocialMediaStrategie",
           "benefits": [
-            "Keyword in Zeichen 1–40",
+            "Keyword in Zeichen 1-40",
             "3 Nischen-Hashtags mit klarem Kontext",
             "Search Intent sofort erkennbar"
           ]
@@ -214,20 +258,41 @@
       "checklist": [
         "Haupt-Keyword in die ersten 60 Zeichen der Caption schreiben",
         "Auto-Untertitel im TikTok-Creator-Studio aktivieren",
-        "Video mit einer Frage starten – trifft Search Intent und erhöht Watch-Time",
-        "3–5 Nischen-Hashtags wählen, kein #fyp-Spam",
+        "Video mit einer Frage starten - trifft Search Intent und erhöht Watch-Time",
+        "3-5 Nischen-Hashtags wählen, kein #fyp-Spam",
         "Video auf eigener Website einbetten + Textabsatz darunter ergänzen",
         "VideoObject-Schema auf Watch-Page hinterlegen",
         "Datum aktuell halten für AI-Zitierungen"
       ],
       "faq": [
-        { "question": "Wie bringe ich mein TikTok-Video in die In-App-Suche?", "answer": "Drei Schritte: Haupt-Keyword in die ersten 60 Zeichen der Caption, Auto-Untertitel im Creator-Studio aktivieren und das Video mit einer Frage starten. TikTok indexiert bei aktivierten Untertiteln meist binnen 24–48 Stunden." },
-        { "question": "Wie optimiere ich meine TikTok Caption für SEO?", "answer": "Das Haupt-Keyword gehört in die ersten 60 Zeichen der Caption – das ist die Zone, die TikTok für die Indexierung primär auswertet. Danach kommen 3–5 Nischen-Hashtags. Breite Tags wie #fyp geben dem Algorithmus keinen Nischen-Kontext." },
-        { "question": "Wie erscheinen TikTok-Videos im Google Perspectives Tab?", "answer": "TikTok-Clips ranken im Google Perspectives-Tab, wenn das Video keyword-optimiert ist, Auto-Untertitel aktiv sind und das Video zusätzlich auf einer eigenen Website mit Textkontext und VideoObject-Schema eingebettet wird." },
-        { "question": "Warum sind Auto-Untertitel bei TikTok so wichtig für das Ranking?", "answer": "TikTok und Google indexieren Untertitel als Textinhalt. Ohne aktive Untertitel fehlt beiden Suchmaschinen das zentrale Keyword-Signal – egal wie gut Caption und Hashtags optimiert sind." },
-        { "question": "Wie viele Hashtags sind bei TikTok SEO optimal?", "answer": "3 bis 5 themenrelevante Nischen-Hashtags wie #TikTokSEO oder #VideoMarketing sind optimal. Mehr Hashtags verwässern den Nischen-Kontext – der Algorithmus kann das Video dann keiner klaren Zielgruppe zuordnen." },
-        { "question": "Wie finde ich Keywords fuer TikTok SEO?", "answer": "TikTok-Suchleiste: Nischen-Begriff eintippen, Autocomplete zeigt echte Suchanfragen. Creator Search Insights (in TikTok suchen) listet Trending Keywords und Content-Luecken. TikTok Creative Center bietet Desktop-Keyword-Analyse mit Suchvolumen." },
-        { "question": "An welchen Stellen im TikTok-Video muss das Keyword stehen?", "answer": "TikTok wertet vier Quellen aus: gesprochenes Audio (automatisch transkribiert), On-Screen Text, Caption (erste 60 Zeichen) und Hashtags. Alle vier konsistent mit dem Haupt-Keyword zu befuellen maximiert die Reichweite in der Suche." }
+        {
+          "question": "Wie bringe ich mein TikTok-Video in die In-App-Suche?",
+          "answer": "Drei Schritte: Haupt-Keyword in die ersten 60 Zeichen der Caption, Auto-Untertitel im Creator-Studio aktivieren und das Video mit einer Frage starten. TikTok indexiert bei aktivierten Untertiteln meist binnen 24-48 Stunden."
+        },
+        {
+          "question": "Wie optimiere ich meine TikTok Caption für SEO?",
+          "answer": "Das Haupt-Keyword gehört in die ersten 60 Zeichen der Caption - das ist die Zone, die TikTok für die Indexierung primär auswertet. Danach kommen 3-5 Nischen-Hashtags. Breite Tags wie #fyp geben dem Algorithmus keinen Nischen-Kontext."
+        },
+        {
+          "question": "Wie erscheinen TikTok-Videos im Google Perspectives Tab?",
+          "answer": "TikTok-Clips ranken im Google Perspectives-Tab, wenn das Video keyword-optimiert ist, Auto-Untertitel aktiv sind und das Video zusätzlich auf einer eigenen Website mit Textkontext und VideoObject-Schema eingebettet wird."
+        },
+        {
+          "question": "Warum sind Auto-Untertitel bei TikTok so wichtig für das Ranking?",
+          "answer": "TikTok und Google indexieren Untertitel als Textinhalt. Ohne aktive Untertitel fehlt beiden Suchmaschinen das zentrale Keyword-Signal - egal wie gut Caption und Hashtags optimiert sind."
+        },
+        {
+          "question": "Wie viele Hashtags sind bei TikTok SEO optimal?",
+          "answer": "3 bis 5 themenrelevante Nischen-Hashtags wie #TikTokSEO oder #VideoMarketing sind optimal. Mehr Hashtags verwässern den Nischen-Kontext - der Algorithmus kann das Video dann keiner klaren Zielgruppe zuordnen."
+        },
+        {
+          "question": "Wie finde ich Keywords für TikTok SEO?",
+          "answer": "TikTok-Suchleiste: Nischen-Begriff eintippen, Autocomplete zeigt echte Suchanfragen. Creator Search Insights (in TikTok suchen) listet Trending Keywords und Content-Lücken. TikTok Creative Center bietet Desktop-Keyword-Analyse mit Suchvolumen."
+        },
+        {
+          "question": "An welchen Stellen im TikTok-Video muss das Keyword stehen?",
+          "answer": "TikTok wertet vier Quellen aus: gesprochenes Audio (automatisch transkribiert), On-Screen Text, Caption (erste 60 Zeichen) und Hashtags. Alle vier konsistent mit dem Haupt-Keyword zu befüllen maximiert die Reichweite in der Suche."
+        }
       ],
       "schema": {
         "@context": "https://schema.org",
@@ -239,64 +304,81 @@
         "duration": "PT0M30S",
         "embedUrl": "https://www.youtube.com/embed/ruO63jNcTdk",
         "contentUrl": "https://www.youtube.com/shorts/ruO63jNcTdk",
-        "author": { "@type": "Person", "name": "Mareen Strauch", "sameAs": "https://www.youtube.com/@MareenSocialUp" },
-        "publisher": { "@type": "Organization", "name": "MareenSocialUp", "url": "https://mareen-socialup.de" },
+        "author": {
+          "@type": "Person",
+          "name": "Mareen Strauch",
+          "sameAs": "https://www.youtube.com/@MareenSocialUp"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "MareenSocialUp",
+          "url": "https://mareen-socialup.de"
+        },
         "inLanguage": "de"
       },
-      "navigation": { "prev": "youtube-seo-2025", "next": "chatgpt-marketing" }
+      "navigation": {
+        "prev": "youtube-seo-2025",
+        "next": "chatgpt-marketing"
+      }
     },
     {
       "id": "chatgpt-marketing",
       "slug": "/guides/chatgpt-marketing-roi-prompt",
       "meta": {
         "title": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
-        "description": "Rolle–Output–Input: die 3-Schritt-Prompt-Formel für KI-Content ohne Korrekturschleifen.",
-        "keywords": ["ChatGPT Marketing 2025", "ROI-Prompt ChatGPT", "Prompt-Formel Marketing", "KI-Content-Plan", "Prompt-Struktur Rolle Output Input"]
+        "description": "Rolle-Output-Input: die 3-Schritt-Prompt-Formel für KI-Content ohne Korrekturschleifen.",
+        "keywords": [
+          "ChatGPT Marketing 2025",
+          "ROI-Prompt ChatGPT",
+          "Prompt-Formel Marketing",
+          "KI-Content-Plan",
+          "Prompt-Struktur Rolle Output Input"
+        ]
       },
       "hero": {
         "headline": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
-        "subheadline": "Rolle–Output–Input: die 3-Schritt-Formel für KI-Content ohne Korrekturschleifen.",
-        "intro": "ChatGPT ist ein sehr freundlicher Kerl. Aber er braucht seinen klaren Rahmen. Wer ihm keinen gibt, dreht Runden – und du sitzt nach einer Stunde immer noch ohne brauchbares Ergebnis da. Die R-O-I-Formel ändert das: Erst die Rolle, dann der Output, dann der Input. In dieser Reihenfolge."
+        "subheadline": "Rolle-Output-Input: die 3-Schritt-Formel für KI-Content ohne Korrekturschleifen.",
+        "intro": "ChatGPT ist ein sehr freundlicher Kerl. Aber er braucht seinen klaren Rahmen. Wer ihm keinen gibt, dreht Runden - und du sitzt nach einer Stunde immer noch ohne brauchbares Ergebnis da. Die R-O-I-Formel ändert das: Erst die Rolle, dann der Output, dann der Input. In dieser Reihenfolge."
       },
       "personalNote": {
         "label": "Von Mareen Strauch",
-        "text": "Ich bin nicht aus Überzeugung zur Formel gekommen – sondern aus Frustration. ChatGPT ist nicht schlecht. Er braucht nur eine klare Richtung. Ohne Rolle, ohne Format, ohne Kontext will er gar nicht aufhören – und ich habe trotzdem kein gescheites Ergebnis. Seit ich die Reihenfolge kenne, bekomme ich beim ersten Versuch, was ich brauche. [ERGÄNZE: wie viel Zeit du früher vs. heute brauchst – eine konkrete Zahl macht das unschlagbar]"
+        "text": "Ich bin nicht aus Überzeugung zur Formel gekommen - sondern aus Frustration. ChatGPT ist nicht schlecht. Er braucht nur eine klare Richtung. Ohne Rolle, ohne Format, ohne Kontext will er gar nicht aufhören - und ich habe trotzdem kein gescheites Ergebnis. Seit ich die Reihenfolge kenne, bekomme ich beim ersten Versuch, was ich brauche. [ERGÄNZE: wie viel Zeit du früher vs. heute brauchst - eine konkrete Zahl macht das unschlagbar]"
       },
       "sections": [
         {
           "id": "warum-prompts-scheitern",
           "type": "answer_capsule",
           "heading": "Warum funktionieren die meisten ChatGPT Marketing Prompts nicht?",
-          "capsule": "Die meisten Prompts scheitern, weil Rolle, Output-Format und Kontext fehlen. ChatGPT kann ohne diese drei Informationen nicht präzise antworten – egal wie gut die Aufgabe formuliert ist.",
-          "body": "Stell dir vor, du rufst jemanden an und sagst: 'Schreib mir zehn Texte.' Kein Name, keine Firma, kein Ton, kein Format. Was bekommst du? Irgendetwas Generisches, das du komplett umschreiben musst.\n\nGenau das passiert mit ChatGPT, wenn der Prompt zu vage ist. 'Schreib mir 10 Instagram-Captions über mein Produkt' klingt nach einer klaren Aufgabe. Ist es aber nicht – denn ChatGPT weiß nicht für wen, in welchem Ton, in welchem Format, mit welchem Ziel. Das Ergebnis: drei Korrekturrunden, verschwendete Zeit, Frust.\n\nDas Problem ist nicht die KI. Das Problem ist das fehlende Briefing."
+          "capsule": "Die meisten Prompts scheitern, weil Rolle, Output-Format und Kontext fehlen. ChatGPT kann ohne diese drei Informationen nicht präzise antworten - egal wie gut die Aufgabe formuliert ist.",
+          "body": "Stell dir vor, du rufst jemanden an und sagst: 'Schreib mir zehn Texte.' Kein Name, keine Firma, kein Ton, kein Format. Was bekommst du? Irgendetwas Generisches, das du komplett umschreiben musst.\n\nGenau das passiert mit ChatGPT, wenn der Prompt zu vage ist. 'Schreib mir 10 Instagram-Captions über mein Produkt' klingt nach einer klaren Aufgabe. Ist es aber nicht - denn ChatGPT weiß nicht für wen, in welchem Ton, in welchem Format, mit welchem Ziel. Das Ergebnis: drei Korrekturrunden, verschwendete Zeit, Frust.\n\nDas Problem ist nicht die KI. Das Problem ist das fehlende Briefing."
         },
         {
           "id": "roi-formel",
           "type": "answer_capsule",
-          "heading": "Was ist die R-O-I-Prompt-Formel fuer ChatGPT Marketing?",
-          "capsule": "R-O-I steht für Rolle, Output und Input – in dieser Reihenfolge. Die Reihenfolge ist entscheidend: Rolle zuerst konditioniert ChatGPT für alles Folgende.",
-          "body": "Die Formel ist einfach. Aber die Reihenfolge ist alles.\n\nR wie Rolle: Sag ChatGPT zuerst, wer es in diesem Moment ist. Nicht 'du bist ein Assistent'. Konkret: 'Du bist Performance Marketer für eine nachhaltige Modemarke, Zielgruppe Frauen 25–40.' Diese Rolle setzt den Kontext für jeden Satz, der danach kommt.\n\nO wie Output: Beschreib präzise das gewünschte Format. Nicht 'schreib Texte'. Sondern: '20 Meta-Titel und Meta-Beschreibungen als Tabelle, zwei Spalten, max. 150 Zeichen je Zeile.' Je genauer das Format, desto weniger Nacharbeit.\n\nI wie Input: Gib das Material. Zielgruppe, Tonalität, zwei Beispiele aus alten Posts, Einschränkungen wie 'keine Anglizismen' oder 'kein Du'. Je mehr Kontext, desto besser das Ergebnis – beim ersten Versuch."
+          "heading": "Was ist die R-O-I-Prompt-Formel für ChatGPT Marketing?",
+          "capsule": "R-O-I steht für Rolle, Output und Input - in dieser Reihenfolge. Die Reihenfolge ist entscheidend: Rolle zuerst konditioniert ChatGPT für alles Folgende.",
+          "body": "Die Formel ist einfach. Aber die Reihenfolge ist alles.\n\nR wie Rolle: Sag ChatGPT zuerst, wer es in diesem Moment ist. Nicht 'du bist ein Assistent'. Konkret: 'Du bist Performance Marketer für eine nachhaltige Modemarke, Zielgruppe Frauen 25-40.' Diese Rolle setzt den Kontext für jeden Satz, der danach kommt.\n\nO wie Output: Beschreib präzise das gewünschte Format. Nicht 'schreib Texte'. Sondern: '20 Meta-Titel und Meta-Beschreibungen als Tabelle, zwei Spalten, max. 150 Zeichen je Zeile.' Je genauer das Format, desto weniger Nacharbeit.\n\nI wie Input: Gib das Material. Zielgruppe, Tonalität, zwei Beispiele aus alten Posts, Einschränkungen wie 'keine Anglizismen' oder 'kein Du'. Je mehr Kontext, desto besser das Ergebnis - beim ersten Versuch."
         },
         {
           "id": "ki-content-google",
           "type": "answer_capsule",
           "heading": "Bestraft Google KI-generierten Content im Marketing?",
           "capsule": "Nein. Google bewertet Qualität, nicht die Herkunft eines Textes. KI-Content wird nur dann zum Problem, wenn er nicht redigiert wurde und echtes Fachwissen fehlt.",
-          "body": "Die Frage kommt immer wieder – und die Antwort ist eindeutig: Nein. Google hat das explizit bestätigt. Was zählt, ist ob der Inhalt hilfreich ist, ob er redigiert wurde und ob echte Expertise dahintersteckt.\n\nIn der Praxis heißt das: ChatGPT liefert die Struktur, du lieferst deine Stimme. Ein Beispiel aus deiner Erfahrung. Eine Zahl aus deiner Arbeit. Eine Einschätzung, die nur du geben kannst. Genau das macht aus einem KI-Entwurf einen Text, den Google als verlässliche Quelle einstuft – und den LLMs wie ChatGPT oder Perplexity zitieren.\n\nDein Name als Autorin, ein aktuelles Datum, ein Article-Schema im Code: das sind die drei Signale, die Google und LLMs brauchen um zu verstehen – hier steht eine echte Person hinter dem Inhalt."
+          "body": "Die Frage kommt immer wieder - und die Antwort ist eindeutig: Nein. Google hat das explizit bestätigt. Was zählt, ist ob der Inhalt hilfreich ist, ob er redigiert wurde und ob echte Expertise dahintersteckt.\n\nIn der Praxis heißt das: ChatGPT liefert die Struktur, du lieferst deine Stimme. Ein Beispiel aus deiner Erfahrung. Eine Zahl aus deiner Arbeit. Eine Einschätzung, die nur du geben kannst. Genau das macht aus einem KI-Entwurf einen Text, den Google als verlässliche Quelle einstuft - und den LLMs wie ChatGPT oder Perplexity zitieren.\n\nDein Name als Autorin, ein aktuelles Datum, ein Article-Schema im Code: das sind die drei Signale, die Google und LLMs brauchen um zu verstehen - hier steht eine echte Person hinter dem Inhalt."
         },
         {
           "id": "use-cases",
           "type": "answer_capsule",
-          "heading": "Fuer welche Marketing-Aufgaben ist ChatGPT am effektivsten?",
-          "capsule": "ChatGPT ist am staerksten bei Content-Erstellung, SEO-Texten, E-Mail-Sequenzen und Zielgruppen-Personas. Mit der R-O-I-Formel und klarem Output-Format liefert es bei diesen Aufgaben sofort verwertbare Ergebnisse.",
-          "body": "Content-Erstellung ist der naheliegendste Use Case – Blog-Entwuerfe, Social-Media-Captions, Produktbeschreibungen. Aber ChatGPT kann mehr.\n\nFuer SEO: Keywords clustern, Meta-Descriptions fuer viele URLs auf einmal generieren, interne Verlinkungsstrategien vorschlagen. Das spart Stunden manueller Arbeit.\n\nFuer Strategie: Zielgruppen-Personas entwickeln, Wettbewerber-Positionierungen analysieren, einen 30-Tage-Content-Plan erstellen – alles in einer Sitzung, wenn der Prompt stimmt.\n\nFuer E-Mail-Marketing: Komplette Sequenzen in einem Durchgang anlegen. Mit R-O-I-Formel und Beispielen aus bestehenden Mails liefert ChatGPT einen direkt anpassbaren Entwurf.\n\nWichtig: ChatGPT kann halluzinieren – also Fakten erfinden, die plausibel klingen, aber falsch sind. Jeder Output braucht einen menschlichen Gegencheck vor der Veroeffentlichung."
+          "heading": "Für welche Marketing-Aufgaben ist ChatGPT am effektivsten?",
+          "capsule": "ChatGPT ist am stärksten bei Content-Erstellung, SEO-Texten, E-Mail-Sequenzen und Zielgruppen-Personas. Mit der R-O-I-Formel und klarem Output-Format liefert es bei diesen Aufgaben sofort verwertbare Ergebnisse.",
+          "body": "Content-Erstellung ist der naheliegendste Use Case - Blog-Entwürfe, Social-Media-Captions, Produktbeschreibungen. Aber ChatGPT kann mehr.\n\nFür SEO: Keywords clustern, Meta-Descriptions für viele URLs auf einmal generieren, interne Verlinkungsstrategien vorschlagen. Das spart Stunden manueller Arbeit.\n\nFür Strategie: Zielgruppen-Personas entwickeln, Wettbewerber-Positionierungen analysieren, einen 30-Tage-Content-Plan erstellen - alles in einer Sitzung, wenn der Prompt stimmt.\n\nFür E-Mail-Marketing: Komplette Sequenzen in einem Durchgang anlegen. Mit R-O-I-Formel und Beispielen aus bestehenden Mails liefert ChatGPT einen direkt anpassbaren Entwurf.\n\nWichtig: ChatGPT kann halluzinieren - also Fakten erfinden, die plausibel klingen, aber falsch sind. Jeder Output braucht einen menschlichen Gegencheck vor der Veröffentlichung."
         },
         {
           "id": "iteratives-prompting",
           "type": "answer_capsule",
           "heading": "Wie verfeinere ich ChatGPT-Ergebnisse durch iteratives Prompting?",
-          "capsule": "Iteratives Prompting bedeutet: nicht beim ersten Entwurf aufhoeren, sondern gezielt nachfeinern. Jede Folgeanweisung baut auf dem vorherigen Ergebnis auf – statt neu zu starten.",
-          "body": "Der erste ChatGPT-Output ist selten das Endergebnis – und das ist kein Fehler, das ist das System. Iteratives Prompting nutzt genau das aus.\n\nNach dem ersten Entwurf: Gib konkretes Feedback. Nicht \"mach es besser\", sondern \"mach Satz 3 direkter\", \"ersetze alle Anglizismen\", \"kuerze auf 120 Zeichen\". Je spezifischer die Anweisung, desto praeziser die Anpassung.\n\nVariationen anfordern: \"Schreib mir drei Versionen – eine formell, eine locker, eine provokant.\" Das gibt dir Auswahl ohne dreifachen Aufwand.\n\nKontext erhalten: ChatGPT merkt sich den Gespraechsverlauf in einer Session. Nutze das: Baue Korrekturrunden aufeinander auf, statt jedes Mal neu zu briefen. So entwickelt sich ein Ergebnis statt neu zu entstehen."
+          "capsule": "Iteratives Prompting bedeutet: nicht beim ersten Entwurf aufhören, sondern gezielt nachfeinern. Jede Folgeanweisung baut auf dem vorherigen Ergebnis auf - statt neu zu starten.",
+          "body": "Der erste ChatGPT-Output ist selten das Endergebnis - und das ist kein Fehler, das ist das System. Iteratives Prompting nutzt genau das aus.\n\nNach dem ersten Entwurf: Gib konkretes Feedback. Nicht \"mach es besser\", sondern \"mach Satz 3 direkter\", \"ersetze alle Anglizismen\", \"kürze auf 120 Zeichen\". Je spezifischer die Anweisung, desto präziser die Anpassung.\n\nVariationen anfordern: \"Schreib mir drei Versionen - eine formell, eine locker, eine provokant.\" Das gibt dir Auswahl ohne dreifachen Aufwand.\n\nKontext erhalten: ChatGPT merkt sich den Gesprächsverlauf in einer Session. Nutze das: Baue Korrekturrunden aufeinander auf, statt jedes Mal neu zu briefen. So entwickelt sich ein Ergebnis statt neu zu entstehen."
         }
       ],
       "video": {
@@ -306,22 +388,22 @@
         "title": "R-O-I Promptformel: Rolle → Output → Input",
         "duration": "PT0M30S",
         "thumbnailUrl": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
-        "caption": "In diesem Short erkläre ich die R-O-I-Formel: Warum die Reihenfolge Rolle, Output, Input entscheidend ist – und wie du sie sofort anwendest."
+        "caption": "In diesem Short erkläre ich die R-O-I-Formel: Warum die Reihenfolge Rolle, Output, Input entscheidend ist - und wie du sie sofort anwendest."
       },
       "comparison": {
         "bad": {
           "label": "Prompt ohne Formel",
           "example": "Schreib mir 10 Instagram-Captions über mein neues Produkt.",
           "issues": [
-            "Keine Rolle – ChatGPT weiß nicht wer spricht",
-            "Kein Format – Liste? Fließtext? Tabelle?",
-            "Kein Input – Ton, Zielgruppe, Stil fehlen komplett",
+            "Keine Rolle - ChatGPT weiß nicht wer spricht",
+            "Kein Format - Liste? Fließtext? Tabelle?",
+            "Kein Input - Ton, Zielgruppe, Stil fehlen komplett",
             "Ergebnis: generisch, 3+ Korrekturrunden nötig"
           ]
         },
         "good": {
           "label": "R-O-I-Prompt",
-          "example": "Du bist Social-Media-Strategin für nachhaltige Modemarken [R]. Erstelle 10 Instagram-Captions als nummerierte Liste, max. 150 Zeichen je Caption [O]. Zielgruppe: Frauen 28–38, Ton: inspirierend aber direkt, kein Englisch, kein Du [I].",
+          "example": "Du bist Social-Media-Strategin für nachhaltige Modemarken [R]. Erstelle 10 Instagram-Captions als nummerierte Liste, max. 150 Zeichen je Caption [O]. Zielgruppe: Frauen 28-38, Ton: inspirierend aber direkt, kein Englisch, kein Du [I].",
           "benefits": [
             "Rolle klar: ChatGPT kennt den Kontext",
             "Format klar: nummerierte Liste, 150 Zeichen",
@@ -331,31 +413,60 @@
         }
       },
       "checklist": [
-        "Rolle konkret benennen – wer ist ChatGPT in diesem Prompt?",
+        "Rolle konkret benennen - wer ist ChatGPT in diesem Prompt?",
         "Output-Format spezifizieren: Tabelle, Liste, Thread, Anzahl, Zeichenlimit",
-        "Input liefern: Zielgruppe, Ton, 1–2 Beispiele, Einschränkungen",
+        "Input liefern: Zielgruppe, Ton, 1-2 Beispiele, Einschränkungen",
         "KI-Output redigieren und eigene Expertise ergänzen",
         "Autorname Mareen Strauch + Erscheinungsdatum auf der Seite sichtbar machen",
         "Article-Schema mit author.sameAs ergänzen",
         "Datum bei jedem inhaltlichen Update aktualisieren"
       ],
       "faq": [
-        { "question": "Was ist die R-O-I-Prompt-Formel für ChatGPT Marketing?", "answer": "R-O-I steht für Rolle, Output und Input – in dieser Reihenfolge. Rolle zuerst konditioniert ChatGPT für den gesamten Kontext. Output definiert das Format präzise. Input liefert Zielgruppe, Ton und Beispiele. Das Ergebnis: verwertbarer Content beim ersten Versuch." },
-        { "question": "Wie erstelle ich mit ChatGPT einen Content-Plan für Marketing?", "answer": "Nutze die R-O-I-Formel: Definiere ChatGPT als deine Content-Strategin für deine Nische [R], fordere einen 30-Tage-Plan als Tabelle mit Thema, Format und Kanal [O] und gib Zielgruppe, Ton und Beispiel-Inhalte als Kontext [I]. Das liefert in 10–20 Minuten einen direkt nutzbaren Plan." },
-        { "question": "Bestraft Google KI-generierten Content?", "answer": "Nein. Google bewertet Qualität, nicht die Herkunft eines Textes. KI-Content funktioniert, wenn er redigiert wurde, echte Expertise enthält und mit Autorschaft sowie aktuellem Datum versehen ist." },
-        { "question": "Wie werde ich mit KI-Content von LLMs wie ChatGPT oder Perplexity zitiert?", "answer": "Durch klare Autorschaft (Name + sameAs-Link), aktuelles Datum, Article-Schema im Seitencode und direkte Antwort-Sätze am Anfang jedes Abschnitts. LLMs bevorzugen strukturierte, faktische Quellen mit nachweisbarer E-E-A-T-Grundlage." },
-        { "question": "Wie lange sollte ein ChatGPT-Prompt für Marketing sein?", "answer": "Effektive Marketing-Prompts mit R-O-I-Struktur brauchen 200–400 Zeichen. Länge ist kein Qualitätsmerkmal – Präzision in Rolle, Output-Format und Input-Kontext ist entscheidend, nicht die Zeichenanzahl." },
-        { "question": "Fuer welche Marketing-Aufgaben eignet sich ChatGPT am besten?", "answer": "Am staerksten bei Content-Erstellung, SEO-Texten (Meta-Descriptions, Keyword-Cluster), E-Mail-Sequenzen und Zielgruppen-Personas. Mit R-O-I-Formel und klarem Format liefert ChatGPT bei diesen Aufgaben sofort verwertbare Ergebnisse." },
-        { "question": "Was ist iteratives Prompting bei ChatGPT?", "answer": "Iteratives Prompting bedeutet, den ersten ChatGPT-Output als Ausgangspunkt zu nutzen und gezielt nachzufeinern – mit konkretem Feedback (\"kuerze auf 120 Zeichen\") statt neuen Prompts. So entsteht ein praezises Ergebnis statt eines generischen Entwurfs." }
+        {
+          "question": "Was ist die R-O-I-Prompt-Formel für ChatGPT Marketing?",
+          "answer": "R-O-I steht für Rolle, Output und Input - in dieser Reihenfolge. Rolle zuerst konditioniert ChatGPT für den gesamten Kontext. Output definiert das Format präzise. Input liefert Zielgruppe, Ton und Beispiele. Das Ergebnis: verwertbarer Content beim ersten Versuch."
+        },
+        {
+          "question": "Wie erstelle ich mit ChatGPT einen Content-Plan für Marketing?",
+          "answer": "Nutze die R-O-I-Formel: Definiere ChatGPT als deine Content-Strategin für deine Nische [R], fordere einen 30-Tage-Plan als Tabelle mit Thema, Format und Kanal [O] und gib Zielgruppe, Ton und Beispiel-Inhalte als Kontext [I]. Das liefert in 10-20 Minuten einen direkt nutzbaren Plan."
+        },
+        {
+          "question": "Bestraft Google KI-generierten Content?",
+          "answer": "Nein. Google bewertet Qualität, nicht die Herkunft eines Textes. KI-Content funktioniert, wenn er redigiert wurde, echte Expertise enthält und mit Autorschaft sowie aktuellem Datum versehen ist."
+        },
+        {
+          "question": "Wie werde ich mit KI-Content von LLMs wie ChatGPT oder Perplexity zitiert?",
+          "answer": "Durch klare Autorschaft (Name + sameAs-Link), aktuelles Datum, Article-Schema im Seitencode und direkte Antwort-Sätze am Anfang jedes Abschnitts. LLMs bevorzugen strukturierte, faktische Quellen mit nachweisbarer E-E-A-T-Grundlage."
+        },
+        {
+          "question": "Wie lange sollte ein ChatGPT-Prompt für Marketing sein?",
+          "answer": "Effektive Marketing-Prompts mit R-O-I-Struktur brauchen 200-400 Zeichen. Länge ist kein Qualitätsmerkmal - Präzision in Rolle, Output-Format und Input-Kontext ist entscheidend, nicht die Zeichenanzahl."
+        },
+        {
+          "question": "Für welche Marketing-Aufgaben eignet sich ChatGPT am besten?",
+          "answer": "Am stärksten bei Content-Erstellung, SEO-Texten (Meta-Descriptions, Keyword-Cluster), E-Mail-Sequenzen und Zielgruppen-Personas. Mit R-O-I-Formel und klarem Format liefert ChatGPT bei diesen Aufgaben sofort verwertbare Ergebnisse."
+        },
+        {
+          "question": "Was ist iteratives Prompting bei ChatGPT?",
+          "answer": "Iteratives Prompting bedeutet, den ersten ChatGPT-Output als Ausgangspunkt zu nutzen und gezielt nachzufeinern - mit konkretem Feedback (\"kürze auf 120 Zeichen\") statt neuen Prompts. So entsteht ein präzises Ergebnis statt eines generischen Entwurfs."
+        }
       ],
       "schema": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
-        "author": { "@type": "Person", "name": "Mareen Strauch", "sameAs": "https://www.youtube.com/@MareenSocialUp" },
+        "author": {
+          "@type": "Person",
+          "name": "Mareen Strauch",
+          "sameAs": "https://www.youtube.com/@MareenSocialUp"
+        },
         "datePublished": "2025-01-20",
         "dateModified": "2026-04-01",
-        "publisher": { "@type": "Organization", "name": "MareenSocialUp", "url": "https://mareen-socialup.de" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "MareenSocialUp",
+          "url": "https://mareen-socialup.de"
+        },
         "inLanguage": "de",
         "video": {
           "@type": "VideoObject",
@@ -367,7 +478,10 @@
           "uploadDate": "2025-01-20T08:00:00+01:00"
         }
       },
-      "navigation": { "prev": "tiktok-seo-2025", "next": null }
+      "navigation": {
+        "prev": "tiktok-seo-2025",
+        "next": null
+      }
     }
   ]
 }
