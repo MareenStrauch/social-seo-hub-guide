@@ -33,6 +33,8 @@ const App = () => (
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           {/* Old routes redirect */}
+          <Route path="/hub" element={<Hub />} />
+          <Route path="/hub/videos" element={<Videos />} />
           <Route path="/hub/youtube-seo" element={<GuideYouTubeSeo />} />
           <Route path="/hub/chatgpt-marketing" element={<GuideChatGptMarketing />} />
           <Route path="/hub/tiktok-seo" element={<GuideTikTokSeo />} />
