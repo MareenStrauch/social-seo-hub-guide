@@ -19,8 +19,8 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
-              <a href="/hub" className="text-foreground hover:text-secondary transition-colors">Guides</a>
-              <a href="/hub/videos" className="text-foreground hover:text-secondary transition-colors">Videos</a>
+              <a href="/guides" className="text-foreground hover:text-secondary transition-colors">Guides</a>
+              <a href="/videos" className="text-foreground hover:text-secondary transition-colors">Videos</a>
               <Button asChild variant="gradient" className="rounded-soft">
                 <a href="/dl/social-seo-checkliste.pdf">Gratis Checkliste</a>
               </Button>
@@ -44,8 +44,8 @@ export function Navigation() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
-              <a href="/hub" className="block px-3 py-2 text-foreground hover:text-secondary">Guides</a>
-              <a href="/hub/videos" className="block px-3 py-2 text-foreground hover:text-secondary">Videos</a>
+              <a href="/guides" className="block px-3 py-2 text-foreground hover:text-secondary">Guides</a>
+              <a href="/videos" className="block px-3 py-2 text-foreground hover:text-secondary">Videos</a>
               <div className="px-3 py-2">
                 <Button asChild variant="gradient" className="w-full rounded-soft">
                   <a href="/dl/social-seo-checkliste.pdf">Gratis Checkliste</a>

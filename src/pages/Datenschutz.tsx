@@ -5,7 +5,7 @@ const Datenschutz = () => {
   useSeo({
     title: "Datenschutzerklärung – MareenSocialUp",
     description: "Datenschutzerklärung von MareenSocialUp gemäß DSGVO.",
-    canonical: "https://social-seo-hub-guide.lovable.app/datenschutz",
+    canonical: "https://mareensocialup.de/datenschutz",
   });
 
   return (

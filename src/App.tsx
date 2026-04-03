@@ -25,14 +25,16 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/hub" element={<Hub />} />
+          <Route path="/guides" element={<Hub />} />
           <Route path="/guides/youtube-seo-2025" element={<GuideYouTubeSeo />} />
           <Route path="/guides/chatgpt-marketing-roi-prompt" element={<GuideChatGptMarketing />} />
           <Route path="/guides/tiktok-seo-2025" element={<GuideTikTokSeo />} />
-          <Route path="/hub/videos" element={<Videos />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           {/* Old routes redirect */}
+          <Route path="/hub" element={<Hub />} />
+          <Route path="/hub/videos" element={<Videos />} />
           <Route path="/hub/youtube-seo" element={<GuideYouTubeSeo />} />
           <Route path="/hub/chatgpt-marketing" element={<GuideChatGptMarketing />} />
           <Route path="/hub/tiktok-seo" element={<GuideTikTokSeo />} />

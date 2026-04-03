@@ -5,7 +5,7 @@ const Impressum = () => {
   useSeo({
     title: "Impressum – MareenSocialUp",
     description: "Impressum von MareenSocialUp. Angaben gemäß § 5 TMG.",
-    canonical: "https://social-seo-hub-guide.lovable.app/impressum",
+    canonical: "https://mareensocialup.de/impressum",
   });
 
   return (

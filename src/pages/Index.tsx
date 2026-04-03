@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Download, Brain, MousePointer, Smartphone, Youtube, MessageSquare, TrendingUp } from "lucide-react";
 import { useSeo } from "@/hooks/use-seo";
 
-const SITE_URL = "https://social-seo-hub-guide.lovable.app";
+const SITE_URL = "https://mareensocialup.de";
 
 const Index = () => {
   useSeo({
@@ -94,7 +94,7 @@ const Index = () => {
           <h2 className="text-3xl font-headline font-bold text-secondary text-center mb-8">Video-Sammlung</h2>
           <VideoMasonry count={6} lazy={true} />
           <div className="text-center mt-8">
-            <a href="/hub/videos" className="text-secondary underline hover:text-primary transition-colors">
+            <a href="/videos" className="text-secondary underline hover:text-primary transition-colors">
               Alle Videos ansehen →
             </a>
           </div>
@@ -175,7 +175,7 @@ const Index = () => {
                   <li><a href="/guides/youtube-seo-2025" className="text-secondary-foreground/80 hover:text-primary transition-colors">YouTube SEO Guide</a></li>
                   <li><a href="/guides/chatgpt-marketing-roi-prompt" className="text-secondary-foreground/80 hover:text-primary transition-colors">ChatGPT Marketing</a></li>
                   <li><a href="/guides/tiktok-seo-2025" className="text-secondary-foreground/80 hover:text-primary transition-colors">TikTok SEO Tipps</a></li>
-                  <li><a href="/hub/videos" className="text-secondary-foreground/80 hover:text-primary transition-colors">Video-Sammlung</a></li>
+                  <li><a href="/videos" className="text-secondary-foreground/80 hover:text-primary transition-colors">Video-Sammlung</a></li>
                 </ul>
               </nav>
             </div>
@@ -187,7 +187,7 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li><a href="/impressum" className="text-secondary-foreground/80 hover:text-primary transition-colors">Impressum</a></li>
                   <li><a href="/datenschutz" className="text-secondary-foreground/80 hover:text-primary transition-colors">Datenschutz</a></li>
-                  <li><a href="/hub" className="text-secondary-foreground/80 hover:text-primary transition-colors">Alle Guides</a></li>
+                  <li><a href="/guides" className="text-secondary-foreground/80 hover:text-primary transition-colors">Alle Guides</a></li>
                 </ul>
               </nav>
             </div>
