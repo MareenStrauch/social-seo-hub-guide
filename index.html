@@ -3,19 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MareenSocialUp - Social SEO & Video Strategien für Creator</title>
-    <meta name="description" content="Social SEO, Video SEO & KI-Content-Strategien für Creator und Marketing-Teams. Optimiere deine Inhalte für Google, TikTok und AI-Overviews." />
+    <title>MareenSocialUp – Technical Video SEO & GEO Audits für Creator</title>
+    <meta name="description" content="Optimiere deine Videos technisch für Google Video SERPs und AI Overviews. Kostenlose Checkliste für YouTube SEO, TikTok SEO & GEO Readiness." />
     <meta name="author" content="Mareen Strauch" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mareensocialup.de/" />
 
-    <meta property="og:title" content="MareenSocialUp - Social SEO & Video Strategien für Creator" />
-    <meta property="og:description" content="Social SEO, Video SEO & KI-Content-Strategien für Creator und Marketing-Teams. Optimiere deine Inhalte für Google, TikTok und AI-Overviews." />
+    <meta property="og:title" content="MareenSocialUp – Technical Video SEO & GEO Audits für Creator" />
+    <meta property="og:description" content="Optimiere deine Videos technisch für Google Video SERPs und AI Overviews. Kostenlose Checkliste für YouTube SEO, TikTok SEO & GEO Readiness." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://social-seo-hub-guide.lovable.app" />
+    <meta property="og:url" content="https://mareensocialup.de/" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!--
+      Crawlable internal links for search engine spiders that do not execute JavaScript.
+      React takes over #root and visually replaces the page; these links remain in the
+      raw HTML so that crawlers like Screaming Frog (HTML mode) discover all routes.
+      The nav is hidden once JS loads but remains accessible in the DOM / raw source.
+    -->
+    <nav id="crawler-nav" aria-label="Seitennavigation" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
+      <a href="/">Startseite</a>
+      <a href="/guides">Alle SEO Guides</a>
+      <a href="/guides/youtube-seo-2025">YouTube-SEO 2025 Guide</a>
+      <a href="/guides/chatgpt-marketing-roi-prompt">ChatGPT-Marketing Guide</a>
+      <a href="/guides/tiktok-seo-2025">TikTok-SEO 2025 Guide</a>
+      <a href="/videos">Video-Bibliothek</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutzerklärung</a>
+    </nav>
   </body>
 </html>
