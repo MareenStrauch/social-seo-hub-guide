@@ -2,36 +2,22 @@ import { Link } from "react-router-dom";
 import { Navigation } from "@/components/layout/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useSeo } from "@/hooks/use-seo";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
+import { CheckCircle2, XCircle, AlertTriangle, BarChart3 } from "lucide-react";
 
 const SITE_URL = "https://social-seo-hub-guide.lovable.app";
 
-interface GuideStep {
-  number?: number;
-  letter?: string;
-  title: string;
-  text: string;
-  example?: string;
-}
-
+/* ─── Types ─── */
 interface GuideSection {
   id: string;
+  type?: string;
   heading: string;
+  capsule?: string;
   body: string;
-  steps?: GuideStep[];
-  comparison?: {
-    bad: { label: string; example: string; issues: string[] };
-    good: { label: string; example: string; benefits: string[] };
-  };
+  dataPoint?: string;
+  steps?: { number?: number; letter?: string; title: string; text: string; example?: string }[];
+  comparison?: GuideComparison;
 }
 
 interface GuideComparison {
@@ -45,19 +31,12 @@ export interface GuideData {
   meta: {
     title: string;
     description: string;
-    keywords: string[];
-    ogTitle: string;
-    ogDescription: string;
+    keywords?: string[];
+    ogTitle?: string;
+    ogDescription?: string;
   };
-  hero: {
-    headline: string;
-    subheadline: string;
-    intro: string;
-  };
-  personalNote: {
-    label: string;
-    text: string;
-  };
+  hero: { headline: string; subheadline: string; intro: string };
+  personalNote: { label: string; text: string };
   video: {
     youtubeId: string;
     url: string;
@@ -72,10 +51,7 @@ export interface GuideData {
   checklist: string[];
   faq: { question: string; answer: string }[];
   schema: Record<string, unknown>;
-  navigation: {
-    prev: string | null;
-    next: string | null;
-  };
+  navigation: { prev: string | null; next: string | null };
 }
 
 interface GuidePageProps {
@@ -88,6 +64,63 @@ function findGuideById(guides: GuideData[], id: string | null) {
   return guides.find((g) => g.id === id) ?? null;
 }
 
+/* ─── Render body with \n\n as separate <p> tags ─── */
+function BodyText({ text }: { text: string }) {
+  const paragraphs = text.split("\n\n");
+  return (
+    <>
+      {paragraphs.map((p, i) => (
+        <p key={i} className="text-foreground leading-relaxed mb-4 last:mb-0">
+          {p}
+        </p>
+      ))}
+    </>
+  );
+}
+
+/* ─── Highlight [ERGÄNZE: ...] placeholders ─── */
+function PersonalNoteText({ text }: { text: string }) {
+  const parts = text.split(/(\[ERGÄNZE:[^\]]*\])/g);
+  return (
+    <p className="text-foreground leading-relaxed italic">
+      {parts.map((part, i) =>
+        part.startsWith("[ERGÄNZE:") ? (
+          <span
+            key={i}
+            className="bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 border border-dashed border-amber-400 dark:border-amber-600 rounded px-1.5 py-0.5 not-italic text-sm"
+          >
+            {part}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </p>
+  );
+}
+
+/* ─── Answer Capsule ─── */
+function AnswerCapsule({ text }: { text: string }) {
+  return (
+    <p
+      className="text-lg font-semibold leading-relaxed bg-accent/50 border-l-4 border-primary rounded-soft px-5 py-4 mb-6"
+      data-ai-summary
+    >
+      {text}
+    </p>
+  );
+}
+
+/* ─── Data Point Aside ─── */
+function DataPoint({ text }: { text: string }) {
+  return (
+    <aside className="my-6 flex items-start gap-3 bg-secondary/5 border border-secondary/20 rounded-soft p-5">
+      <BarChart3 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+      <p className="text-sm text-foreground/80 leading-relaxed font-medium">{text}</p>
+    </aside>
+  );
+}
+
 /* ─── Comparison Table ─── */
 function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   return (
@@ -96,7 +129,6 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
         Vorher / Nachher
       </h3>
       <div className="grid md:grid-cols-2 gap-6">
-        {/* Bad */}
         <div className="rounded-soft border border-destructive/30 bg-destructive/5 p-6">
           <div className="flex items-center gap-2 mb-3">
             <XCircle className="w-5 h-5 text-destructive" />
@@ -114,7 +146,6 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
             ))}
           </ul>
         </div>
-        {/* Good */}
         <div className="rounded-soft border border-primary/30 bg-primary/5 p-6">
           <div className="flex items-center gap-2 mb-3">
             <CheckCircle2 className="w-5 h-5 text-primary" />
@@ -137,47 +168,23 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   );
 }
 
-/* ─── Steps Renderer ─── */
-function StepsList({ steps }: { steps: GuideStep[] }) {
-  return (
-    <div className="my-8 space-y-6">
-      {steps.map((step, i) => (
-        <div key={i} className="flex gap-4 items-start">
-          <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary text-lg">
-            {step.letter ?? step.number ?? i + 1}
-          </div>
-          <div>
-            <h4 className="font-headline font-semibold text-foreground text-lg mb-1">
-              {step.title}
-            </h4>
-            <p className="text-muted-foreground leading-relaxed">{step.text}</p>
-            {step.example && (
-              <div className="mt-2 bg-muted rounded-soft px-4 py-3 text-sm text-foreground/80 italic border-l-4 border-primary/30">
-                Beispiel: {step.example}
-              </div>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/* ─── Checklist ─── */
-function Checklist({ items }: { items: string[] }) {
+/* ─── Checklist with checkboxes ─── */
+function ChecklistSection({ items }: { items: string[] }) {
   return (
     <div className="my-10">
       <h3 className="text-2xl font-headline font-semibold text-secondary mb-6">
         Checkliste
       </h3>
-      <ul className="space-y-3">
+      <ol className="space-y-3">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-            <span className="text-foreground leading-relaxed">{item}</span>
+            <Checkbox id={`check-${i}`} className="mt-0.5" />
+            <label htmlFor={`check-${i}`} className="text-foreground leading-relaxed cursor-pointer">
+              {item}
+            </label>
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }
@@ -191,9 +198,11 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
     title: guide.meta.title,
     description: guide.meta.description,
     canonical: `${SITE_URL}${guide.slug}`,
+    keywords: guide.meta.keywords,
+    ogTitle: guide.meta.ogTitle || guide.meta.title,
+    ogDescription: guide.meta.ogDescription || guide.meta.description,
   });
 
-  // Build breadcrumb schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -204,7 +213,6 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
     ],
   };
 
-  // FAQ schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -232,7 +240,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             <div className="mt-6 text-lg text-foreground max-w-3xl mx-auto leading-relaxed" data-ai-summary>
               {guide.hero.intro}
             </div>
-            <meta itemProp="headline" content={guide.meta.ogTitle} />
+            <meta itemProp="headline" content={guide.meta.title} />
             <meta itemProp="author" content="Mareen Strauch" />
             <meta itemProp="image" content={guide.video.thumbnailUrl} />
           </div>
@@ -245,7 +253,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             {/* Personal Note */}
             <aside className="my-10 bg-tertiary/40 border border-primary/20 rounded-soft p-6">
               <p className="text-sm font-semibold text-primary mb-2">{guide.personalNote.label}</p>
-              <p className="text-foreground leading-relaxed italic">{guide.personalNote.text}</p>
+              <PersonalNoteText text={guide.personalNote.text} />
             </aside>
 
             {/* Video Embed */}
@@ -273,10 +281,9 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                 <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
                   {section.heading}
                 </h2>
-                <p className="text-foreground leading-relaxed" data-ai-summary>
-                  {section.body}
-                </p>
-                {section.steps && <StepsList steps={section.steps} />}
+                {section.capsule && <AnswerCapsule text={section.capsule} />}
+                <BodyText text={section.body} />
+                {section.dataPoint && <DataPoint text={section.dataPoint} />}
                 {section.comparison && <ComparisonTable comparison={section.comparison} />}
               </section>
             ))}
@@ -285,10 +292,10 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             {guide.comparison && <ComparisonTable comparison={guide.comparison} />}
 
             {/* Checklist */}
-            <Checklist items={guide.checklist} />
+            <ChecklistSection items={guide.checklist} />
 
             {/* FAQ */}
-            <div className="mt-12">
+            <div className="mt-12 faq-schema">
               <h3 className="text-2xl font-headline font-semibold text-secondary mb-6">
                 Häufig gestellte Fragen
               </h3>
