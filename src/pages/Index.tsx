@@ -94,7 +94,7 @@ const Index = () => {
           <h2 className="text-3xl font-headline font-bold text-secondary text-center mb-8">Video-Sammlung</h2>
           <VideoMasonry count={6} lazy={true} />
           <div className="text-center mt-8">
-            <a href="/hub/videos" className="text-secondary underline hover:text-primary transition-colors">
+            <a href="/videos" className="text-secondary underline hover:text-primary transition-colors">
               Alle Videos ansehen →
             </a>
           </div>
