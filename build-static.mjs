@@ -365,7 +365,7 @@ function buildHome() {
   return head(
     'MareenSocialUp – Technical Video SEO & GEO Audits für Creator',
     'Optimiere deine Videos technisch für Google Video SERPs und AI Overviews. Kostenlose Checkliste für YouTube SEO, TikTok SEO & GEO Readiness.',
-    `${SITE}/`,
+    SITE,
     `<script type="application/ld+json">${faqSchema}</script>\n<script type="application/ld+json">${orgSchema}</script>`
   ) + nav() + `
 
@@ -375,7 +375,7 @@ function buildHome() {
       <img class="avatar" src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen Strauch">
       <h1>Technical Video SEO &amp; GEO Readiness: Die Audits für Creator und Marketing-Teams</h1>
       <p>Wir beweisen den ROI deines Contents: Optimiere deine Profile technisch für Google Video SERPs und die Zitatfähigkeit in AI Overviews.</p>
-      <p style="margin-top:2rem"><a href="/dl/social-seo-checkliste.pdf" class="btn-cta" style="padding:.85rem 2rem;font-size:1rem">⬇ KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern</a></p>
+      <p style="margin-top:2.5rem"><a href="/dl/social-seo-checkliste.pdf" class="btn-cta" style="padding:1rem 2rem;font-size:1.05rem">${ICONS.download} KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern</a></p>
     </div>
   </div>
 </header>
@@ -387,9 +387,9 @@ function buildHome() {
       <p>KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>🎬 YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>🤖 Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>📈 TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
     </div>
   </div>
 </section>
@@ -397,13 +397,13 @@ function buildHome() {
 <section class="section section-alt">
   <div class="wrap">
     <div class="section-title">
-      <h2>So hat sich Suche verändert</h2>
+      <h2 class="text-secondary" style="color:var(--secondary)">So hat sich Suche verändert</h2>
       <p>Die Suchlandschaft entwickelt sich rasant – bleib sichtbar mit den richtigen Strategien</p>
     </div>
     <div class="grid3">
-      <div class="tile"><h3>🧠 AI Overviews</h3><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="tile"><h3>🖱️ Zero-Click</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="tile"><h3>📱 Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="tile">${iconCircle(ICONS.brain, 'var(--gradient-primary)')}<h3>AI Overviews</h3><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="tile">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')}<h3>Zero-Click</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="tile">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
@@ -411,7 +411,7 @@ function buildHome() {
 <section class="section" itemscope itemtype="https://schema.org/FAQPage">
   <div class="wrap-narrow">
     <div class="section-title">
-      <h2>Häufig gestellte Fragen</h2>
+      <h2 style="color:var(--secondary)">Häufig gestellte Fragen</h2>
       <p>Alles, was du über Social SEO und Video-Optimierung wissen musst</p>
     </div>
     <div class="faq">
