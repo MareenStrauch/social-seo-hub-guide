@@ -129,10 +129,10 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .checklist li{padding:.25rem 0}
 .checklist li::marker{content:'☐ '}
 
-/* FAQ */
+/* FAQ - minimal style, no card background */
 .faq{margin:2rem 0}
-.faq details{background:var(--card);border-radius:var(--radius);margin:.5rem 0;padding:1rem 1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.faq summary{cursor:pointer;font-weight:600;font-size:1rem;color:var(--secondary);list-style:none}
+.faq details{margin:.5rem 0;padding:1rem 0;border-bottom:1px solid var(--border)}
+.faq summary{cursor:pointer;font-weight:600;font-size:1rem;color:var(--text);list-style:none}
 .faq summary::before{content:'▸ ';color:var(--primary)}
 .faq details[open] summary::before{content:'▾ '}
 .faq details p{font-size:.95rem;color:var(--muted);margin-top:.5rem}
