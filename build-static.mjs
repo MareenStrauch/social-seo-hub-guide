@@ -449,13 +449,13 @@ function buildHub() {
     "@context":"https://schema.org","@type":"BreadcrumbList",
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":SITE},
-      {"@type":"ListItem","position":2,"name":"Guides","item":`${SITE}/guides`}
+      {"@type":"ListItem","position":2,"name":"Guides","item":`${SITE}/guides/`}
     ]
   });
   return head(
     'Social SEO Guides – YouTube, TikTok & GEO Readiness',
     'Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube. Technical Video SEO & GEO Audits.',
-    `${SITE}/guides`,
+    `${SITE}/guides/`,
     `<script type="application/ld+json">${breadcrumb}</script>`
   ) + nav() + `
 
@@ -494,7 +494,7 @@ function buildGuide(guide) {
   let html = head(
     guide.meta.title,
     guide.meta.description,
-    `${SITE}${guide.slug}`,
+    `${SITE}${guide.slug}/`,
     `<meta name="keywords" content="${guide.meta.keywords.join(', ')}">\n${schemaTag}`
   ) + nav();
 
@@ -602,7 +602,7 @@ function buildVideos() {
   return head(
     'Video-Bibliothek – MareenSocialUp',
     'Alle Videos zu Social SEO, YouTube-Optimierung, TikTok-SEO und KI-Content-Strategien auf einen Blick.',
-    `${SITE}/videos`
+    `${SITE}/videos/`
   ) + nav() + `
 
 <section class="section" style="padding-top:5rem">
@@ -623,7 +623,7 @@ function buildImpressum() {
   return head(
     'Impressum – MareenSocialUp',
     'Impressum von MareenSocialUp. Angaben gemäß § 5 TMG.',
-    `${SITE}/impressum`
+    `${SITE}/impressum/`
   ) + nav() + `
 
 <section class="section prose" style="padding-top:5rem">
@@ -659,7 +659,7 @@ function buildDatenschutz() {
   return head(
     'Datenschutzerklärung – MareenSocialUp',
     'Datenschutzerklärung von MareenSocialUp gemäß DSGVO.',
-    `${SITE}/datenschutz`
+    `${SITE}/datenschutz/`
   ) + nav() + `
 
 <section class="section prose" style="padding-top:5rem">
