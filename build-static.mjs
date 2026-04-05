@@ -410,9 +410,9 @@ function buildHome() {
       <p>Die Suchlandschaft entwickelt sich rasant – bleib sichtbar mit den richtigen Strategien</p>
     </div>
     <div class="grid3">
-      <div class="tile"><div class="tile-header">${iconCircle(ICONS.brain, 'var(--gradient-primary)', true)}<h3>AI Overviews</h3></div><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="tile"><div class="tile-header">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)', true)}<h3>Zero-Click</h3></div><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="tile"><div class="tile-header">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)', true)}<h3>Social Search</h3></div><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="tile">${iconCircle(ICONS.brain, 'var(--gradient-primary)', true, 'icon-circle-tile')}<div class="tile-header"><h3>AI Overviews</h3><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div></div>
+      <div class="tile">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)', true, 'icon-circle-tile')}<div class="tile-header"><h3>Zero-Click</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div></div>
+      <div class="tile">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)', true, 'icon-circle-tile')}<div class="tile-header"><h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div></div>
     </div>
   </div>
 </section>
