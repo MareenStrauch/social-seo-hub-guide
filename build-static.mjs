@@ -517,7 +517,7 @@ function buildGuide(guide) {
   <h2>${esc(sec.heading)}</h2>
   <div class="answer">${esc(sec.capsule)}</div>
   <div class="body">${nl2p(sec.body)}</div>
-  ${sec.dataPoint ? `<div class="data-point">📊 ${esc(sec.dataPoint)}</div>` : ''}
+  ${sec.dataPoint ? `<div class="data-point">${iconCircle(ICONS.chart, 'rgba(255,255,255,.2)')} ${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
   }
 
