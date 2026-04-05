@@ -85,6 +85,8 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .grid3{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .card{background:var(--card);border-radius:var(--radius-soft);padding:2rem;box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;border:1px solid var(--border)}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
+.card{text-align:center}
+.card .icon-circle{margin:0 auto}
 .card h3{margin-top:1rem;color:var(--secondary)}
 .card p{color:var(--muted);font-size:1rem;line-height:1.6;margin-top:.5rem}
 .card a{display:block;text-decoration:none;color:inherit}
