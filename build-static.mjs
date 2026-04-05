@@ -10,6 +10,23 @@ const GA_MEASUREMENT_ID = 'G-5HB3L36YFZ';
 const guidesData = JSON.parse(fs.readFileSync('src/data/guides-content.json', 'utf-8'));
 
 // --- Shared CSS ---
+// SVG icon library
+const ICONS = {
+  youtube: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>`,
+  messageSquare: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+  trendingUp: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+  brain: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>`,
+  mousePointer: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="m13 13 6 6"/></svg>`,
+  smartphone: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>`,
+  download: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>`,
+  search: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`,
+  chart: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>`,
+};
+
+function iconCircle(iconSvg, bgColor = 'var(--primary)') {
+  return `<span class="icon-circle" style="background:${bgColor}">${iconSvg}</span>`;
+}
+
 const CSS = `
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
@@ -18,75 +35,84 @@ const CSS = `
   --bg:#F0F0F0;--card:#fff;--text:#1A1A1A;--muted:#757575;--border:#E8E8E8;
   --radius:0.5rem;--radius-soft:1.25rem;
   --font-body:'Inter',system-ui,sans-serif;--font-headline:'Outfit','Inter',sans-serif;
+  --gradient-primary:linear-gradient(135deg,var(--primary),var(--secondary));
 }
-html{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+html{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
 body{min-height:100vh}
 a{color:var(--secondary);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3,h4{font-family:var(--font-headline);line-height:1.2;color:var(--text)}
-h1{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800}
-h2{font-size:clamp(1.35rem,3vw,2rem);font-weight:700;margin-top:2rem}
-h3{font-size:1.15rem;font-weight:600;margin-top:1.5rem}
+h1,h2,h3,h4{font-family:var(--font-headline);line-height:1.15;color:var(--text);letter-spacing:-0.02em}
+h1{font-size:clamp(2rem,4.5vw,3.25rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.5vw,2.5rem);font-weight:700;margin-top:2rem}
+h3{font-size:1.25rem;font-weight:600;margin-top:1.5rem}
 p{margin-top:0.75rem}
 ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 
+/* Icon circles */
+.icon-circle{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:0.75rem;color:#fff;flex-shrink:0}
+.icon-circle svg{width:1.25rem;height:1.25rem}
+
 /* Layout */
-.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
-.wrap-narrow{max-width:48rem;margin:0 auto;padding:0 1rem}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+.wrap-narrow{max-width:48rem;margin:0 auto;padding:0 1.5rem}
 
 /* Nav */
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:.75rem 0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:72rem;margin:0 auto;padding:0 1rem}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:72rem;margin:0 auto;padding:0 1.5rem}
 .nav-brand{display:flex;align-items:center;gap:.5rem;font-family:var(--font-headline);font-weight:700;font-size:1.15rem;color:var(--secondary)}
 .nav-brand img{height:3rem;width:auto}
 .nav-links{display:flex;align-items:center;gap:1.5rem}
 .nav-links a{color:var(--text);font-size:.95rem}
 .nav-links a:hover{color:var(--secondary);text-decoration:none}
-.btn-cta{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:.55rem 1.25rem;border-radius:var(--radius-soft);font-weight:600;font-size:.9rem;text-decoration:none;transition:opacity .2s}
+.btn-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--gradient-primary);color:#fff;padding:.55rem 1.25rem;border-radius:var(--radius-soft);font-weight:600;font-size:.9rem;text-decoration:none;transition:opacity .2s}
 .btn-cta:hover{opacity:.9;text-decoration:none}
 
 /* Hero */
 .hero{padding:3rem 0;text-align:center}
-.hero-card{background:var(--tertiary);border-radius:2rem;padding:3rem 2rem;position:relative;overflow:hidden}
+.hero-card{background:linear-gradient(135deg,var(--tertiary),var(--bg));border-radius:2rem;padding:4rem 2.5rem;position:relative;overflow:hidden}
 .hero-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);pointer-events:none}
 .hero-card>*{position:relative}
 .hero img.avatar{width:7rem;height:7rem;border-radius:50%;margin:0 auto;object-fit:cover;border:4px solid var(--primary);box-shadow:0 0 30px rgba(92,124,226,.15)}
-.hero h1{margin-top:1.5rem;color:var(--secondary)}
-.hero p{margin-top:1rem;color:var(--muted);max-width:36rem;margin-left:auto;margin-right:auto;font-size:1.05rem}
+.hero h1{margin-top:2rem;color:var(--secondary)}
+.hero p{margin-top:1rem;color:var(--muted);max-width:36rem;margin-left:auto;margin-right:auto;font-size:1.1rem}
 
 /* Cards Grid */
-.grid3{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card{background:var(--card);border-radius:var(--radius-soft);padding:1.75rem;box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-2px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
-.card h3{margin-top:.75rem;color:var(--secondary)}
-.card p{color:var(--muted);font-size:.95rem}
+.grid3{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border-radius:var(--radius-soft);padding:2rem;box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;border:1px solid var(--border)}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
+.card h3{margin-top:.75rem;color:var(--secondary);display:flex;align-items:center;gap:.75rem}
+.card p{color:var(--muted);font-size:1rem;line-height:1.6}
 .card a{display:block;text-decoration:none;color:inherit}
 .card a:hover{text-decoration:none}
 
 /* Sections */
-.section{padding:3rem 0}
+.section{padding:4rem 0}
 .section-alt{background:linear-gradient(to bottom,var(--bg),#f7f2f0)}
-.section-title{text-align:center;margin-bottom:2rem}
+.section-title{text-align:center;margin-bottom:3rem}
 .section-title h2{color:var(--primary)}
-.section-title p{color:var(--muted);max-width:40rem;margin:0.5rem auto 0}
+.section-title h2.text-secondary{color:var(--secondary)}
+.section-title p{color:var(--muted);max-width:40rem;margin:0.75rem auto 0;font-size:1.05rem}
 
 /* Info tiles */
-.tile{background:var(--card);border-radius:var(--radius-soft);padding:1.5rem;text-align:center}
-.tile h3{color:var(--secondary);margin-top:.75rem}
-.tile p{color:var(--muted);font-size:.9rem}
+.tile{background:var(--card);border-radius:var(--radius-soft);padding:2rem;text-align:center;border:1px solid var(--border);box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
+.tile .icon-circle{margin:0 auto .75rem}
+.tile h3{color:var(--secondary);margin-top:.5rem;font-size:1.15rem}
+.tile p{color:var(--muted);font-size:.95rem;line-height:1.6}
 
 /* Guide specific */
 .guide-hero{padding:4rem 0 2rem;text-align:center}
 .guide-hero h1{color:var(--secondary)}
-.guide-hero .sub{color:var(--muted);font-size:1.05rem;margin-top:.5rem}
-.guide-intro{font-size:1.05rem;line-height:1.7;margin-top:1.5rem;color:var(--text)}
+.guide-hero .sub{color:var(--muted);font-size:1.1rem;margin-top:.5rem}
+.guide-intro{font-size:1.1rem;line-height:1.7;margin-top:1.5rem;color:var(--text)}
 .personal-note{background:var(--tertiary);border-radius:var(--radius-soft);padding:1.25rem 1.5rem;margin:2rem 0;font-size:.95rem}
 .personal-note strong{color:var(--primary)}
 
 .capsule{background:var(--card);border-radius:var(--radius-soft);padding:1.5rem;margin:2rem 0;border-left:4px solid var(--primary);box-shadow:0 2px 12px -4px rgba(0,0,0,.06)}
 .capsule .answer{background:#fef9f7;padding:.75rem 1rem;border-radius:.5rem;margin:.75rem 0;font-weight:500;color:var(--text);font-size:.95rem}
 .capsule .body{color:var(--muted);font-size:.95rem;white-space:pre-line}
-.data-point{background:linear-gradient(135deg,var(--secondary),#4a6bd4);color:#fff;border-radius:.75rem;padding:1rem 1.25rem;margin:1rem 0;font-size:.9rem;font-weight:500}
+.data-point{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--secondary),#4a6bd4);color:#fff;border-radius:.75rem;padding:1rem 1.25rem;margin:1rem 0;font-size:.9rem;font-weight:500}
+.data-point .icon-circle{background:rgba(255,255,255,.2);width:2rem;height:2rem}
 
 /* Comparison */
 .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
@@ -104,31 +130,31 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 /* FAQ */
 .faq{margin:2rem 0}
 .faq details{background:var(--card);border-radius:var(--radius);margin:.5rem 0;padding:1rem 1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.faq summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--secondary);list-style:none}
+.faq summary{cursor:pointer;font-weight:600;font-size:1rem;color:var(--secondary);list-style:none}
 .faq summary::before{content:'▸ ';color:var(--primary)}
 .faq details[open] summary::before{content:'▾ '}
-.faq details p{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+.faq details p{font-size:.95rem;color:var(--muted);margin-top:.5rem}
 
 /* Video embed */
 .video-embed{margin:2rem auto;max-width:20rem;text-align:center}
 .video-embed iframe{width:100%;aspect-ratio:9/16;border:none;border-radius:var(--radius-soft)}
 .video-embed p{font-size:.85rem;color:var(--muted);margin-top:.5rem}
 
-/* Footer */
-.footer{background:var(--text);color:#fff;padding:3rem 0 2rem;margin-top:3rem}
+/* Footer - purple/secondary background */
+.footer{background:var(--secondary);color:#fff;padding:4rem 0 2rem;margin-top:3rem}
 .footer a{color:rgba(255,255,255,.8)}
-.footer a:hover{color:var(--primary)}
+.footer a:hover{color:var(--primary);text-decoration:none}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
-.footer h3{font-family:var(--font-headline);font-size:1rem;font-weight:700;margin-bottom:1rem}
+.footer h3{font-family:var(--font-headline);font-size:1.1rem;font-weight:700;margin-bottom:1rem}
 .footer ul{list-style:none;margin:0;padding:0}.footer li{margin:.5rem 0}
-.footer-copy{border-top:1px solid rgba(255,255,255,.15);margin-top:2rem;padding-top:1.5rem;text-align:center;font-size:.85rem;color:rgba(255,255,255,.5)}
-.footer-brand{font-family:var(--font-headline);font-size:1.15rem;font-weight:700;margin-bottom:.75rem}
-.footer-brand img{height:2.5rem;width:auto;display:inline-block;vertical-align:middle;margin-right:.5rem}
-.footer-desc{color:rgba(255,255,255,.7);font-size:.9rem;max-width:28rem;line-height:1.6}
+.footer-copy{border-top:1px solid rgba(255,255,255,.2);margin-top:2rem;padding-top:1.5rem;text-align:center;font-size:.85rem;color:rgba(255,255,255,.5)}
+.footer-brand{display:flex;align-items:center;gap:.5rem;font-family:var(--font-headline);font-size:1.15rem;font-weight:700;margin-bottom:.75rem}
+.footer-brand img{height:2.5rem;width:auto}
+.footer-desc{color:rgba(255,255,255,.8);font-size:.95rem;max-width:28rem;line-height:1.7}
 .social-links{display:flex;gap:.75rem;margin-top:1rem}
-.social-links a{color:rgba(255,255,255,.7);font-size:.85rem;padding:.4rem .75rem;border-radius:2rem;background:rgba(255,255,255,.08)}
-.social-links a:hover{background:rgba(255,255,255,.15);color:#fff;text-decoration:none}
+.social-links a{color:rgba(255,255,255,.7);font-size:.85rem;padding:.4rem .75rem;border-radius:2rem;background:rgba(255,255,255,.1)}
+.social-links a:hover{background:rgba(255,255,255,.2);color:#fff;text-decoration:none}
 
 /* Prose for legal pages */
 .prose{line-height:1.7}.prose h2{margin-top:2rem}.prose h3{margin-top:1.25rem}
@@ -163,7 +189,7 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .cookie-btn{appearance:none;border:none;border-radius:999px;padding:.7rem 1rem;font:inherit;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
 .cookie-btn:hover{opacity:.95;transform:translateY(-1px)}
 .cookie-btn-secondary{background:#f3f4f6;color:var(--text)}
-.cookie-btn-primary{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+.cookie-btn-primary{background:var(--gradient-primary);color:#fff}
 @media(max-width:640px){
   .cookie-banner-card{flex-direction:column;align-items:flex-start}
   .cookie-banner-actions{width:100%}
@@ -339,7 +365,7 @@ function buildHome() {
   return head(
     'MareenSocialUp – Technical Video SEO & GEO Audits für Creator',
     'Optimiere deine Videos technisch für Google Video SERPs und AI Overviews. Kostenlose Checkliste für YouTube SEO, TikTok SEO & GEO Readiness.',
-    `${SITE}/`,
+    SITE,
     `<script type="application/ld+json">${faqSchema}</script>\n<script type="application/ld+json">${orgSchema}</script>`
   ) + nav() + `
 
@@ -349,7 +375,7 @@ function buildHome() {
       <img class="avatar" src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen Strauch">
       <h1>Technical Video SEO &amp; GEO Readiness: Die Audits für Creator und Marketing-Teams</h1>
       <p>Wir beweisen den ROI deines Contents: Optimiere deine Profile technisch für Google Video SERPs und die Zitatfähigkeit in AI Overviews.</p>
-      <p style="margin-top:2rem"><a href="/dl/social-seo-checkliste.pdf" class="btn-cta" style="padding:.85rem 2rem;font-size:1rem">⬇ KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern</a></p>
+      <p style="margin-top:2.5rem"><a href="/dl/social-seo-checkliste.pdf" class="btn-cta" style="padding:1rem 2rem;font-size:1.05rem">${ICONS.download} KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern</a></p>
     </div>
   </div>
 </header>
@@ -361,9 +387,9 @@ function buildHome() {
       <p>KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>🎬 YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>🤖 Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>📈 TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
     </div>
   </div>
 </section>
@@ -371,13 +397,13 @@ function buildHome() {
 <section class="section section-alt">
   <div class="wrap">
     <div class="section-title">
-      <h2>So hat sich Suche verändert</h2>
+      <h2 class="text-secondary" style="color:var(--secondary)">So hat sich Suche verändert</h2>
       <p>Die Suchlandschaft entwickelt sich rasant – bleib sichtbar mit den richtigen Strategien</p>
     </div>
     <div class="grid3">
-      <div class="tile"><h3>🧠 AI Overviews</h3><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="tile"><h3>🖱️ Zero-Click</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="tile"><h3>📱 Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="tile">${iconCircle(ICONS.brain, 'var(--gradient-primary)')}<h3>AI Overviews</h3><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="tile">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')}<h3>Zero-Click</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="tile">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
@@ -385,7 +411,7 @@ function buildHome() {
 <section class="section" itemscope itemtype="https://schema.org/FAQPage">
   <div class="wrap-narrow">
     <div class="section-title">
-      <h2>Häufig gestellte Fragen</h2>
+      <h2 style="color:var(--secondary)">Häufig gestellte Fragen</h2>
       <p>Alles, was du über Social SEO und Video-Optimierung wissen musst</p>
     </div>
     <div class="faq">
@@ -430,12 +456,12 @@ function buildHub() {
       <p>Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>🎬 YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>🤖 ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>📈 TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
-      <div class="card"><h3>🧠 AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="card"><h3>🖱️ Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="card"><h3>📱 Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><h3>${iconCircle(ICONS.brain, 'var(--gradient-primary)')} AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="card"><h3>${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')} Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="card"><h3>${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')} Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
@@ -491,7 +517,7 @@ function buildGuide(guide) {
   <h2>${esc(sec.heading)}</h2>
   <div class="answer">${esc(sec.capsule)}</div>
   <div class="body">${nl2p(sec.body)}</div>
-  ${sec.dataPoint ? `<div class="data-point">📊 ${esc(sec.dataPoint)}</div>` : ''}
+  ${sec.dataPoint ? `<div class="data-point">${iconCircle(ICONS.chart, 'rgba(255,255,255,.2)')} ${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
   }
 
