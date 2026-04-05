@@ -461,17 +461,17 @@ function buildHub() {
 
 <section class="section" style="padding-top:5rem">
   <div class="wrap">
-    <div class="section-title" style="margin-bottom:3rem">
-      <h1>Alle Guides auf einen Blick</h1>
-      <p>Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.</p>
+    <div style="background:rgba(92,124,226,0.1);border-radius:0.75rem;padding:1.5rem;margin-bottom:3rem">
+      <h1 style="font-size:1.5rem;color:var(--secondary);text-align:center;margin:0 0 0.5rem">Alle Guides auf einen Blick</h1>
+      <p style="text-align:center;color:var(--muted);font-size:0.9rem;margin:0">Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025/">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt/">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025/">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
-      <div class="card">${iconCircle(ICONS.brain, 'var(--gradient-primary)', true)}<h3>AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="card">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)', true)}<h3>Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="card">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)', true)}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="card" style="border-radius:0.75rem"><a href="/guides/youtube-seo-2025/">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card" style="border-radius:0.75rem"><a href="/guides/chatgpt-marketing-roi-prompt/">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card" style="border-radius:0.75rem"><a href="/guides/tiktok-seo-2025/">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card" style="border-radius:0.75rem">${iconCircle(ICONS.brain, '#f3e8ff')}<h3>AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="card" style="border-radius:0.75rem">${iconCircle(ICONS.mousePointer, '#dcfce7')}<h3>Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="card" style="border-radius:0.75rem">${iconCircle(ICONS.smartphone, '#fce7f3')}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
