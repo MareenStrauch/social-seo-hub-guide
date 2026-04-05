@@ -8,6 +8,7 @@ interface GuideCardProps {
   text: string;
   icon: LucideIcon;
   iconBgColor?: string;
+  cardBgColor?: string;
 }
 
 export function GuideCard({ slug, title, text, icon: Icon, iconBgColor = "bg-primary/10" }: GuideCardProps) {
