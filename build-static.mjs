@@ -28,9 +28,6 @@ function iconCircle(iconSvg, bgColor = 'var(--primary)', isGradient = false, siz
   const extra = sizeClass ? ' ' + sizeClass : '';
   return `<div class="${cls}${extra}" style="background:${bgColor}">${iconSvg}</div>`;
 }
-  const cls = isGradient ? 'icon-circle icon-circle-gradient' : 'icon-circle icon-circle-light';
-  return `<span class="${cls}" style="background:${bgColor}">${iconSvg}</span>`;
-}
 
 const CSS = `
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
