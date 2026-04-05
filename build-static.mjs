@@ -56,6 +56,8 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .icon-circle-light{color:var(--secondary)}
 .icon-circle-sm{width:2.5rem;height:2.5rem;border-radius:.75rem}
 .icon-circle-sm svg{width:1.25rem;height:1.25rem}
+.icon-circle-tile{width:2.5rem;height:2.5rem;border-radius:.75rem}
+.icon-circle-tile svg{width:1.15rem;height:1.15rem}
 
 /* Layout */
 .wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
