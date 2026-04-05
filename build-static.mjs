@@ -389,9 +389,9 @@ function buildHome() {
       <p>KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><a href="/guides/youtube-seo-2025">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
     </div>
   </div>
 </section>
