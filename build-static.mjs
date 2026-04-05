@@ -156,7 +156,7 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .footer a:hover{color:var(--primary);text-decoration:none}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
-.footer h3{font-family:var(--font-headline);font-size:1.1rem;font-weight:700;margin-bottom:1rem}
+.footer h3{font-family:var(--font-headline);font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:#fff}
 .footer ul{list-style:none;margin:0;padding:0}.footer li{margin:.5rem 0}
 .footer-copy{border-top:1px solid rgba(255,255,255,.2);margin-top:2rem;padding-top:1.5rem;text-align:center;font-size:.85rem;color:rgba(255,255,255,.5)}
 .footer-brand{display:flex;align-items:center;gap:.5rem;font-family:var(--font-headline);font-size:1.15rem;font-weight:700;margin-bottom:.75rem}
