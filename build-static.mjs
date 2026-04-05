@@ -238,8 +238,8 @@ function nav() {
       <span>MareenSocialUp</span>
     </a>
     <div class="nav-links">
-      <a href="/guides">Guides</a>
-      <a href="/videos">Videos</a>
+      <a href="/guides/">Guides</a>
+      <a href="/videos/">Videos</a>
       <a href="/dl/social-seo-checkliste.pdf" class="btn-cta">Gratis Checkliste</a>
     </div>
   </div>
@@ -264,18 +264,18 @@ function footer() {
       <div>
         <h3>SEO Guides</h3>
         <ul>
-          <li><a href="/guides/youtube-seo-2025">YouTube SEO Guide</a></li>
-          <li><a href="/guides/chatgpt-marketing-roi-prompt">ChatGPT Marketing</a></li>
-          <li><a href="/guides/tiktok-seo-2025">TikTok SEO Tipps</a></li>
-          <li><a href="/videos">Video-Sammlung</a></li>
+          <li><a href="/guides/youtube-seo-2025/">YouTube SEO Guide</a></li>
+          <li><a href="/guides/chatgpt-marketing-roi-prompt/">ChatGPT Marketing</a></li>
+          <li><a href="/guides/tiktok-seo-2025/">TikTok SEO Tipps</a></li>
+          <li><a href="/videos/">Video-Sammlung</a></li>
         </ul>
       </div>
       <div>
         <h3>Rechtliches</h3>
         <ul>
-          <li><a href="/impressum">Impressum</a></li>
-          <li><a href="/datenschutz">Datenschutz</a></li>
-          <li><a href="/guides">Alle Guides</a></li>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+          <li><a href="/guides/">Alle Guides</a></li>
         </ul>
       </div>
     </div>
@@ -288,7 +288,7 @@ function cookieBanner() {
   return `
 <div id="cookie-banner" class="cookie-banner" hidden>
   <div class="cookie-banner-card">
-    <p class="cookie-banner-copy">Wir nutzen Cookies zur Analyse unserer Website. Google Analytics wird nur nach deiner Zustimmung aktiviert. Mehr dazu in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+    <p class="cookie-banner-copy">Wir nutzen Cookies zur Analyse unserer Website. Google Analytics wird nur nach deiner Zustimmung aktiviert. Mehr dazu in unserer <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
     <div class="cookie-banner-actions">
       <button id="cookie-decline" class="cookie-btn cookie-btn-secondary" type="button">Ablehnen</button>
       <button id="cookie-accept" class="cookie-btn cookie-btn-primary" type="button">Akzeptieren</button>
@@ -397,9 +397,9 @@ function buildHome() {
       <p>KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><a href="/guides/youtube-seo-2025/">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt/">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025/">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
     </div>
   </div>
 </section>
@@ -466,9 +466,9 @@ function buildHub() {
       <p>Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><a href="/guides/youtube-seo-2025/">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt/">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025/">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
       <div class="card">${iconCircle(ICONS.brain, 'var(--gradient-primary)', true)}<h3>AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
       <div class="card">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)', true)}<h3>Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
       <div class="card">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)', true)}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
@@ -586,10 +586,10 @@ function buildGuide(guide) {
 <nav class="guide-pagination" aria-label="Guide Navigation">
   ${prevGuide
     ? `<a class="nav-pill nav-pill-secondary" href="${prevGuide.slug}">← ${esc(prevGuide.meta.title.split(':')[0])}</a>`
-    : '<a class="nav-pill nav-pill-secondary" href="/guides">← Alle Guides</a>'}
+    : '<a class="nav-pill nav-pill-secondary" href="/guides/">← Alle Guides</a>'}
   ${nextGuide
     ? `<a class="nav-pill nav-pill-primary" href="${nextGuide.slug}">${esc(nextGuide.meta.title.split(':')[0])} →</a>`
-    : '<a class="nav-pill nav-pill-primary" href="/guides">Alle Guides →</a>'}
+    : '<a class="nav-pill nav-pill-primary" href="/guides/">Alle Guides →</a>'}
 </nav>`;
 
   html += '</div>'; // close wrap-narrow
