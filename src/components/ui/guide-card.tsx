@@ -12,7 +12,7 @@ interface GuideCardProps {
 
 export function GuideCard({ slug, title, text, icon: Icon, iconBgColor = "bg-primary/10" }: GuideCardProps) {
   const content = (
-    <Card className="group relative overflow-hidden hover:shadow-glow transition-all duration-500 border border-border/40 bg-card/80 backdrop-blur-md hover:scale-[1.03] hover:-translate-y-1 shadow-float h-full">
+    <Card className="group relative overflow-hidden hover:shadow-glow transition-all duration-500 border border-border/40 bg-card/80 backdrop-blur-md hover:scale-[1.03] hover:-translate-y-1 shadow-float h-full rounded-xl">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <CardContent className="relative p-8 text-center">
         <div className="flex justify-center mb-6">
