@@ -585,7 +585,7 @@ function buildGuide(guide) {
   html += `
 <nav class="guide-pagination" aria-label="Guide Navigation">
   ${prevGuide
-    ? `<a class="nav-pill nav-pill-secondary" href="${prevGuide.slug}">← ${esc(prevGuide.meta.title.split(':')[0])}</a>`
+    ? `<a class="nav-pill nav-pill-secondary" href="${prevGuide.slug}/">← ${esc(prevGuide.meta.title.split(':')[0])}</a>`
     : '<a class="nav-pill nav-pill-secondary" href="/guides/">← Alle Guides</a>'}
   ${nextGuide
     ? `<a class="nav-pill nav-pill-primary" href="${nextGuide.slug}">${esc(nextGuide.meta.title.split(':')[0])} →</a>`
