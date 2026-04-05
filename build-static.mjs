@@ -95,11 +95,11 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .section-title h2.text-secondary{color:var(--secondary)}
 .section-title p{color:var(--muted);max-width:40rem;margin:0.75rem auto 0;font-size:1.05rem}
 
-/* Info tiles */
-.tile{background:var(--card);border-radius:var(--radius-soft);padding:2rem;text-align:center;border:1px solid var(--border);box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
+/* Info tiles - horizontal layout with icon next to heading */
+.tile{background:var(--card);border-radius:var(--radius-soft);padding:2rem;border:1px solid var(--border);box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
 .tile:hover{transform:translateY(-3px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
-.tile .icon-circle{margin:0 auto .75rem}
-.tile h3{color:var(--secondary);margin-top:.5rem;font-size:1.15rem}
+.tile-header{display:flex;align-items:center;gap:.75rem}
+.tile h3{color:var(--secondary);margin-top:0;font-size:1.15rem}
 .tile p{color:var(--muted);font-size:.95rem;line-height:1.6}
 
 /* Guide specific */
