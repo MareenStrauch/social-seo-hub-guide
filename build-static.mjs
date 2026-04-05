@@ -588,7 +588,7 @@ function buildGuide(guide) {
     ? `<a class="nav-pill nav-pill-secondary" href="${prevGuide.slug}/">← ${esc(prevGuide.meta.title.split(':')[0])}</a>`
     : '<a class="nav-pill nav-pill-secondary" href="/guides/">← Alle Guides</a>'}
   ${nextGuide
-    ? `<a class="nav-pill nav-pill-primary" href="${nextGuide.slug}">${esc(nextGuide.meta.title.split(':')[0])} →</a>`
+    ? `<a class="nav-pill nav-pill-primary" href="${nextGuide.slug}/">${esc(nextGuide.meta.title.split(':')[0])} →</a>`
     : '<a class="nav-pill nav-pill-primary" href="/guides/">Alle Guides →</a>'}
 </nav>`;
 
