@@ -49,8 +49,10 @@ p{margin-top:0.75rem}
 ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 
 /* Icon circles */
-.icon-circle{display:inline-flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border-radius:1rem;color:#fff;flex-shrink:0}
+.icon-circle{display:inline-flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border-radius:1rem;flex-shrink:0}
 .icon-circle svg{width:1.5rem;height:1.5rem}
+.icon-circle-gradient{color:#fff}
+.icon-circle-light{color:var(--secondary)}
 .icon-circle-sm{width:2.5rem;height:2.5rem;border-radius:.75rem}
 .icon-circle-sm svg{width:1.25rem;height:1.25rem}
 
