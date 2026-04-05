@@ -4,6 +4,7 @@ import path from 'path';
 
 const DIST = 'dist';
 const SITE = 'https://mareensocialup.de';
+const GA_MEASUREMENT_ID = 'G-5HB3L36YFZ';
 
 // --- Read guide data ---
 const guidesData = JSON.parse(fs.readFileSync('src/data/guides-content.json', 'utf-8'));
@@ -143,6 +144,31 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
   .nav-links{display:none}.nav-toggle{display:block}
   .nav-mobile{display:flex;flex-direction:column;gap:.75rem;padding:1rem 0;border-top:1px solid var(--border)}
 }
+
+/* Guide navigation */
+.guide-pagination{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:2.5rem 0 0;padding-top:2rem;border-top:1px solid var(--border)}
+.nav-pill{display:inline-flex;align-items:center;padding:.7rem 1rem;border-radius:var(--radius-soft);font-weight:600;transition:background .2s ease,transform .2s ease}
+.nav-pill:hover{text-decoration:none;transform:translateY(-1px)}
+.nav-pill-secondary{background:rgba(92,124,226,.1);color:var(--secondary)}
+.nav-pill-secondary:hover{background:rgba(92,124,226,.16)}
+.nav-pill-primary{background:rgba(210,96,76,.1);color:var(--primary)}
+.nav-pill-primary:hover{background:rgba(210,96,76,.16)}
+
+/* Cookie banner */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:100;padding:1rem}
+.cookie-banner[hidden]{display:none}
+.cookie-banner-card{max-width:48rem;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:1.25rem;box-shadow:0 18px 40px -24px rgba(0,0,0,.28);padding:1rem 1.25rem;display:flex;gap:1rem;align-items:center}
+.cookie-banner-copy{flex:1;font-size:.92rem;color:var(--muted);line-height:1.55}
+.cookie-banner-actions{display:flex;gap:.75rem;flex-shrink:0}
+.cookie-btn{appearance:none;border:none;border-radius:999px;padding:.7rem 1rem;font:inherit;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+.cookie-btn:hover{opacity:.95;transform:translateY(-1px)}
+.cookie-btn-secondary{background:#f3f4f6;color:var(--text)}
+.cookie-btn-primary{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+@media(max-width:640px){
+  .cookie-banner-card{flex-direction:column;align-items:flex-start}
+  .cookie-banner-actions{width:100%}
+  .cookie-btn{flex:1;text-align:center;justify-content:center}
+}
 `;
 
 // --- Shared HTML parts ---
@@ -220,6 +246,66 @@ function footer() {
     <div class="footer-copy">&copy; ${year} MareenSocialUp. Alle Rechte vorbehalten.</div>
   </div>
 </footer>`;
+}
+
+function cookieBanner() {
+  return `
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <div class="cookie-banner-card">
+    <p class="cookie-banner-copy">Wir nutzen Cookies zur Analyse unserer Website. Google Analytics wird nur nach deiner Zustimmung aktiviert. Mehr dazu in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline" class="cookie-btn cookie-btn-secondary" type="button">Ablehnen</button>
+      <button id="cookie-accept" class="cookie-btn cookie-btn-primary" type="button">Akzeptieren</button>
+    </div>
+  </div>
+</div>`;
+}
+
+function analyticsScript() {
+  return `<script>
+(function () {
+  var GA_ID = '${GA_MEASUREMENT_ID}';
+  var STORAGE_KEY = 'cookie-consent';
+
+  function loadAnalytics() {
+    if (window.__msuGaLoaded) return;
+    window.__msuGaLoaded = true;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+  }
+
+  function syncConsent() {
+    var banner = document.getElementById('cookie-banner');
+    var consent = localStorage.getItem(STORAGE_KEY);
+    if (banner) banner.hidden = consent !== null;
+    if (consent === 'accepted') loadAnalytics();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var acceptButton = document.getElementById('cookie-accept');
+    var declineButton = document.getElementById('cookie-decline');
+    if (acceptButton) acceptButton.addEventListener('click', function () {
+      localStorage.setItem(STORAGE_KEY, 'accepted');
+      syncConsent();
+    });
+    if (declineButton) declineButton.addEventListener('click', function () {
+      localStorage.setItem(STORAGE_KEY, 'declined');
+      syncConsent();
+    });
+    syncConsent();
+  });
+})();
+</script>`;
+}
+
+function bodyEnd() {
+  return cookieBanner() + analyticsScript() + '\n</body>\n</html>';
 }
 
 function esc(s) {
@@ -319,7 +405,7 @@ function buildHome() {
   </div>
 </section>
 
-` + footer() + '\n</body>\n</html>';
+` + footer() + bodyEnd();
 }
 
 function buildHub() {
@@ -354,10 +440,17 @@ function buildHub() {
   </div>
 </section>
 
-` + footer() + '\n</body>\n</html>';
+` + footer() + bodyEnd();
 }
 
 function buildGuide(guide) {
+  const prevGuide = guide.navigation?.prev
+    ? guidesData.guides.find((entry) => entry.id === guide.navigation.prev) ?? null
+    : null;
+  const nextGuide = guide.navigation?.next
+    ? guidesData.guides.find((entry) => entry.id === guide.navigation.next) ?? null
+    : null;
+
   const schemaTag = guide.schema
     ? `<script type="application/ld+json">${JSON.stringify(guide.schema)}</script>`
     : '';
@@ -453,9 +546,19 @@ function buildGuide(guide) {
 </div>`;
   }
 
+  html += `
+<nav class="guide-pagination" aria-label="Guide Navigation">
+  ${prevGuide
+    ? `<a class="nav-pill nav-pill-secondary" href="${prevGuide.slug}">← ${esc(prevGuide.meta.title.split(':')[0])}</a>`
+    : '<a class="nav-pill nav-pill-secondary" href="/guides">← Alle Guides</a>'}
+  ${nextGuide
+    ? `<a class="nav-pill nav-pill-primary" href="${nextGuide.slug}">${esc(nextGuide.meta.title.split(':')[0])} →</a>`
+    : '<a class="nav-pill nav-pill-primary" href="/guides">Alle Guides →</a>'}
+</nav>`;
+
   html += '</div>'; // close wrap-narrow
 
-  html += footer() + '\n</body>\n</html>';
+  html += footer() + bodyEnd();
   return html;
 }
 
@@ -477,7 +580,7 @@ function buildVideos() {
   </div>
 </section>
 
-` + footer() + '\n</body>\n</html>';
+` + footer() + bodyEnd();
 }
 
 function buildImpressum() {
@@ -513,7 +616,7 @@ function buildImpressum() {
   </div>
 </section>
 
-` + footer() + '\n</body>\n</html>';
+` + footer() + bodyEnd();
 }
 
 function buildDatenschutz() {
@@ -577,7 +680,7 @@ function buildDatenschutz() {
   </div>
 </section>
 
-` + footer() + '\n</body>\n</html>';
+` + footer() + bodyEnd();
 }
 
 // --- Build ---
