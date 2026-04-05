@@ -458,12 +458,12 @@ function buildHub() {
       <p>Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
-      <div class="card"><h3>${iconCircle(ICONS.brain, 'var(--gradient-primary)')} AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="card"><h3>${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')} Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="card"><h3>${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')} Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="card"><a href="/guides/youtube-seo-2025">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card">${iconCircle(ICONS.brain, 'var(--gradient-primary)')}<h3>AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="card">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')}<h3>Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="card">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
