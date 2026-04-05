@@ -19,11 +19,11 @@ const Hub = () => {
       
       <section className="py-16 px-4 sm:px-6 lg:px-8 pt-24">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-background/80 backdrop-blur-sm rounded-[2rem] p-8 mb-12 shadow-float">
-            <h1 className="text-3xl font-headline font-bold text-secondary text-center mb-4">
+          <div className="bg-secondary/10 backdrop-blur-sm rounded-xl p-6 mb-12">
+            <h1 className="text-2xl font-headline font-bold text-secondary text-center mb-2">
               Alle Guides auf einen Blick
             </h1>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto text-sm">
               Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.
             </p>
           </div>
