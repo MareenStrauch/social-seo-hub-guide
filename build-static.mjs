@@ -23,8 +23,9 @@ const ICONS = {
   chart: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>`,
 };
 
-function iconCircle(iconSvg, bgColor = 'var(--primary)') {
-  return `<span class="icon-circle" style="background:${bgColor}">${iconSvg}</span>`;
+function iconCircle(iconSvg, bgColor = 'var(--primary)', isGradient = false) {
+  const cls = isGradient ? 'icon-circle icon-circle-gradient' : 'icon-circle icon-circle-light';
+  return `<span class="${cls}" style="background:${bgColor}">${iconSvg}</span>`;
 }
 
 const CSS = `
@@ -49,8 +50,12 @@ p{margin-top:0.75rem}
 ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 
 /* Icon circles */
-.icon-circle{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:0.75rem;color:#fff;flex-shrink:0}
-.icon-circle svg{width:1.25rem;height:1.25rem}
+.icon-circle{display:inline-flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border-radius:1rem;flex-shrink:0}
+.icon-circle svg{width:1.5rem;height:1.5rem}
+.icon-circle-gradient{color:#fff}
+.icon-circle-light{color:var(--secondary)}
+.icon-circle-sm{width:2.5rem;height:2.5rem;border-radius:.75rem}
+.icon-circle-sm svg{width:1.25rem;height:1.25rem}
 
 /* Layout */
 .wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
@@ -80,8 +85,8 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .grid3{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .card{background:var(--card);border-radius:var(--radius-soft);padding:2rem;box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;border:1px solid var(--border)}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
-.card h3{margin-top:.75rem;color:var(--secondary);display:flex;align-items:center;gap:.75rem}
-.card p{color:var(--muted);font-size:1rem;line-height:1.6}
+.card h3{margin-top:1rem;color:var(--secondary)}
+.card p{color:var(--muted);font-size:1rem;line-height:1.6;margin-top:.5rem}
 .card a{display:block;text-decoration:none;color:inherit}
 .card a:hover{text-decoration:none}
 
@@ -93,11 +98,11 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .section-title h2.text-secondary{color:var(--secondary)}
 .section-title p{color:var(--muted);max-width:40rem;margin:0.75rem auto 0;font-size:1.05rem}
 
-/* Info tiles */
-.tile{background:var(--card);border-radius:var(--radius-soft);padding:2rem;text-align:center;border:1px solid var(--border);box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
+/* Info tiles - horizontal layout with icon next to heading */
+.tile{background:var(--card);border-radius:var(--radius-soft);padding:2rem;border:1px solid var(--border);box-shadow:0 4px 20px -8px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
 .tile:hover{transform:translateY(-3px);box-shadow:0 8px 32px -12px rgba(0,0,0,.12)}
-.tile .icon-circle{margin:0 auto .75rem}
-.tile h3{color:var(--secondary);margin-top:.5rem;font-size:1.15rem}
+.tile-header{display:flex;align-items:center;gap:.75rem}
+.tile h3{color:var(--secondary);margin-top:0;font-size:1.15rem}
 .tile p{color:var(--muted);font-size:.95rem;line-height:1.6}
 
 /* Guide specific */
@@ -127,10 +132,10 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .checklist li{padding:.25rem 0}
 .checklist li::marker{content:'☐ '}
 
-/* FAQ */
+/* FAQ - minimal style, no card background */
 .faq{margin:2rem 0}
-.faq details{background:var(--card);border-radius:var(--radius);margin:.5rem 0;padding:1rem 1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.faq summary{cursor:pointer;font-weight:600;font-size:1rem;color:var(--secondary);list-style:none}
+.faq details{margin:.5rem 0;padding:1rem 0;border-bottom:1px solid var(--border)}
+.faq summary{cursor:pointer;font-weight:600;font-size:1rem;color:var(--text);list-style:none}
 .faq summary::before{content:'▸ ';color:var(--primary)}
 .faq details[open] summary::before{content:'▾ '}
 .faq details p{font-size:.95rem;color:var(--muted);margin-top:.5rem}
@@ -387,9 +392,9 @@ function buildHome() {
       <p>KI-Modelle zitieren nur Quellen, denen sie vertrauen. Wir beheben die technischen Barrieren für Social Search und Generative Engine Optimization (GEO).</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card"><a href="/guides/youtube-seo-2025">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>Generative Engine Optimization (GEO) Check</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
     </div>
   </div>
 </section>
@@ -401,9 +406,9 @@ function buildHome() {
       <p>Die Suchlandschaft entwickelt sich rasant – bleib sichtbar mit den richtigen Strategien</p>
     </div>
     <div class="grid3">
-      <div class="tile">${iconCircle(ICONS.brain, 'var(--gradient-primary)')}<h3>AI Overviews</h3><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="tile">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')}<h3>Zero-Click</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="tile">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="tile"><div class="tile-header">${iconCircle(ICONS.brain, 'var(--gradient-primary)', true)}<h3>AI Overviews</h3></div><p>90 % der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="tile"><div class="tile-header">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)', true)}<h3>Zero-Click</h3></div><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="tile"><div class="tile-header">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)', true)}<h3>Social Search</h3></div><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
@@ -456,12 +461,12 @@ function buildHub() {
       <p>Praxisleitfäden für bessere Sichtbarkeit in Google, TikTok und YouTube.</p>
     </div>
     <div class="grid3">
-      <div class="card"><a href="/guides/youtube-seo-2025"><h3>${iconCircle(ICONS.youtube, '#fee2e2')} YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
-      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt"><h3>${iconCircle(ICONS.messageSquare, '#dbeafe')} ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
-      <div class="card"><a href="/guides/tiktok-seo-2025"><h3>${iconCircle(ICONS.trendingUp, '#ffedd5')} TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
-      <div class="card"><h3>${iconCircle(ICONS.brain, 'var(--gradient-primary)')} AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
-      <div class="card"><h3>${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)')} Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
-      <div class="card"><h3>${iconCircle(ICONS.smartphone, 'var(--gradient-primary)')} Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
+      <div class="card"><a href="/guides/youtube-seo-2025">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
+      <div class="card"><a href="/guides/chatgpt-marketing-roi-prompt">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
+      <div class="card"><a href="/guides/tiktok-seo-2025">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
+      <div class="card">${iconCircle(ICONS.brain, 'var(--gradient-primary)', true)}<h3>AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
+      <div class="card">${iconCircle(ICONS.mousePointer, 'var(--gradient-primary)', true)}<h3>Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
+      <div class="card">${iconCircle(ICONS.smartphone, 'var(--gradient-primary)', true)}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
     </div>
   </div>
 </section>
@@ -517,7 +522,7 @@ function buildGuide(guide) {
   <h2>${esc(sec.heading)}</h2>
   <div class="answer">${esc(sec.capsule)}</div>
   <div class="body">${nl2p(sec.body)}</div>
-  ${sec.dataPoint ? `<div class="data-point">${iconCircle(ICONS.chart, 'rgba(255,255,255,.2)')} ${esc(sec.dataPoint)}</div>` : ''}
+  ${sec.dataPoint ? `<div class="data-point">${iconCircle(ICONS.chart, 'rgba(255,255,255,.2)', true)} ${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
   }
 
