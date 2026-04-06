@@ -224,7 +224,6 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
     })),
   };
 
-  let capsuleIndex = 0;
 
   return (
     <div className="min-h-screen bg-background">
