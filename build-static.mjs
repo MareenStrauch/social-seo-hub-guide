@@ -511,7 +511,7 @@ function buildGuide(guide) {
     `<meta name="keywords" content="${guide.meta.keywords.join(', ')}">\n${schemaTag}`
   ) + nav();
 
-  // Hero
+  // Hero with gradient fade
   html += `
 <header class="guide-hero">
   <div class="wrap-narrow">
@@ -521,7 +521,7 @@ function buildGuide(guide) {
   </div>
 </header>`;
 
-  // Personal note
+  // Personal note – lighter bg, subtle border
   if (guide.personalNote) {
     html += `
 <div class="wrap-narrow">
@@ -532,46 +532,54 @@ function buildGuide(guide) {
 </div>`;
   }
 
-  // Sections
-  html += '<div class="wrap-narrow">';
-  for (const sec of guide.sections) {
-    html += `
-<section class="capsule" id="${sec.id}">
-  <h2>${esc(sec.heading)}</h2>
-  <div class="answer">${esc(sec.capsule)}</div>
-  <div class="body">${nl2p(sec.body)}</div>
-  ${sec.dataPoint ? `<div class="data-point">${iconCircle(ICONS.chart, 'rgba(255,255,255,.2)', true)} ${esc(sec.dataPoint)}</div>` : ''}
-</section>`;
-  }
-
-  // Video
+  // Video – directly after personal note
   if (guide.video) {
     html += `
-<div class="video-embed">
-  <iframe src="${guide.video.embedUrl}" title="${esc(guide.video.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-  <p>${esc(guide.video.caption)}</p>
+<div class="wrap-narrow">
+  <div class="video-embed">
+    <iframe src="${guide.video.embedUrl}" title="${esc(guide.video.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    <p>${esc(guide.video.caption)}</p>
+  </div>
 </div>`;
   }
 
-  // Comparison
+  // Sections – no card background
+  html += '<div class="wrap-narrow">';
+  let capsuleIdx = 0;
+  for (const sec of guide.sections) {
+    const borderClass = capsuleIdx % 2 === 0 ? '' : ' border-orange';
+    html += `
+<section class="guide-section" id="${sec.id}">
+  <h2>${esc(sec.heading)}</h2>
+  ${sec.capsule ? `<div class="capsule-answer${borderClass}">${esc(sec.capsule)}</div>` : ''}
+  <div class="guide-body">${nl2p(sec.body)}</div>
+  ${sec.dataPoint ? `<div class="data-point">${esc(sec.dataPoint)}</div>` : ''}
+</section>`;
+    if (sec.capsule) capsuleIdx++;
+  }
+
+  // Comparison – orange tones, no emojis
   if (guide.comparison) {
     const c = guide.comparison;
     html += `
-<div class="comparison">
-  <div class="comp-bad">
-    <h3>❌ ${esc(c.bad.label)}</h3>
-    <div class="comp-example">${esc(c.bad.example)}</div>
-    <ul>${c.bad.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
-  </div>
-  <div class="comp-good">
-    <h3>✅ ${esc(c.good.label)}</h3>
-    <div class="comp-example">${esc(c.good.example)}</div>
-    <ul>${c.good.benefits.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+<div style="margin:2.5rem 0">
+  <h3 class="comp-title" style="color:var(--secondary);font-size:1.4rem;margin-bottom:1rem">Vorher / Nachher</h3>
+  <div class="comparison">
+    <div class="comp-bad">
+      <h4>${esc(c.bad.label)}</h4>
+      <div class="comp-example">„${esc(c.bad.example)}"</div>
+      <ul class="comp-issues">${c.bad.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+    </div>
+    <div class="comp-good">
+      <h4>${esc(c.good.label)}</h4>
+      <div class="comp-example">„${esc(c.good.example)}"</div>
+      <ul class="comp-issues">${c.good.benefits.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+    </div>
   </div>
 </div>`;
   }
 
-  // Checklist
+  // Checklist – no background, orange checkboxes
   if (guide.checklist) {
     html += `
 <div class="checklist">
@@ -584,7 +592,7 @@ function buildGuide(guide) {
   if (guide.faq) {
     html += `
 <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
-  <h2>Häufig gestellte Fragen</h2>
+  <h2 style="color:var(--secondary)">Häufig gestellte Fragen</h2>
   ${guide.faq.map(f => `
   <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
     <summary itemprop="name">${esc(f.question)}</summary>
@@ -606,7 +614,6 @@ function buildGuide(guide) {
 </nav>`;
 
   html += '</div>'; // close wrap-narrow
-
   html += footer() + bodyEnd();
   return html;
 }
