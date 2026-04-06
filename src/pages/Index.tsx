@@ -27,7 +27,7 @@ const Index = () => {
           <div className="py-24 gradient-peach rounded-[2rem] text-center px-8 shadow-float relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
             <div className="relative">
-              <img src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen" className="w-28 h-28 mx-auto rounded-full shadow-glow ring-4 ring-primary/80 object-cover" />
+              <img src="/lovable-uploads/7349c7f8-f691-401f-abf6-8518c723d7db.png" alt="Mareen" className="w-28 h-28 mx-auto rounded-full shadow-glow ring-4 ring-primary/80 object-cover" width={112} height={112} fetchPriority="high" />
               <h1 className="mt-8 text-4xl md:text-5xl lg:text-[3.25rem] font-headline font-bold leading-[1.15] text-secondary max-w-4xl mx-auto tracking-tight">
                 Technical Video SEO &amp; GEO Readiness: Die Audits für Creator und Marketing-Teams
               </h1>
