@@ -166,7 +166,7 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   );
 }
 
-/* ─── Checklist – no background, orange checkboxes ─── */
+/* ─── Checklist – primary/terrakotta checkboxes ─── */
 function ChecklistSection({ items }: { items: string[] }) {
   return (
     <div className="my-10">
@@ -178,7 +178,7 @@ function ChecklistSection({ items }: { items: string[] }) {
           <li key={i} className="flex items-start gap-3">
             <Checkbox
               id={`check-${i}`}
-              className="mt-0.5 border-orange-400 data-[state=checked]:bg-orange-500 data-[state=checked]:border-orange-500"
+              className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:border-primary"
             />
             <label htmlFor={`check-${i}`} className="text-foreground leading-relaxed cursor-pointer">
               {item}
