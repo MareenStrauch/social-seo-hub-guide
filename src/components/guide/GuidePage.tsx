@@ -281,21 +281,17 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             </figure>
 
             {/* Sections */}
-            {guide.sections.map((section) => {
-              const currentCapsuleIndex = capsuleIndex;
-              if (section.capsule) capsuleIndex++;
-              return (
+            {guide.sections.map((section) => (
                 <section key={section.id} id={section.id} className="mt-16 scroll-mt-20">
                   <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
                     {section.heading}
                   </h2>
-                  {section.capsule && <AnswerCapsule text={section.capsule} index={currentCapsuleIndex} />}
+                  {section.capsule && <AnswerCapsule text={section.capsule} />}
                   <BodyText text={section.body} />
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
                 </section>
-              );
-            })}
+            ))}
 
             {/* Top-level Comparison */}
             {guide.comparison && <ComparisonTable comparison={guide.comparison} />}
