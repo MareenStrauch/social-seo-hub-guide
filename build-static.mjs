@@ -111,31 +111,44 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .tile-header p{color:var(--muted);font-size:.95rem;line-height:1.6;margin:0}
 
 /* Guide specific */
-.guide-hero{padding:4rem 0 2rem;text-align:center}
+.guide-hero{position:relative;padding:4rem 0 6rem;text-align:center}
+.guide-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,var(--tertiary),rgba(255,223,216,.4),transparent);pointer-events:none}
+.guide-hero>*{position:relative}
 .guide-hero h1{color:var(--secondary)}
 .guide-hero .sub{color:var(--muted);font-size:1.1rem;margin-top:.5rem}
 .guide-intro{font-size:1.1rem;line-height:1.7;margin-top:1.5rem;color:var(--text)}
-.personal-note{background:var(--tertiary);border-radius:var(--radius-soft);padding:1.25rem 1.5rem;margin:2rem 0;font-size:.95rem}
-.personal-note strong{color:var(--primary)}
+.personal-note{background:rgba(255,223,216,.2);border:1px solid rgba(210,96,76,.15);border-radius:.75rem;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.95rem}
+.personal-note strong{color:rgba(210,96,76,.8);font-size:.9rem}
+.personal-note p{color:var(--text);font-style:italic}
 
-.capsule{background:var(--card);border-radius:var(--radius-soft);padding:1.5rem;margin:2rem 0;border-left:4px solid var(--primary);box-shadow:0 2px 12px -4px rgba(0,0,0,.06)}
-.capsule .answer{background:#fef9f7;padding:.75rem 1rem;border-radius:.5rem;margin:.75rem 0;font-weight:500;color:var(--text);font-size:.95rem}
-.capsule .body{color:var(--muted);font-size:.95rem;white-space:pre-line}
-.data-point{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--secondary),#4a6bd4);color:#fff;border-radius:.75rem;padding:1rem 1.25rem;margin:1rem 0;font-size:.9rem;font-weight:500}
-.data-point .icon-circle{background:rgba(255,255,255,.2);width:2rem;height:2rem}
+/* Sections – no card background, just content */
+.guide-section{margin:3rem 0 0}
+.guide-section h2{color:var(--secondary);margin-bottom:1rem}
+.capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--secondary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
+.capsule-answer.border-orange{border-left-color:var(--primary)}
+.guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
+.guide-body p{margin-top:.75rem}
+.data-point{display:flex;align-items:center;gap:.75rem;background:rgba(92,124,226,.05);border:1px solid rgba(92,124,226,.2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;font-weight:500;color:var(--text)}
 
-/* Comparison */
-.comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
+/* Comparison – orange tones, no emojis */
+.comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
+.comparison h3.comp-title{color:var(--secondary);font-size:1.4rem;margin-bottom:1rem}
 @media(max-width:640px){.comparison{grid-template-columns:1fr}}
-.comp-bad{background:#fef2f2;border-radius:var(--radius-soft);padding:1.25rem}
-.comp-good{background:#f0fdf4;border-radius:var(--radius-soft);padding:1.25rem}
-.comp-bad h3{color:#dc2626}.comp-good h3{color:#16a34a}
-.comp-example{font-style:italic;margin:.5rem 0;padding:.5rem;background:rgba(0,0,0,.03);border-radius:.25rem;font-size:.9rem}
+.comp-bad{background:#fff7ed;border:1px solid #fdba74;border-radius:.75rem;padding:1.25rem}
+.comp-good{background:#ffedd5;border:1px solid #fb923c;border-radius:.75rem;padding:1.25rem}
+.comp-bad h4{color:#c2410c;font-weight:700;margin-bottom:.75rem}.comp-good h4{color:#9a3412;font-weight:700;margin-bottom:.75rem}
+.comp-example{font-style:italic;margin:.5rem 0;padding:.5rem .75rem;border-left:4px solid #fdba74;font-size:.9rem;color:var(--text)}
+.comp-good .comp-example{border-left-color:#fb923c}
+.comp-issues{list-style:none;margin:0;padding:0}.comp-issues li{padding:.15rem 0;font-size:.9rem;color:var(--muted)}
+.comp-issues li::before{content:'– ';color:#f97316}
+.comp-good .comp-issues li::before{content:'+ ';color:#ea580c}
 
-/* Checklist */
-.checklist{background:var(--card);border-radius:var(--radius-soft);padding:1.5rem;margin:2rem 0}
-.checklist li{padding:.25rem 0}
-.checklist li::marker{content:'☐ '}
+/* Checklist – no background, orange checkboxes */
+.checklist{margin:2.5rem 0;padding:0}
+.checklist h2{color:var(--secondary)}
+.checklist ul{list-style:none;margin:1rem 0 0;padding:0}
+.checklist li{padding:.4rem 0;display:flex;align-items:flex-start;gap:.6rem;font-size:.95rem}
+.checklist li::before{content:'';display:inline-block;width:1.1rem;height:1.1rem;border:2px solid #f97316;border-radius:.25rem;flex-shrink:0;margin-top:.2rem}
 
 /* FAQ - minimal style, no card background */
 .faq{margin:2rem 0}
