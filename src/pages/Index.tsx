@@ -102,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section with Schema */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-tertiary/20 to-background" itemScope itemType="https://schema.org/FAQPage">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-tertiary/20 to-background">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-secondary mb-3">
