@@ -99,12 +99,11 @@ function PersonalNoteText({ text }: { text: string }) {
   );
 }
 
-/* ─── Answer Capsule – purple/orange left border ─── */
-function AnswerCapsule({ text, index }: { text: string; index: number }) {
-  const borderColor = index % 2 === 0 ? "border-secondary" : "border-primary";
+/* ─── Answer Capsule – consistent primary border ─── */
+function AnswerCapsule({ text }: { text: string }) {
   return (
     <p
-      className={`text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 ${borderColor} rounded-xl px-5 py-4 mb-6`}
+      className="text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 border-primary rounded-xl px-5 py-4 mb-6"
       data-ai-summary
     >
       {text}
