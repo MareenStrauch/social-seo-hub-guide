@@ -124,31 +124,30 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 /* Sections – no card background, just content */
 .guide-section{margin:3rem 0 0}
 .guide-section h2{color:var(--secondary);margin-bottom:1rem}
-.capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--secondary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
-.capsule-answer.border-orange{border-left-color:var(--primary)}
+.capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
 .guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
 .guide-body p{margin-top:.75rem}
 .data-point{display:flex;align-items:center;gap:.75rem;background:rgba(92,124,226,.05);border:1px solid rgba(92,124,226,.2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;font-weight:500;color:var(--text)}
 
-/* Comparison – orange tones, no emojis */
+/* Comparison – red/green */
 .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
 .comparison h3.comp-title{color:var(--secondary);font-size:1.4rem;margin-bottom:1rem}
 @media(max-width:640px){.comparison{grid-template-columns:1fr}}
-.comp-bad{background:#fff7ed;border:1px solid #fdba74;border-radius:.75rem;padding:1.25rem}
-.comp-good{background:#ffedd5;border:1px solid #fb923c;border-radius:.75rem;padding:1.25rem}
-.comp-bad h4{color:#c2410c;font-weight:700;margin-bottom:.75rem}.comp-good h4{color:#9a3412;font-weight:700;margin-bottom:.75rem}
-.comp-example{font-style:italic;margin:.5rem 0;padding:.5rem .75rem;border-left:4px solid #fdba74;font-size:.9rem;color:var(--text)}
-.comp-good .comp-example{border-left-color:#fb923c}
+.comp-bad{background:#fef2f2;border:1px solid #fecaca;border-radius:.75rem;padding:1.25rem}
+.comp-good{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:.75rem;padding:1.25rem}
+.comp-bad h4{color:#dc2626;font-weight:700;margin-bottom:.75rem}.comp-good h4{color:#16a34a;font-weight:700;margin-bottom:.75rem}
+.comp-example{font-style:italic;margin:.5rem 0;padding:.5rem .75rem;border-left:4px solid #fecaca;font-size:.9rem;color:var(--text)}
+.comp-good .comp-example{border-left-color:#86efac}
 .comp-issues{list-style:none;margin:0;padding:0}.comp-issues li{padding:.15rem 0;font-size:.9rem;color:var(--muted)}
-.comp-issues li::before{content:'– ';color:#f97316}
-.comp-good .comp-issues li::before{content:'+ ';color:#ea580c}
+.comp-issues li::before{content:'– ';color:#dc2626}
+.comp-good .comp-issues li::before{content:'+ ';color:#16a34a}
 
-/* Checklist – no background, orange checkboxes */
+/* Checklist – primary/terrakotta checkboxes */
 .checklist{margin:2.5rem 0;padding:0}
 .checklist h2{color:var(--secondary)}
 .checklist ul{list-style:none;margin:1rem 0 0;padding:0}
 .checklist li{padding:.4rem 0;display:flex;align-items:flex-start;gap:.6rem;font-size:.95rem}
-.checklist li::before{content:'';display:inline-block;width:1.1rem;height:1.1rem;border:2px solid #f97316;border-radius:.25rem;flex-shrink:0;margin-top:.2rem}
+.checklist li::before{content:'';display:inline-block;width:1.1rem;height:1.1rem;border:2px solid var(--primary);border-radius:.25rem;flex-shrink:0;margin-top:.2rem}
 
 /* FAQ - minimal style, no card background */
 .faq{margin:2rem 0}
@@ -543,22 +542,19 @@ function buildGuide(guide) {
 </div>`;
   }
 
-  // Sections – no card background
+  // Sections
   html += '<div class="wrap-narrow">';
-  let capsuleIdx = 0;
   for (const sec of guide.sections) {
-    const borderClass = capsuleIdx % 2 === 0 ? '' : ' border-orange';
     html += `
 <section class="guide-section" id="${sec.id}">
   <h2>${esc(sec.heading)}</h2>
-  ${sec.capsule ? `<div class="capsule-answer${borderClass}">${esc(sec.capsule)}</div>` : ''}
+  ${sec.capsule ? `<div class="capsule-answer">${esc(sec.capsule)}</div>` : ''}
   <div class="guide-body">${nl2p(sec.body)}</div>
   ${sec.dataPoint ? `<div class="data-point">${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
-    if (sec.capsule) capsuleIdx++;
   }
 
-  // Comparison – orange tones, no emojis
+  // Comparison – red/green
   if (guide.comparison) {
     const c = guide.comparison;
     html += `
@@ -566,12 +562,12 @@ function buildGuide(guide) {
   <h3 class="comp-title" style="color:var(--secondary);font-size:1.4rem;margin-bottom:1rem">Vorher / Nachher</h3>
   <div class="comparison">
     <div class="comp-bad">
-      <h4>${esc(c.bad.label)}</h4>
+      <h4>❌ ${esc(c.bad.label)}</h4>
       <div class="comp-example">„${esc(c.bad.example)}"</div>
       <ul class="comp-issues">${c.bad.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
     </div>
     <div class="comp-good">
-      <h4>${esc(c.good.label)}</h4>
+      <h4>✅ ${esc(c.good.label)}</h4>
       <div class="comp-example">„${esc(c.good.example)}"</div>
       <ul class="comp-issues">${c.good.benefits.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
     </div>

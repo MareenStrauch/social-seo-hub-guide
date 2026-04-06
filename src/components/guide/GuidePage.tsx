@@ -99,12 +99,11 @@ function PersonalNoteText({ text }: { text: string }) {
   );
 }
 
-/* ─── Answer Capsule – purple/orange left border ─── */
-function AnswerCapsule({ text, index }: { text: string; index: number }) {
-  const borderColor = index % 2 === 0 ? "border-secondary" : "border-primary";
+/* ─── Answer Capsule – consistent primary border ─── */
+function AnswerCapsule({ text }: { text: string }) {
   return (
     <p
-      className={`text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 ${borderColor} rounded-xl px-5 py-4 mb-6`}
+      className="text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 border-primary rounded-xl px-5 py-4 mb-6"
       data-ai-summary
     >
       {text}
@@ -122,7 +121,7 @@ function DataPoint({ text }: { text: string }) {
   );
 }
 
-/* ─── Comparison Table – orange tones, no emojis ─── */
+/* ─── Comparison Table – classic red/green ─── */
 function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   return (
     <div className="my-10">
@@ -130,35 +129,33 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
         Vorher / Nachher
       </h3>
       <div className="grid md:grid-cols-2 gap-6">
-        {/* Bad – lighter orange */}
-        <div className="rounded-xl border border-orange-300 bg-orange-50 p-6">
+        <div className="rounded-xl border border-red-200 bg-red-50 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-bold text-orange-700">{comparison.bad.label}</span>
+            <span className="font-bold text-red-600">❌ {comparison.bad.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-orange-300 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-red-300 pl-4 mb-4 text-sm">
             „{comparison.bad.example}"
           </blockquote>
           <ul className="space-y-1">
             {comparison.bad.issues.map((issue, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <span className="text-orange-500 shrink-0 mt-0.5">–</span>
+                <span className="text-red-500 shrink-0 mt-0.5">–</span>
                 {issue}
               </li>
             ))}
           </ul>
         </div>
-        {/* Good – stronger orange */}
-        <div className="rounded-xl border border-orange-400 bg-orange-100 p-6">
+        <div className="rounded-xl border border-green-200 bg-green-50 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-bold text-orange-800">{comparison.good.label}</span>
+            <span className="font-bold text-green-700">✅ {comparison.good.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-orange-500 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-green-400 pl-4 mb-4 text-sm">
             „{comparison.good.example}"
           </blockquote>
           <ul className="space-y-1">
             {comparison.good.benefits.map((b, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <span className="text-orange-600 shrink-0 mt-0.5">+</span>
+                <span className="text-green-600 shrink-0 mt-0.5">+</span>
                 {b}
               </li>
             ))}
@@ -169,7 +166,7 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   );
 }
 
-/* ─── Checklist – no background, orange checkboxes ─── */
+/* ─── Checklist – primary/terrakotta checkboxes ─── */
 function ChecklistSection({ items }: { items: string[] }) {
   return (
     <div className="my-10">
@@ -181,7 +178,7 @@ function ChecklistSection({ items }: { items: string[] }) {
           <li key={i} className="flex items-start gap-3">
             <Checkbox
               id={`check-${i}`}
-              className="mt-0.5 border-orange-400 data-[state=checked]:bg-orange-500 data-[state=checked]:border-orange-500"
+              className="mt-0.5 border-primary data-[state=checked]:bg-primary data-[state=checked]:border-primary"
             />
             <label htmlFor={`check-${i}`} className="text-foreground leading-relaxed cursor-pointer">
               {item}
@@ -227,7 +224,6 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
     })),
   };
 
-  let capsuleIndex = 0;
 
   return (
     <div className="min-h-screen bg-background">
@@ -284,21 +280,17 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             </figure>
 
             {/* Sections */}
-            {guide.sections.map((section) => {
-              const currentCapsuleIndex = capsuleIndex;
-              if (section.capsule) capsuleIndex++;
-              return (
+            {guide.sections.map((section) => (
                 <section key={section.id} id={section.id} className="mt-16 scroll-mt-20">
                   <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
                     {section.heading}
                   </h2>
-                  {section.capsule && <AnswerCapsule text={section.capsule} index={currentCapsuleIndex} />}
+                  {section.capsule && <AnswerCapsule text={section.capsule} />}
                   <BodyText text={section.body} />
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
                 </section>
-              );
-            })}
+            ))}
 
             {/* Top-level Comparison */}
             {guide.comparison && <ComparisonTable comparison={guide.comparison} />}
