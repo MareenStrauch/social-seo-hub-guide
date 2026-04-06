@@ -35,7 +35,7 @@ const Index = () => {
                 Wir beweisen den ROI deines Contents: Optimiere deine Profile technisch für Google Video SERPs und die Zitatfähigkeit in AI Overviews.
               </p>
               <Button asChild variant="gradient" className="mt-10 px-8 py-10 font-semibold rounded-2xl shadow-float hover:shadow-glow transition-all duration-300 w-full sm:w-auto">
-                <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2">
+                <a href="/dl/social-seo-checkliste.pdf" className="inline-flex flex-col items-center gap-2 text-white">
                   <Download className="w-5 h-5" />
                   <span className="text-center">
                     KOSTENLOS: Deine Technical Video SEO Audit Checkliste sichern
