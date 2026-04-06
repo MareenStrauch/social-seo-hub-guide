@@ -4,7 +4,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useSeo } from "@/hooks/use-seo";
-import { CheckCircle2, XCircle, AlertTriangle, BarChart3 } from "lucide-react";
+import { BarChart3 } from "lucide-react";
 
 const SITE_URL = "https://mareensocialup.de";
 
@@ -99,11 +99,12 @@ function PersonalNoteText({ text }: { text: string }) {
   );
 }
 
-/* ─── Answer Capsule ─── */
-function AnswerCapsule({ text }: { text: string }) {
+/* ─── Answer Capsule – purple/orange left border ─── */
+function AnswerCapsule({ text, index }: { text: string; index: number }) {
+  const borderColor = index % 2 === 0 ? "border-secondary" : "border-primary";
   return (
     <p
-      className="text-lg font-semibold leading-relaxed bg-accent/50 border-l-4 border-primary rounded-soft px-5 py-4 mb-6"
+      className={`text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 ${borderColor} rounded-xl px-5 py-4 mb-6`}
       data-ai-summary
     >
       {text}
@@ -114,14 +115,14 @@ function AnswerCapsule({ text }: { text: string }) {
 /* ─── Data Point Aside ─── */
 function DataPoint({ text }: { text: string }) {
   return (
-    <aside className="my-6 flex items-start gap-3 bg-secondary/5 border border-secondary/20 rounded-soft p-5">
+    <aside className="my-6 flex items-start gap-3 bg-secondary/5 border border-secondary/20 rounded-xl p-5">
       <BarChart3 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
       <p className="text-sm text-foreground/80 leading-relaxed font-medium">{text}</p>
     </aside>
   );
 }
 
-/* ─── Comparison Table ─── */
+/* ─── Comparison Table – orange tones, no emojis ─── */
 function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   return (
     <div className="my-10">
@@ -129,35 +130,35 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
         Vorher / Nachher
       </h3>
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="rounded-soft border border-destructive/30 bg-destructive/5 p-6">
+        {/* Bad – lighter orange */}
+        <div className="rounded-xl border border-orange-300 bg-orange-50 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <XCircle className="w-5 h-5 text-destructive" />
-            <span className="font-bold text-destructive">{comparison.bad.label}</span>
+            <span className="font-bold text-orange-700">{comparison.bad.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-destructive/30 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-orange-300 pl-4 mb-4 text-sm">
             „{comparison.bad.example}"
           </blockquote>
           <ul className="space-y-1">
             {comparison.bad.issues.map((issue, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <AlertTriangle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                <span className="text-orange-500 shrink-0 mt-0.5">–</span>
                 {issue}
               </li>
             ))}
           </ul>
         </div>
-        <div className="rounded-soft border border-primary/30 bg-primary/5 p-6">
+        {/* Good – stronger orange */}
+        <div className="rounded-xl border border-orange-400 bg-orange-100 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <CheckCircle2 className="w-5 h-5 text-primary" />
-            <span className="font-bold text-primary">{comparison.good.label}</span>
+            <span className="font-bold text-orange-800">{comparison.good.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-primary/30 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-orange-500 pl-4 mb-4 text-sm">
             „{comparison.good.example}"
           </blockquote>
           <ul className="space-y-1">
             {comparison.good.benefits.map((b, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span className="text-orange-600 shrink-0 mt-0.5">+</span>
                 {b}
               </li>
             ))}
@@ -168,7 +169,7 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   );
 }
 
-/* ─── Checklist with checkboxes ─── */
+/* ─── Checklist – no background, orange checkboxes ─── */
 function ChecklistSection({ items }: { items: string[] }) {
   return (
     <div className="my-10">
@@ -178,7 +179,10 @@ function ChecklistSection({ items }: { items: string[] }) {
       <ol className="space-y-3">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-3">
-            <Checkbox id={`check-${i}`} className="mt-0.5" />
+            <Checkbox
+              id={`check-${i}`}
+              className="mt-0.5 border-orange-400 data-[state=checked]:bg-orange-500 data-[state=checked]:border-orange-500"
+            />
             <label htmlFor={`check-${i}`} className="text-foreground leading-relaxed cursor-pointer">
               {item}
             </label>
@@ -223,14 +227,18 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
     })),
   };
 
+  let capsuleIndex = 0;
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       <article itemScope itemType="https://schema.org/Article" className="pt-24">
-        {/* Hero */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-tertiary to-background">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* Hero with gradient fade */}
+        <section className="relative px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+          {/* Background gradient that fades out */}
+          <div className="absolute inset-0 bg-gradient-to-b from-tertiary via-tertiary/40 to-transparent pointer-events-none" />
+          <div className="relative max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-secondary mb-6">
               {guide.hero.headline}
             </h1>
@@ -247,18 +255,19 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
         </section>
 
         {/* Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 sm:px-6 lg:px-8 pb-16">
           <div className="max-w-4xl mx-auto">
 
-            {/* Personal Note */}
-            <aside className="my-10 bg-tertiary/40 border border-primary/20 rounded-soft p-6">
-              <p className="text-sm font-semibold text-primary mb-2">{guide.personalNote.label}</p>
+            {/* Personal Note – lighter bg, subtle border */}
+            <aside className="my-10 bg-tertiary/20 border border-primary/15 rounded-xl p-6">
+              <p className="text-sm font-semibold text-primary/80 mb-2">{guide.personalNote.label}</p>
               <PersonalNoteText text={guide.personalNote.text} />
             </aside>
-            {/* Video Embed */}
+
+            {/* Video Embed – directly after personal note */}
             <figure className="my-10">
               <div className="max-w-sm mx-auto">
-                <div className="aspect-[9/16] rounded-soft overflow-hidden shadow-float">
+                <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-float">
                   <iframe
                     src={guide.video.embedUrl}
                     title={guide.video.title}
@@ -275,17 +284,21 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             </figure>
 
             {/* Sections */}
-            {guide.sections.map((section) => (
-              <section key={section.id} id={section.id} className="mt-16 scroll-mt-20">
-                <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
-                  {section.heading}
-                </h2>
-                {section.capsule && <AnswerCapsule text={section.capsule} />}
-                <BodyText text={section.body} />
-                {section.dataPoint && <DataPoint text={section.dataPoint} />}
-                {section.comparison && <ComparisonTable comparison={section.comparison} />}
-              </section>
-            ))}
+            {guide.sections.map((section) => {
+              const currentCapsuleIndex = capsuleIndex;
+              if (section.capsule) capsuleIndex++;
+              return (
+                <section key={section.id} id={section.id} className="mt-16 scroll-mt-20">
+                  <h2 className="text-3xl font-headline font-bold text-secondary mb-6">
+                    {section.heading}
+                  </h2>
+                  {section.capsule && <AnswerCapsule text={section.capsule} index={currentCapsuleIndex} />}
+                  <BodyText text={section.body} />
+                  {section.dataPoint && <DataPoint text={section.dataPoint} />}
+                  {section.comparison && <ComparisonTable comparison={section.comparison} />}
+                </section>
+              );
+            })}
 
             {/* Top-level Comparison */}
             {guide.comparison && <ComparisonTable comparison={guide.comparison} />}
@@ -305,20 +318,20 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
               </Accordion>
             </div>
 
-            {/* Navigation */}
+            {/* Navigation – different font */}
             <nav className="mt-16 pt-8 border-t border-border">
               <div className="flex flex-wrap gap-4 justify-between">
                 {prevGuide ? (
                   <Link
                     to={prevGuide.slug}
-                    className="inline-flex items-center px-4 py-2 rounded-soft bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors"
+                    className="inline-flex items-center px-4 py-2 rounded-xl bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors font-mono text-sm"
                   >
                     ← {prevGuide.meta.title.split(":")[0]}
                   </Link>
                 ) : (
                   <Link
                     to="/hub"
-                    className="inline-flex items-center px-4 py-2 rounded-soft bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors"
+                    className="inline-flex items-center px-4 py-2 rounded-xl bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors font-mono text-sm"
                   >
                     ← Alle Guides
                   </Link>
@@ -326,14 +339,14 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                 {nextGuide ? (
                   <Link
                     to={nextGuide.slug}
-                    className="inline-flex items-center px-4 py-2 rounded-soft bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                    className="inline-flex items-center px-4 py-2 rounded-xl bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-mono text-sm"
                   >
                     {nextGuide.meta.title.split(":")[0]} →
                   </Link>
                 ) : (
                   <Link
                     to="/hub"
-                    className="inline-flex items-center px-4 py-2 rounded-soft bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                    className="inline-flex items-center px-4 py-2 rounded-xl bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-mono text-sm"
                   >
                     Alle Guides →
                   </Link>
