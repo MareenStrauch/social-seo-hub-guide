@@ -38,7 +38,7 @@
     --neutral-050: var(--brand-neutral-050);
 
     --muted: 0 0% 96%;                /* Gedämpfter Hintergrund */
-    --muted-foreground: 0 0% 46%;
+    --muted-foreground: 0 0% 37%;     /* Verbesserter Kontrast (WCAG AA) */
 
     --accent: var(--brand-secondary);
     --accent-foreground: 0 0% 100%;
