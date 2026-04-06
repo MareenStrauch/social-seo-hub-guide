@@ -542,22 +542,19 @@ function buildGuide(guide) {
 </div>`;
   }
 
-  // Sections – no card background
+  // Sections
   html += '<div class="wrap-narrow">';
-  let capsuleIdx = 0;
   for (const sec of guide.sections) {
-    const borderClass = capsuleIdx % 2 === 0 ? '' : ' border-orange';
     html += `
 <section class="guide-section" id="${sec.id}">
   <h2>${esc(sec.heading)}</h2>
-  ${sec.capsule ? `<div class="capsule-answer${borderClass}">${esc(sec.capsule)}</div>` : ''}
+  ${sec.capsule ? `<div class="capsule-answer">${esc(sec.capsule)}</div>` : ''}
   <div class="guide-body">${nl2p(sec.body)}</div>
   ${sec.dataPoint ? `<div class="data-point">${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
-    if (sec.capsule) capsuleIdx++;
   }
 
-  // Comparison – orange tones, no emojis
+  // Comparison – red/green
   if (guide.comparison) {
     const c = guide.comparison;
     html += `
@@ -565,12 +562,12 @@ function buildGuide(guide) {
   <h3 class="comp-title" style="color:var(--secondary);font-size:1.4rem;margin-bottom:1rem">Vorher / Nachher</h3>
   <div class="comparison">
     <div class="comp-bad">
-      <h4>${esc(c.bad.label)}</h4>
+      <h4>❌ ${esc(c.bad.label)}</h4>
       <div class="comp-example">„${esc(c.bad.example)}"</div>
       <ul class="comp-issues">${c.bad.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
     </div>
     <div class="comp-good">
-      <h4>${esc(c.good.label)}</h4>
+      <h4>✅ ${esc(c.good.label)}</h4>
       <div class="comp-example">„${esc(c.good.example)}"</div>
       <ul class="comp-issues">${c.good.benefits.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
     </div>
