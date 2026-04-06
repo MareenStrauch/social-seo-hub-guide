@@ -121,7 +121,7 @@ function DataPoint({ text }: { text: string }) {
   );
 }
 
-/* ─── Comparison Table – orange tones, no emojis ─── */
+/* ─── Comparison Table – classic red/green ─── */
 function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   return (
     <div className="my-10">
@@ -129,35 +129,33 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
         Vorher / Nachher
       </h3>
       <div className="grid md:grid-cols-2 gap-6">
-        {/* Bad – lighter orange */}
-        <div className="rounded-xl border border-orange-300 bg-orange-50 p-6">
+        <div className="rounded-xl border border-red-200 bg-red-50 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-bold text-orange-700">{comparison.bad.label}</span>
+            <span className="font-bold text-red-600">❌ {comparison.bad.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-orange-300 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-red-300 pl-4 mb-4 text-sm">
             „{comparison.bad.example}"
           </blockquote>
           <ul className="space-y-1">
             {comparison.bad.issues.map((issue, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <span className="text-orange-500 shrink-0 mt-0.5">–</span>
+                <span className="text-red-500 shrink-0 mt-0.5">–</span>
                 {issue}
               </li>
             ))}
           </ul>
         </div>
-        {/* Good – stronger orange */}
-        <div className="rounded-xl border border-orange-400 bg-orange-100 p-6">
+        <div className="rounded-xl border border-green-200 bg-green-50 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-bold text-orange-800">{comparison.good.label}</span>
+            <span className="font-bold text-green-700">✅ {comparison.good.label}</span>
           </div>
-          <blockquote className="italic text-foreground/80 border-l-4 border-orange-500 pl-4 mb-4 text-sm">
+          <blockquote className="italic text-foreground/80 border-l-4 border-green-400 pl-4 mb-4 text-sm">
             „{comparison.good.example}"
           </blockquote>
           <ul className="space-y-1">
             {comparison.good.benefits.map((b, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <span className="text-orange-600 shrink-0 mt-0.5">+</span>
+                <span className="text-green-600 shrink-0 mt-0.5">+</span>
                 {b}
               </li>
             ))}
