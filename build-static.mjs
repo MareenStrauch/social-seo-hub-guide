@@ -196,7 +196,7 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 
 /* Guide navigation */
 .guide-pagination{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:2.5rem 0 0;padding-top:2rem;border-top:1px solid var(--border)}
-.nav-pill{display:inline-flex;align-items:center;padding:.7rem 1rem;border-radius:var(--radius-soft);font-weight:600;transition:background .2s ease,transform .2s ease}
+.nav-pill{display:inline-flex;align-items:center;padding:.7rem 1rem;border-radius:.75rem;font-weight:600;font-family:'Courier New',monospace;font-size:.85rem;transition:background .2s ease,transform .2s ease}
 .nav-pill:hover{text-decoration:none;transform:translateY(-1px)}
 .nav-pill-secondary{background:rgba(92,124,226,.1);color:var(--secondary)}
 .nav-pill-secondary:hover{background:rgba(92,124,226,.16)}
