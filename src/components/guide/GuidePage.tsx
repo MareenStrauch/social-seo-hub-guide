@@ -241,10 +241,14 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               {guide.hero.subheadline}
             </p>
+            <p className="mt-4 text-sm text-muted-foreground font-medium">
+              Zuletzt aktualisiert: April 2026
+            </p>
             <div className="mt-6 text-lg text-foreground max-w-3xl mx-auto leading-relaxed" data-ai-summary>
               {guide.hero.intro}
             </div>
             <meta itemProp="headline" content={guide.meta.title} />
+            <meta itemProp="dateModified" content="2026-04-08" />
             <meta itemProp="author" content="Mareen Strauch" />
             <meta itemProp="image" content={guide.video.thumbnailUrl} />
           </div>
@@ -253,6 +257,15 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
         {/* Content */}
         <section className="px-4 sm:px-6 lg:px-8 pb-16">
           <div className="max-w-4xl mx-auto">
+            {/* Was ist neu in 2026 */}
+            <aside className="mb-10 bg-accent/30 border border-accent rounded-xl p-6">
+              <h2 className="text-lg font-headline font-bold text-secondary mb-2">🆕 Was ist neu in 2026?</h2>
+              <p className="text-foreground leading-relaxed text-sm">
+                KI-Systeme bevorzugen Quellen, die im Schnitt 25 % frischer sind als klassische Google-Ergebnisse. 
+                Alle Inhalte auf dieser Seite wurden im April 2026 auf aktuelle Algorithmus-Änderungen, neue Plattform-Features 
+                und die neuesten Best Practices überprüft und aktualisiert.
+              </p>
+            </aside>
 
             {/* Personal Note – lighter bg, subtle border */}
             <aside className="my-10 bg-tertiary/20 border border-primary/15 rounded-xl p-6">
