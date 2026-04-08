@@ -257,6 +257,15 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
         {/* Content */}
         <section className="px-4 sm:px-6 lg:px-8 pb-16">
           <div className="max-w-4xl mx-auto">
+            {/* Was ist neu in 2026 */}
+            <aside className="mb-10 bg-accent/30 border border-accent rounded-xl p-6">
+              <h2 className="text-lg font-headline font-bold text-secondary mb-2">🆕 Was ist neu in 2026?</h2>
+              <p className="text-foreground leading-relaxed text-sm">
+                KI-Systeme bevorzugen Quellen, die im Schnitt 25 % frischer sind als klassische Google-Ergebnisse. 
+                Alle Inhalte auf dieser Seite wurden im April 2026 auf aktuelle Algorithmus-Änderungen, neue Plattform-Features 
+                und die neuesten Best Practices überprüft und aktualisiert.
+              </p>
+            </aside>
 
             {/* Personal Note – lighter bg, subtle border */}
             <aside className="my-10 bg-tertiary/20 border border-primary/15 rounded-xl p-6">
