@@ -241,10 +241,14 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               {guide.hero.subheadline}
             </p>
+            <p className="mt-4 text-sm text-muted-foreground font-medium">
+              Zuletzt aktualisiert: April 2026
+            </p>
             <div className="mt-6 text-lg text-foreground max-w-3xl mx-auto leading-relaxed" data-ai-summary>
               {guide.hero.intro}
             </div>
             <meta itemProp="headline" content={guide.meta.title} />
+            <meta itemProp="dateModified" content="2026-04-08" />
             <meta itemProp="author" content="Mareen Strauch" />
             <meta itemProp="image" content={guide.video.thumbnailUrl} />
           </div>
