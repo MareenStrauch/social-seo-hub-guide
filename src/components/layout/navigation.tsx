@@ -21,8 +21,8 @@ export function Navigation() {
             <div className="flex items-center space-x-8">
               <a href="/guides" className="text-foreground hover:text-secondary transition-colors">Guides</a>
               <a href="/videos" className="text-foreground hover:text-secondary transition-colors">Videos</a>
-              <Button asChild variant="gradient" className="rounded-soft">
-                <a href="/dl/social-seo-checkliste.pdf">Gratis Checkliste</a>
+              <Button asChild variant="gradient" className="rounded-soft !text-white">
+                <a href="/dl/social-seo-checkliste.pdf" className="!text-white">Gratis Checkliste</a>
               </Button>
             </div>
           </div>
@@ -47,8 +47,8 @@ export function Navigation() {
               <a href="/guides" className="block px-3 py-2 text-foreground hover:text-secondary">Guides</a>
               <a href="/videos" className="block px-3 py-2 text-foreground hover:text-secondary">Videos</a>
               <div className="px-3 py-2">
-                <Button asChild variant="gradient" className="w-full rounded-soft">
-                  <a href="/dl/social-seo-checkliste.pdf">Gratis Checkliste</a>
+                <Button asChild variant="gradient" className="w-full rounded-soft !text-white">
+                  <a href="/dl/social-seo-checkliste.pdf" className="!text-white">Gratis Checkliste</a>
                 </Button>
               </div>
             </div>
