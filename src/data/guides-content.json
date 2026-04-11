@@ -455,22 +455,29 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
+        "description": "Rolle-Output-Input: die 3-Schritt-Prompt-Formel für KI-Content ohne Korrekturschleifen. Lerne, wie du mit der R-O-I-Struktur in Minuten statt Stunden präzise Marketing-Inhalte erstellst.",
+        "image": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
         "author": {
           "@type": "Person",
           "name": "Mareen Strauch",
           "sameAs": "https://www.youtube.com/@MareenSocialUp"
         },
         "datePublished": "2025-01-20",
-        "dateModified": "2026-04-01",
+        "dateModified": "2026-04-08",
         "publisher": {
           "@type": "Organization",
           "name": "MareenSocialUp",
           "url": "https://mareen-socialup.de"
         },
         "inLanguage": "de",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://mareensocialup.de/guides/chatgpt-marketing-roi-prompt"
+        },
         "video": {
           "@type": "VideoObject",
           "name": "R-O-I Promptformel: Rolle → Output → Input",
+          "description": "Mareen Strauch erklärt die R-O-I-Prompt-Formel: Rolle, Output, Input – für punktgenaue KI-Inhalte ohne Korrekturschleifen.",
           "embedUrl": "https://www.youtube.com/embed/AjXVOQ2P7jQ",
           "contentUrl": "https://www.youtube.com/shorts/AjXVOQ2P7jQ",
           "thumbnailUrl": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
