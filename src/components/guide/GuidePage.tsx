@@ -338,7 +338,8 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                     {section.heading}
                   </h2>
                   {section.capsule && <AnswerCapsule text={section.capsule} />}
-                  <BodyText text={section.body} />
+                  {section.body && <BodyText text={section.body} />}
+                  {section.table && <SectionTable table={section.table} />}
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
                 </section>
