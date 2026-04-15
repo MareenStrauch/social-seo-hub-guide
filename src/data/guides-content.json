@@ -494,8 +494,8 @@
       "id": "multi-platform-seo-2026",
       "slug": "/guides/multi-platform-seo-2026",
       "meta": {
-        "title": "Multi-Platform SEO 2026: Ein Video – vier Plattformen – maximale Sichtbarkeit",
-        "description": "So optimierst du ein einziges Video-Asset für Google, YouTube, TikTok und LinkedIn gleichzeitig. Plattform-Matrix, Schema-Vorlage & Checkliste.",
+        "title": "Multi-Platform SEO 2026: Ein Video - vier Plattformen optimieren",
+        "description": "So optimierst du ein Video-Asset für Google, YouTube, TikTok und LinkedIn gleichzeitig. Plattform-Matrix, Keyword-Strategie & Checkliste.",
         "keywords": [
           "Multi-Platform SEO 2026",
           "Video cross-platform optimieren",
@@ -505,151 +505,199 @@
         ]
       },
       "hero": {
-        "headline": "Multi-Platform SEO 2026: Ein Video – vier Plattformen – maximale Sichtbarkeit",
-        "subheadline": "So optimierst du ein einziges Video-Asset für Google, YouTube, TikTok und LinkedIn gleichzeitig.",
-        "intro": "Du drehst ein Video. Du lädst es auf YouTube hoch. Fertig? Nein. Denn dasselbe Video könnte gleichzeitig auf TikTok ranken, auf LinkedIn Leads generieren und in Google AI Overviews zitiert werden. Die meisten Creator verschenken 75 % ihrer Reichweite – weil sie für eine Plattform optimieren und den Rest ignorieren."
+        "headline": "Multi-Platform SEO 2026: Ein Video - vier Plattformen optimieren",
+        "subheadline": "Wie du ein Video-Asset für Google, YouTube, TikTok und LinkedIn aufbereitest.",
+        "intro": "Du drehst ein Video. Du lädst es auf YouTube hoch. Fertig? Nicht ganz. Dasselbe Video könnte gleichzeitig in der TikTok-Suche auftauchen, auf LinkedIn Reichweite aufbauen und auf deiner Website für Google indexiert werden. Viele Creator optimieren nur für eine Plattform - und lassen die anderen Kanäle ungenutzt."
       },
       "lastUpdated": "April 2026",
-      "whatsNew2026": "Google AI Overviews zitieren jetzt 121 % mehr YouTube-Videos als 2025. LinkedIn hat vertikale Kurzvideos eingeführt, die 3× mehr Impressionen erhalten als Textposts. TikTok-Inhalte erscheinen direkt in Google Perspectives. Wer alle vier Kanäle bedient, dominiert die Sichtbarkeit – wer nur einen bespielt, wird verdrängt.",
+      "whatsNew2026": "Google AI Overviews zitieren zunehmend YouTube-Videos. LinkedIn hat vertikale Kurzvideos eingeführt. TikTok-Inhalte erscheinen in Google Perspectives. Wer mehrere Kanäle bespielt, erhöht die Sichtbarkeit deutlich.",
       "personalNote": {
         "label": "Von Mareen Strauch",
-        "text": "Ich habe Jahre lang für jede Plattform einzeln optimiert – und irgendwann gemerkt: Das ist nicht skalierbar. Seit ich ein zentrales Video-Asset baue und es plattformgerecht adaptiere, spare ich 60 % meiner Content-Zeit und erreiche mehr Menschen als je zuvor. Hier zeige ich dir, wie das funktioniert."
+        "text": "Ich habe lange für jede Plattform einzeln optimiert - und irgendwann gemerkt: Das ist nicht skalierbar. Seit ich ein zentrales Video-Asset baue und es plattformgerecht adaptiere, spare ich deutlich Content-Zeit und erreiche mehr Menschen. Hier zeige ich dir, wie das funktioniert."
       },
       "sections": [
         {
           "id": "warum-multi-platform",
           "type": "answer_capsule",
           "heading": "Warum reicht eine Plattform nicht mehr aus?",
-          "capsule": "41 % der Gen Z suchen zuerst auf Social-Plattformen statt Google. Gleichzeitig ziehen Google AI Overviews Inhalte von YouTube, TikTok und LinkedIn. Wer nur auf einer Plattform präsent ist, verliert bis zu 75 % potenzieller Sichtbarkeit.",
-          "body": "Die Suchlandschaft hat sich fundamental verändert. Google ist nicht mehr die einzige Suchmaschine – TikTok, YouTube und LinkedIn sind eigenständige Discovery-Plattformen geworden. Und das Entscheidende: Google selbst integriert Inhalte aus diesen Plattformen über AI Overviews und Perspectives.\n\nDas bedeutet: Ein Video, das auf YouTube rankt, kann gleichzeitig in Google AI Overviews zitiert werden, in TikTok-Suchergebnissen erscheinen und auf LinkedIn B2B-Leads generieren. Aber nur, wenn es für jede Plattform richtig aufbereitet ist.\n\nDie Daten sprechen eine klare Sprache: Seiten mit eingebettetem Video haben eine 53× höhere Wahrscheinlichkeit, auf Googles erster Seite zu erscheinen. LinkedIn-Videos erhalten 5× mehr Engagement als Textposts. TikTok-Videos werden innerhalb von 48 Stunden indexiert. Wer all das ignoriert, verschenkt Reichweite.",
-          "dataPoint": "Seiten mit Video sind laut Forrester 53× wahrscheinlicher auf Googles erster Seite. YouTube-Zitierungen in AI Overviews stiegen 2025/26 um 121 %."
+          "capsule": "Mehr als ein Drittel der Konsumenten suchen zuerst auf Social-Plattformen statt Google (Quelle 1). Gleichzeitig zieht Google über AI Overviews und Perspectives Inhalte von YouTube, TikTok und LinkedIn heran. Wer nur auf einer Plattform präsent ist, verschenkt Reichweite.",
+          "body": "Die Suchlandschaft hat sich verändert. Google ist nicht mehr die einzige Anlaufstelle - TikTok, YouTube und LinkedIn sind eigenständige Discovery-Plattformen geworden. Google selbst integriert Inhalte aus diesen Plattformen über AI Overviews und Perspectives.\n\nDas bedeutet: Ein Video, das auf YouTube rankt, kann gleichzeitig in Google AI Overviews auftauchen, in TikTok-Suchergebnissen erscheinen und auf LinkedIn ein Fachpublikum erreichen. Voraussetzung ist, dass es für jede Plattform richtig aufbereitet wird.\n\nEin paar relevante Zahlen: Seiten mit eingebettetem Video sind laut Forrester Research deutlich häufiger auf Googles erster Seite vertreten (Quelle 2). LinkedIn-Videos erhalten 5x mehr Engagement als reine Textposts (Quelle 3). TikTok-Videos werden innerhalb von 48 Stunden indexiert. Wer das mitdenkt, nutzt vorhandene Inhalte besser.",
+          "dataPoint": "Seiten mit eingebettetem Video sind laut Forrester Research 53x wahrscheinlicher auf Google Seite 1 vertreten (Quelle 2). VideoObject-Schema erhöht die Klickrate in den Suchergebnissen um 30 % (Quelle 4)."
         },
         {
           "id": "ein-asset-vier-formate",
           "type": "answer_capsule",
-          "heading": "Wie baue ich ein Video-Asset für vier Plattformen?",
-          "capsule": "Starte mit einem 3–5-minütigen YouTube-Video als Master-Asset. Extrahiere daraus: einen 30–60-Sekunden-Clip für TikTok/Shorts, eine vertikale Version für LinkedIn, und einen Blogartikel mit eingebettetem Video für deine Website.",
-          "body": "Der größte Fehler beim Multi-Platform-Ansatz: Für jede Plattform komplett neuen Content erstellen. Das ist nicht nötig. Du brauchst ein durchdachtes Master-Asset und eine klare Adaptions-Strategie.\n\nSchritt 1 – Master-Video (YouTube): Drehe ein 3–5-minütiges Video mit klarer Struktur. Haupt-Keyword in den ersten 40 Zeichen des Titels. Timestamps in der Beschreibung. Mindestens zwei Synonyme im Beschreibungstext.\n\nSchritt 2 – Short-Clip (TikTok/YouTube Shorts): Schneide die stärkste Aussage als 30–60-Sekunden-Clip. Keyword in die ersten 60 Zeichen der Caption. Auto-Untertitel aktivieren. Mit einer Frage starten.\n\nSchritt 3 – LinkedIn-Video: Vertikales 9:16-Format, 60–90 Sekunden. Erster Satz = konkrete Zahl oder Erkenntnis. Kein Intro, kein Logo-Vorspann – LinkedIn belohnt sofortigen Mehrwert. Keyword im Post-Text, nicht nur im Video.\n\nSchritt 4 – Website-Embed: Video auf eigener Seite einbetten mit vollständigem VideoObject-Schema. Transkript als sichtbaren Text darunter. H2-Überschriften als Kapitelstruktur. Das liefert Google den Kontext, den es für AI Overviews braucht.",
-          "dataPoint": "Creator, die ein Video auf 3+ Plattformen publizieren, erzielen laut HubSpot 2026 im Schnitt 3,2× mehr Gesamtreichweite als Single-Platform-Publisher."
+          "heading": "Ein Video-Asset - aber nicht einfach kopieren",
+          "capsule": "Starte mit einem YouTube-Video als Master-Format. Daraus lassen sich Kurzclips für TikTok/Shorts ableiten. Für LinkedIn brauchst du aber eine eigene Ansprache - ein 1:1-Repost funktioniert dort selten.",
+          "body": "Der größte Fehler beim Multi-Platform-Ansatz: Das gleiche Video überall unverändert hochladen. Jede Plattform hat ein anderes Publikum, eine andere Erwartungshaltung und einen anderen Algorithmus. Repurposing heißt nicht Copy-Paste.\n\nMaster-Video (YouTube): Ein 3-5-minütiges Video mit klarer Struktur bildet die Basis. Haupt-Keyword in den ersten 40 Zeichen des Titels. Timestamps in der Beschreibung. Synonyme im Beschreibungstext.\n\nShort-Clip (TikTok / YouTube Shorts): Die stärkste Aussage oder ein konkreter Tipp als 30-60-Sekunden-Clip. Keyword in die ersten 60 Zeichen der Caption. Auto-Untertitel aktivieren. Mit einer Frage oder einer konkreten Zahl starten.\n\nLinkedIn-Video: Hier wird es anders. LinkedIn-Nutzer erwarten fachlichen Mehrwert, keinen Entertainment-Schnitt. Ein TikTok-Video mit Trendmusik und schnellen Schnitten wirkt auf LinkedIn fehl am Platz (Quelle 5). Besser: Eine ruhigere Version, in der du dein Thema direkt ansprichst. Erster Satz = konkrete Erkenntnis oder Zahl. Kein Intro, kein Logo-Vorspann. 60-90 Sekunden reichen. Keyword im Post-Text, nicht nur im Video. Nativer Upload - kein YouTube-Link, sonst drosselt LinkedIn die Reichweite.\n\nWebsite-Embed: Video auf einer eigenen Seite einbetten mit VideoObject-Schema. Transkript als sichtbaren Text darunter. H2-Überschriften als Kapitelstruktur. Das liefert Google den Kontext für AI Overviews.",
+          "dataPoint": "Social Video generiert laut Brightcove 12x mehr Shares als Text- und Bild-Inhalte zusammen. Auf LinkedIn liegt der Multiplikator sogar bei 16x (Quelle 6)."
         },
         {
           "id": "plattform-matrix",
           "type": "answer_capsule",
-          "heading": "Die Plattform-Matrix: Was funktioniert wo?",
-          "capsule": "Jede Plattform hat eigene Regeln für Format, Länge, Keywords und Indexierung. Diese Matrix zeigt dir die wichtigsten Unterschiede auf einen Blick.",
-          "body": "YouTube: Format 16:9 oder 9:16 (Shorts). Titellänge max. 60 Zeichen, Keyword in Zeichen 1–40. Beschreibung mit Timestamps und Synonymen. VideoObject-Schema auf eigener Website. Indexierung durch Google innerhalb von 24–72 Stunden.\n\nTikTok: Format 9:16. Caption max. 4.000 Zeichen, Keyword in Zeichen 1–60. 3–5 Hashtags (Mix aus Nische und Trend). Auto-Untertitel aktivieren. Indexierung durch TikTok in 48 Stunden, durch Google Perspectives in 3–7 Tagen.\n\nLinkedIn: Format 9:16 (vertikal) oder 1:1. Optimale Länge 60–90 Sekunden. Keyword im Post-Text (erste zwei Zeilen). Kein externer Link im selben Post – LinkedIn drosselt Reichweite bei Outbound-Links. Native Upload statt YouTube-Link.\n\nGoogle (eigene Website): Video eingebettet auf optimierter Landing Page. VideoObject-Schema mit name, description, thumbnailUrl, uploadDate, duration. Transkript als sichtbarer Text. H2-Struktur für Key Moments. dateModified bei jedem Update aktualisieren.\n\nWichtig: Jede Plattform hat einen anderen primären Ranking-Faktor. YouTube = Watch Time. TikTok = Completion Rate. LinkedIn = Engagement (Kommentare > Likes). Google = Strukturierte Daten + Textkontext.",
-          "dataPoint": "LinkedIn-Kurzvideos (unter 90 Sekunden) erhalten 3× mehr Impressionen als Textposts. TikTok-Videos mit Keyword in den ersten 60 Caption-Zeichen ranken 2,4× häufiger in der In-App-Suche."
+          "heading": "Plattform-Matrix: Was funktioniert wo?",
+          "capsule": "Jede Plattform hat eigene Regeln für Format, Länge, Keywords und Ranking-Faktoren. Diese Übersicht zeigt die wichtigsten Unterschiede.",
+          "body": "",
+          "table": {
+            "headers": [
+              "",
+              "YouTube",
+              "TikTok",
+              "LinkedIn",
+              "Eigene Website"
+            ],
+            "rows": [
+              [
+                "Format",
+                "16:9 (Long) oder 9:16 (Shorts)",
+                "9:16 (vertikal)",
+                "9:16 oder 1:1",
+                "Eingebettet (16:9)"
+              ],
+              [
+                "Optimale Länge",
+                "3-10 Min (Long), < 60 Sek (Shorts)",
+                "30-60 Sekunden",
+                "60-90 Sekunden",
+                "Beliebig"
+              ],
+              [
+                "Keyword-Platzierung",
+                "Titel (Zeichen 1-40), Beschreibung, Tags",
+                "Caption (Zeichen 1-60), 3-5 Hashtags",
+                "Post-Text (erste 2 Zeilen)",
+                "H1, Meta-Title, Schema"
+              ],
+              [
+                "Untertitel",
+                "Auto-Captions + manuell prüfen",
+                "Auto-Untertitel aktivieren",
+                "Immer (85 % schauen ohne Ton)",
+                "Transkript als sichtbarer Text"
+              ],
+              [
+                "Ranking-Faktor",
+                "Watch Time",
+                "Completion Rate",
+                "Engagement (Kommentare > Likes)",
+                "Strukturierte Daten + Textkontext"
+              ],
+              [
+                "Indexierung",
+                "Google: 24-72 Std.",
+                "TikTok: 48 Std., Google Perspectives: 3-7 Tage",
+                "Kein direktes Google-Indexing",
+                "Abhängig von Crawl-Frequenz"
+              ],
+              [
+                "Wichtiger Hinweis",
+                "Timestamps in Beschreibung für Key Moments",
+                "Trendmusik & schnelle Schnitte erwartet",
+                "Kein externer Link im Post (drosselt Reichweite)",
+                "VideoObject-Schema ist Pflicht"
+              ]
+            ]
+          },
+          "dataPoint": "LinkedIn-Videos erhalten 5x mehr Engagement als Textposts (Quelle 3). TikTok hat eine durchschnittliche Engagement-Rate von 5,69 % - doppelt so hoch wie Instagram Reels mit 2,80 % (Quelle 7)."
         },
         {
           "id": "keyword-strategie",
           "type": "answer_capsule",
-          "heading": "Wie finde ich Keywords, die auf allen Plattformen funktionieren?",
-          "capsule": "Starte mit der YouTube-Autocomplete-Suche, validiere auf TikTok und Google Trends, und prüfe auf LinkedIn, ob das Thema B2B-Relevanz hat. Das Ziel: ein Haupt-Keyword, das plattformübergreifend Suchvolumen hat.",
-          "body": "Nicht jedes Keyword funktioniert überall gleich. 'YouTube SEO' hat auf Google hohes Suchvolumen, auf TikTok suchen Nutzer eher 'wie ranke ich auf YouTube'. LinkedIn-Nutzer suchen selten nach SEO-Begriffen – dort funktionieren Problem-Formulierungen wie 'Warum findet niemand meine Videos'.\n\nDie Lösung: Ein Keyword-Cluster statt eines einzelnen Keywords. Dein Haupt-Keyword bleibt gleich (z. B. 'Video SEO 2026'), aber du adaptierst die Formulierung pro Plattform.\n\nYouTube-Titel: 'Video SEO 2026 – so rankst du auf 4 Plattformen'\nTikTok-Caption: 'Wusstest du, dass 75 % der Creator nur für eine Plattform optimieren? #VideoSEO #MultiPlatform'\nLinkedIn-Post: '121 % mehr AI-Zitierungen. Ein Video. Vier Plattformen. So geht Video SEO 2026.'\nWebsite-H1: 'Multi-Platform Video SEO 2026: Ein Asset – maximale Sichtbarkeit'\n\nTools für die Recherche: YouTube Autocomplete, TikTok Creative Center (Trend Discovery), Google Trends (Vergleichsmodus), LinkedIn-Suchleiste für Themenvalidierung.",
-          "dataPoint": "Keywords, die auf mindestens 2 Plattformen Suchvolumen haben, erzielen laut Semrush 2026 im Schnitt 47 % mehr Gesamttraffic als Single-Platform-Keywords."
+          "heading": "Keyword-Strategie: Ein Thema, vier Formulierungen",
+          "capsule": "Nicht jedes Keyword funktioniert überall gleich. Du brauchst ein Haupt-Keyword und plattformspezifische Varianten.",
+          "body": "Auf Google suchen Nutzer eher sachlich: 'Video SEO Strategie 2026'. Auf TikTok formulieren sie als Frage: 'Wie ranke ich auf YouTube?'. LinkedIn-Nutzer suchen selten nach SEO-Begriffen - dort funktionieren Problem-Formulierungen besser.\n\nDer Ansatz: Du definierst ein Haupt-Keyword (z. B. 'Video SEO 2026') und formulierst es pro Plattform um.\n\nKonkretes Beispiel zum Thema 'Video SEO':\n\nYouTube-Titel: 'Video SEO 2026 - so wirst du auf 4 Plattformen gefunden'\nTikTok-Caption: 'Die meisten optimieren nur für eine Plattform. #VideoSEO #MultiPlatform'\nLinkedIn-Post: 'Ein Video. Vier Plattformen. So nutze ich Video SEO 2026 für mehr Sichtbarkeit.'\nWebsite-H1: 'Multi-Platform Video SEO 2026: Sichtbarkeit über vier Kanäle'\n\nTools für die Recherche:\n- YouTube Autocomplete: Tippe dein Keyword ein und notiere die Vorschläge.\n- TikTok Creative Center (Trend Discovery): Zeigt dir, welche Begriffe gerade gesucht werden.\n- Google Trends (Vergleichsmodus): Vergleiche Suchvolumen über Plattformen.\n- LinkedIn-Suchleiste: Prüfe, ob dein Thema dort diskutiert wird."
         },
         {
-          "id": "schema-cross-platform",
+          "id": "schema-website",
           "type": "answer_capsule",
-          "heading": "Wie setze ich strukturierte Daten für Multi-Platform-Videos ein?",
-          "capsule": "Jedes Video auf deiner Website braucht ein VideoObject-Schema mit vollständigen Metadaten. Für plattformübergreifende Sichtbarkeit verknüpfst du alle Video-URLs (YouTube, TikTok) über sameAs im Schema.",
-          "body": "Strukturierte Daten sind der technische Hebel, der dein Video für Google maschinenlesbar macht. Ohne VideoObject-Schema fehlt Google der Kontext – egal wie gut dein Video ist.\n\nDas Minimum für Multi-Platform:\n\n1. name – Titel des Videos (identisch mit YouTube-Titel)\n2. description – 1–2 Sätze, die den Inhalt zusammenfassen (SEO-optimiert)\n3. thumbnailUrl – URL zum Thumbnail\n4. uploadDate – Erstveröffentlichung im ISO-8601-Format\n5. duration – Videolänge im ISO-8601-Format (z. B. PT3M45S)\n6. embedUrl – YouTube-Embed-URL\n7. contentUrl – Direkter Link zum Video\n8. author – Dein Name als Person-Objekt\n9. publisher – Deine Marke als Organization-Objekt\n\nFür Multi-Platform ergänzt du im author- oder publisher-Objekt ein sameAs-Array mit allen Profil-URLs:\n\nsameAs: ['https://youtube.com/@DeinKanal', 'https://tiktok.com/@DeinProfil', 'https://linkedin.com/in/dein-profil']\n\nDas signalisiert Google, dass du eine konsistente Entität über alle Plattformen bist – ein starkes E-E-A-T-Signal.\n\nBonus: Wenn du das Video auch auf TikTok hochgeladen hast, kannst du die TikTok-URL als zusätzliche contentUrl oder im sameAs des Videos referenzieren.",
-          "dataPoint": "Seiten mit vollständigem VideoObject-Schema haben laut einer Analyse von 1.000+ Websites eine 53 % höhere Chance auf ein Page-1-Ranking."
+          "heading": "Strukturierte Daten: Nur auf deiner eigenen Website",
+          "capsule": "VideoObject-Schema kannst du ausschließlich auf deiner eigenen Website hinterlegen - nicht auf YouTube, TikTok oder LinkedIn. Es macht dein Video für Google maschinenlesbar.",
+          "body": "Ein häufiges Missverständnis: Strukturierte Daten lassen sich überall einsetzen. Das stimmt nicht. Schema-Markup (wie VideoObject) ist HTML-Code, den du nur auf einer Website kontrollierst, die dir gehört. YouTube, TikTok und LinkedIn haben eigene Metadaten-Systeme, die du nicht mit Schema beeinflussen kannst.\n\nWas du auf deiner Website tun kannst:\n\nBette dein YouTube-Video auf einer eigenen Seite ein und ergänze ein VideoObject-Schema mit diesen Feldern:\n\n- name: Titel des Videos (identisch mit YouTube-Titel)\n- description: 1-2 Sätze Zusammenfassung\n- thumbnailUrl: URL zum Thumbnail\n- uploadDate: Erstveröffentlichung (ISO-8601)\n- duration: Videolänge (z. B. PT3M45S)\n- embedUrl: YouTube-Embed-URL\n\nZusätzlich kannst du im author- oder publisher-Objekt ein sameAs-Array mit deinen Profil-URLs ergänzen. Das signalisiert Google, dass du eine konsistente Präsenz über mehrere Plattformen hast - ein E-E-A-T-Signal.\n\nsameAs: ['https://youtube.com/@DeinKanal', 'https://tiktok.com/@DeinProfil', 'https://linkedin.com/in/dein-profil']\n\nSeiten mit VideoObject-Schema erhalten laut BrightEdge eine um 30 % höhere Klickrate in den Suchergebnissen (Quelle 4). Einen ausführlichen technischen Guide dazu findest du bald in einem eigenen Artikel.",
+          "dataPoint": "VideoObject-Schema erhöht die CTR in Google-Suchergebnissen um 30 % (BrightEdge 2024, Quelle 4)."
         },
         {
-          "id": "workflow-zeitplan",
+          "id": "quellen",
           "type": "answer_capsule",
-          "heading": "Wie sieht der optimale Publishing-Workflow aus?",
-          "capsule": "Tag 1: YouTube-Upload + Website-Embed mit Schema. Tag 2: TikTok/Shorts-Clip. Tag 3: LinkedIn-Adaption. Tag 7: Performance-Check und Optimierung. Gesamtaufwand pro Video-Asset: ca. 3 Stunden.",
-          "body": "Der größte Fehler: Alles gleichzeitig posten. Jede Plattform hat einen optimalen Posting-Rhythmus und eigene Peak-Zeiten.\n\nTag 1 – YouTube + Website:\nYouTube-Video hochladen. Titel, Beschreibung, Timestamps optimieren. Gleichzeitig auf der eigenen Website einbetten mit VideoObject-Schema und Transkript. Google indexiert in der Regel innerhalb von 24–72 Stunden.\n\nTag 2 – TikTok + YouTube Shorts:\nBesten Clip aus dem Master-Video schneiden (30–60 Sek.). Keyword in Caption-Zeichen 1–60. Frage-Hook als Einstieg. Auto-Untertitel prüfen. Auf TikTok und als YouTube Short hochladen.\n\nTag 3 – LinkedIn:\nVertikale Version des Clips nativ auf LinkedIn posten. Erster Satz = Zahl oder Erkenntnis. Kein externer Link im selben Post. Stattdessen Link in den ersten Kommentar.\n\nTag 7 – Performance-Review:\nYouTube: CTR und Watch Time in YouTube Analytics prüfen. TikTok: Completion Rate im Creator Dashboard. LinkedIn: Impressionen und Kommentare. Google Search Console: Indexierungsstatus der Website-Seite.\n\nGesamtaufwand: Einmal eingerichtet, brauchst du pro Video-Asset ca. 3 Stunden für alle vier Plattformen – statt 8+ Stunden bei Einzelproduktion.",
-          "dataPoint": "Creator mit festem Cross-Platform-Workflow publizieren laut Buffer-Report 2026 durchschnittlich 2,7× mehr Content bei gleichem Zeitbudget."
+          "heading": "Quellen",
+          "body": "1. Sprout Social (2025): 'Social Media is the Top Place Gen Z Turns to for Search' - Studie mit Konsumenten aller Altersgruppen. Mehr als ein Drittel bevorzugt Social-Plattformen für Produktrecherche. sproutsocial.com/insights/press\n\n2. Forrester Research (2023): Digital Experience Study - Analyse von 200.000 SERPs. Seiten mit eingebettetem Video sind 53x wahrscheinlicher auf Google Seite 1. Zitiert via greenfroglabs.com/blog/video-seo-statistics\n\n3. LinkedIn Marketing Solutions (2025): Interne Daten - Native Video-Posts generieren 5x mehr Engagement als reine Text-Updates. linkedin.com/business\n\n4. BrightEdge (2024): Technical SEO Study - Analyse von 25.000 Seiten. VideoObject-Schema erhöht die CTR in Suchergebnissen um 30 %. Zitiert via greenfroglabs.com/blog/video-seo-statistics\n\n5. Joyspace (2026): 'How to Edit the Same Video for LinkedIn vs TikTok' - Platform Guide zu Format-Unterschieden und Tonalität. joyspace.ai/context-switching-editing-linkedin-vs-tiktok\n\n6. Brightcove (2024): Social Video Benchmarks - Tracking von 10.000 Brand-Posts. Social Video generiert 12x mehr Shares, auf LinkedIn 16x. Zitiert via greenfroglabs.com/blog/video-seo-statistics\n\n7. Socialinsider (2025): Social Media Benchmarks - TikTok Engagement-Rate 5,69 %, Instagram Reels 2,80 %, YouTube Shorts 1,90 %. Zitiert via greenfroglabs.com/blog/video-seo-statistics"
         }
       ],
       "comparison": {
         "bad": {
-          "label": "Single-Platform-Ansatz",
-          "example": "Video nur auf YouTube hochladen, Link auf Social Media teilen",
+          "label": "Gleiches Video überall posten",
+          "example": "TikTok-Video mit Trendmusik und schnellen Schnitten direkt auf LinkedIn hochgeladen.",
           "issues": [
-            "75 % der potenziellen Reichweite verschenkt",
-            "Kein Ranking auf TikTok oder LinkedIn",
-            "Kein VideoObject-Schema auf eigener Website",
-            "Google AI Overviews ignorieren das Video"
+            "Wirkt unprofessionell im Business-Kontext",
+            "LinkedIn drosselt Reichweite bei externen Links",
+            "Keine plattformspezifische Keyword-Optimierung",
+            "Untertitel fehlen oder passen nicht"
           ]
         },
         "good": {
-          "label": "Multi-Platform-Ansatz",
-          "example": "Ein Master-Video → YouTube + TikTok-Clip + LinkedIn-Native + Website-Embed mit Schema",
+          "label": "Plattformgerecht adaptieren",
+          "example": "YouTube-Master-Video als Basis. TikTok-Clip mit Frage-Hook. LinkedIn-Version mit ruhigem Einstieg und Fach-Kontext.",
           "benefits": [
-            "3,2× mehr Gesamtreichweite bei gleichem Content",
-            "Video rankt auf 4 Plattformen gleichzeitig",
-            "Strukturierte Daten stärken E-E-A-T und AI-Zitierungen",
-            "Einheitlicher Workflow spart 60 % Produktionszeit"
+            "Jede Plattform bekommt den passenden Ton",
+            "Keywords sind pro Kanal optimiert",
+            "Höheres Engagement durch native Uploads",
+            "Ein Asset, mehrere Touchpoints"
           ]
         }
       },
       "checklist": [
-        "Master-Video auf YouTube mit Keyword in Zeichen 1–40 hochladen",
-        "Timestamps und 2 Synonyme in die YouTube-Beschreibung eintragen",
-        "30–60-Sek.-Clip für TikTok und YouTube Shorts schneiden",
-        "TikTok-Caption: Keyword in Zeichen 1–60, Auto-Untertitel aktiv",
-        "LinkedIn: Vertikales Video nativ uploaden, Zahl/Erkenntnis im ersten Satz",
-        "Kein externer Link im LinkedIn-Post – Link in den ersten Kommentar",
-        "Video auf eigener Website einbetten mit vollständigem VideoObject-Schema",
-        "Transkript als sichtbaren Text unter dem eingebetteten Video platzieren",
-        "sameAs-Array im Schema mit YouTube-, TikTok- und LinkedIn-Profil-URLs",
-        "dateModified im Schema bei jedem Update aktualisieren",
-        "Tag 7: Performance-Review auf allen Plattformen durchführen"
+        "Master-Video (3-5 Min) auf YouTube hochgeladen mit Keyword im Titel (Zeichen 1-40)",
+        "Timestamps und Synonyme in der YouTube-Beschreibung ergänzt",
+        "30-60-Sekunden-Clip für TikTok/Shorts geschnitten (stärkste Aussage)",
+        "TikTok-Caption: Keyword in den ersten 60 Zeichen, 3-5 Hashtags",
+        "Auto-Untertitel auf TikTok und YouTube aktiviert",
+        "LinkedIn-Version separat erstellt: ruhiger Ton, fachlicher Einstieg, 60-90 Sek.",
+        "LinkedIn: Nativer Upload, kein externer Link im Post",
+        "Video auf eigener Website eingebettet mit Textkontext",
+        "VideoObject-Schema auf der Website implementiert (name, description, duration, uploadDate)",
+        "sameAs-Array im Schema mit allen Plattform-Profilen ergänzt",
+        "Transkript als sichtbarer Text unter dem eingebetteten Video",
+        "Keyword-Varianten pro Plattform definiert und eingesetzt"
       ],
       "faq": [
         {
-          "question": "Wie optimiere ich ein Video für mehrere Plattformen gleichzeitig?",
-          "answer": "Erstelle ein 3–5-minütiges Master-Video für YouTube. Schneide daraus einen 30–60-Sekunden-Clip für TikTok und Shorts. Lade eine vertikale Version nativ auf LinkedIn hoch. Bette das Video auf deiner Website ein mit VideoObject-Schema und Transkript."
+          "question": "Kann ich ein TikTok-Video direkt auf LinkedIn posten?",
+          "answer": "Technisch ja, aber es funktioniert selten gut. LinkedIn-Nutzer erwarten einen anderen Ton als TikTok-Nutzer. Schnelle Schnitte und Trendmusik wirken im Business-Kontext oft deplatziert. Besser: Dieselbe Kernaussage in einer ruhigeren Version neu aufnehmen oder den Clip ohne Musik und mit fachlichem Intro posten."
         },
         {
-          "question": "Soll ich auf allen Plattformen am selben Tag posten?",
-          "answer": "Nein. Optimaler Rhythmus: Tag 1 YouTube + Website, Tag 2 TikTok/Shorts, Tag 3 LinkedIn. Jede Plattform hat eigene Peak-Zeiten und Algorithmus-Zyklen. Gestaffeltes Posting maximiert die Sichtbarkeit."
+          "question": "Brauche ich für jede Plattform ein komplett neues Video?",
+          "answer": "Nein. Du brauchst ein Master-Video (z. B. auf YouTube) und adaptierst es. Für TikTok schneidest du einen Kurzclip. Für LinkedIn passt du Ton und Einstieg an. Für die Website ergänzt du Textkontext und Schema. Das Kernmaterial bleibt gleich."
         },
         {
-          "question": "Welche Plattform ist für Video SEO am wichtigsten?",
-          "answer": "YouTube bleibt der stärkste Kanal für langfristiges SEO-Ranking in Google. Aber TikTok und LinkedIn bieten schnellere Discovery und andere Zielgruppen. Die Kombination aller vier Kanäle (YouTube, TikTok, LinkedIn, eigene Website) liefert die beste Gesamtreichweite."
+          "question": "Wo hinterlege ich VideoObject-Schema?",
+          "answer": "Ausschließlich auf deiner eigenen Website. YouTube, TikTok und LinkedIn nutzen eigene Metadaten-Systeme, auf die du keinen Einfluss über Schema-Markup hast. Das VideoObject-Schema kommt in den HTML-Code deiner Seite, auf der das Video eingebettet ist."
         },
         {
-          "question": "Brauche ich für jede Plattform ein eigenes Keyword?",
-          "answer": "Nein, aber du brauchst plattformgerechte Formulierungen. Das Haupt-Keyword bleibt gleich, die Darstellung wird adaptiert: YouTube = Titel-Formel, TikTok = Frage + Hashtags, LinkedIn = Problem-Formulierung, Website = H1 mit Keyword."
+          "question": "Welche Plattform ist am wichtigsten für Video-SEO?",
+          "answer": "YouTube, weil Google YouTube-Videos am stärksten in die eigenen Suchergebnisse und AI Overviews einbindet. Aber die Kombination macht den Unterschied: Ein Video, das auf YouTube, TikTok und deiner Website präsent ist, hat deutlich mehr Touchpoints als eines, das nur auf einem Kanal existiert."
         },
         {
-          "question": "Wie helfen strukturierte Daten bei Multi-Platform SEO?",
-          "answer": "VideoObject-Schema auf deiner Website macht dein Video für Google maschinenlesbar. Das sameAs-Array verknüpft alle Plattform-Profile und stärkt dein E-E-A-T. Seiten mit Video-Schema haben eine 53 % höhere Chance auf ein Page-1-Ranking."
-        },
-        {
-          "question": "Wie viel Zeit kostet Multi-Platform Video SEO?",
-          "answer": "Mit einem eingerichteten Workflow ca. 3 Stunden pro Video-Asset für alle vier Plattformen. Ohne Workflow sind es 8+ Stunden. Der Zeitaufwand sinkt mit jedem Video, weil Vorlagen und Prozesse stehen."
+          "question": "Wie viel Mehraufwand ist Multi-Platform-Optimierung?",
+          "answer": "Der Hauptaufwand liegt in der Produktion des Master-Videos. Die Adaption (Kurzclip schneiden, LinkedIn-Text schreiben, Schema ergänzen) dauert pro Plattform 15-30 Minuten. Das steht in keinem Verhältnis zum Reichweiten-Gewinn."
         }
       ],
       "schema": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Multi-Platform SEO 2026: Ein Video – vier Plattformen – maximale Sichtbarkeit",
-        "description": "So optimierst du ein einziges Video-Asset für Google, YouTube, TikTok und LinkedIn gleichzeitig. Plattform-Matrix, Schema-Vorlage & Checkliste.",
-        "image": "https://mareensocialup.de/lovable-uploads/mareen-logo.png",
-        "datePublished": "2026-04-15",
-        "dateModified": "2026-04-15",
+        "headline": "Multi-Platform SEO 2026: Ein Video - vier Plattformen optimieren",
+        "description": "So optimierst du ein Video-Asset für Google, YouTube, TikTok und LinkedIn gleichzeitig.",
         "author": {
           "@type": "Person",
           "name": "Mareen Strauch",
-          "url": "https://mareensocialup.de",
-          "sameAs": ["https://www.youtube.com/@MareenSocialUp", "https://www.tiktok.com/@mareensocialup", "https://www.linkedin.com/in/mareenstrauch"]
+          "url": "https://mareensocialup.de"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "MareenSocialUp",
+          "name": "SocialUp - Mareen Strauch",
           "url": "https://mareensocialup.de"
         },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://mareensocialup.de/guides/multi-platform-seo-2026"
-        },
-        "inLanguage": "de"
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-04-15",
+        "mainEntityOfPage": "https://mareensocialup.de/guides/multi-platform-seo-2026"
       },
       "navigation": {
         "prev": "chatgpt-marketing-roi-prompt",
