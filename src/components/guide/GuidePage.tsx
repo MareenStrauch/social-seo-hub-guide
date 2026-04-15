@@ -167,6 +167,41 @@ function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   );
 }
 
+/* ─── Responsive Table ─── */
+function SectionTable({ table }: { table: { headers: string[]; rows: string[][] } }) {
+  return (
+    <div className="my-8 overflow-x-auto -mx-4 px-4">
+      <table className="w-full text-sm border-collapse">
+        <thead>
+          <tr>
+            {table.headers.map((h, i) => (
+              <th
+                key={i}
+                className="text-left font-semibold text-secondary bg-tertiary/30 px-4 py-3 border-b border-border first:rounded-tl-lg last:rounded-tr-lg"
+              >
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.rows.map((row, ri) => (
+            <tr key={ri} className="border-b border-border/50 last:border-0">
+              {row.map((cell, ci) => (
+                <td
+                  key={ci}
+                  className={`px-4 py-3 leading-relaxed ${ci === 0 ? "font-medium text-foreground" : "text-muted-foreground"}`}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+
 /* ─── Checklist – primary/terrakotta checkboxes ─── */
 function ChecklistSection({ items }: { items: string[] }) {
   return (
