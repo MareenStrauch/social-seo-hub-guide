@@ -201,6 +201,7 @@ function SectionTable({ table }: { table: { headers: string[]; rows: string[][] 
       </table>
     </div>
   );
+}
 
 /* ─── Checklist – primary/terrakotta checkboxes ─── */
 function ChecklistSection({ items }: { items: string[] }) {
