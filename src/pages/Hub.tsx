@@ -1,7 +1,7 @@
 
 import { Navigation } from "@/components/layout/navigation";
 import { GuideCard } from "@/components/ui/guide-card";
-import { Youtube, MessageSquare, TrendingUp, Brain, MousePointer, Smartphone } from "lucide-react";
+import { Youtube, MessageSquare, TrendingUp, Brain, MousePointer, Smartphone, Layers } from "lucide-react";
 import { useSeo } from "@/hooks/use-seo";
 
 const SITE_URL = "https://mareensocialup.de";
@@ -32,6 +32,7 @@ const Hub = () => {
             <GuideCard slug="/guides/youtube-seo-2025" title="YouTube-SEO" text="Titel, Chapters & Schema – so rankt dein nächstes Video auf Platz 1-10." icon={Youtube} iconBgColor="bg-red-100" />
             <GuideCard slug="/guides/chatgpt-marketing-roi-prompt" title="ChatGPT-Marketing" text="Prompts, Rollen & Workflow: KI-Content in 30 Min statt 3 Stunden." icon={MessageSquare} iconBgColor="bg-blue-100" />
             <GuideCard slug="/guides/tiktok-seo-2025" title="TikTok-SEO" text="Caption-Keyword, CC-Index & Clips: nutze TikTok als Suchmaschine." icon={TrendingUp} iconBgColor="bg-orange-100" />
+            <GuideCard slug="/guides/multi-platform-seo-2026" title="Multi-Platform SEO" text="Ein Video – vier Plattformen. So maximierst du Reichweite auf Google, YouTube, TikTok & LinkedIn." icon={Layers} iconBgColor="bg-indigo-100" />
             <GuideCard title="AI Overviews" text="90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle." icon={Brain} iconBgColor="bg-purple-100" />
             <GuideCard title="Zero-Click Search" text="Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit." icon={MousePointer} iconBgColor="bg-green-100" />
             <GuideCard title="Social Search" text="TikTok & Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO." icon={Smartphone} iconBgColor="bg-pink-100" />
