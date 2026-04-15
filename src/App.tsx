@@ -10,6 +10,7 @@ import Videos from "./pages/Videos";
 import GuideYouTubeSeo from "./pages/GuideYouTubeSeo";
 import GuideChatGptMarketing from "./pages/GuideChatGptMarketing";
 import GuideTikTokSeo from "./pages/GuideTikTokSeo";
+import GuideMultiPlatformSeo from "./pages/GuideMultiPlatformSeo";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";

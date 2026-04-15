@@ -37,7 +37,7 @@ export interface GuideData {
   };
   hero: { headline: string; subheadline: string; intro: string };
   personalNote: { label: string; text: string };
-  video: {
+  video?: {
     youtubeId: string;
     url: string;
     embedUrl: string;
