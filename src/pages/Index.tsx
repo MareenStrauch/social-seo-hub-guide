@@ -175,6 +175,7 @@ const Index = () => {
                   <li><a href="/guides/youtube-seo-2025" className="text-secondary-foreground/80 hover:text-primary transition-colors">YouTube SEO Guide</a></li>
                   <li><a href="/guides/chatgpt-marketing-roi-prompt" className="text-secondary-foreground/80 hover:text-primary transition-colors">ChatGPT Marketing</a></li>
                   <li><a href="/guides/tiktok-seo-2025" className="text-secondary-foreground/80 hover:text-primary transition-colors">TikTok SEO Tipps</a></li>
+                  <li><a href="/guides/multi-platform-seo-2026" className="text-secondary-foreground/80 hover:text-primary transition-colors">Multi-Platform SEO</a></li>
                   <li><a href="/videos" className="text-secondary-foreground/80 hover:text-primary transition-colors">Video-Sammlung</a></li>
                 </ul>
               </nav>

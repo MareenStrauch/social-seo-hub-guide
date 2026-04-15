@@ -37,7 +37,7 @@ export interface GuideData {
   };
   hero: { headline: string; subheadline: string; intro: string };
   personalNote: { label: string; text: string };
-  video: {
+  video?: {
     youtubeId: string;
     url: string;
     embedUrl: string;
@@ -250,7 +250,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             <meta itemProp="headline" content={guide.meta.title} />
             <meta itemProp="dateModified" content="2026-04-08" />
             <meta itemProp="author" content="Mareen Strauch" />
-            <meta itemProp="image" content={guide.video.thumbnailUrl} />
+            {guide.video && <meta itemProp="image" content={guide.video.thumbnailUrl} />}
           </div>
         </section>
 
@@ -274,6 +274,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
             </aside>
 
             {/* Video Embed – directly after personal note */}
+            {guide.video && (
             <figure className="my-10">
               <div className="max-w-sm mx-auto">
                 <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-float">
@@ -291,6 +292,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                 </figcaption>
               </div>
             </figure>
+            )}
 
             {/* Sections */}
             {guide.sections.map((section) => (
