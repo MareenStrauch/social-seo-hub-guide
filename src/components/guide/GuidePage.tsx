@@ -18,6 +18,7 @@ interface GuideSection {
   dataPoint?: string;
   steps?: { number?: number; letter?: string; title: string; text: string; example?: string }[];
   comparison?: GuideComparison;
+  table?: { headers: string[]; rows: string[][] };
 }
 
 interface GuideComparison {
