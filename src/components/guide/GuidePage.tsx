@@ -193,6 +193,35 @@ function ToolList({ tools }: { tools: { color: string; name: string; description
     </ul>
   );
 }
+
+/* ─── CTA Box ─── */
+function CtaBox({ cta }: { cta: { headline: string; text: string; actions: { label: string; url: string; type: string }[] } }) {
+  return (
+    <aside className="my-10 rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 via-tertiary/30 to-background p-6 sm:p-8">
+      <h3 className="text-xl font-headline font-bold text-secondary mb-2">{cta.headline}</h3>
+      <p className="text-foreground/80 leading-relaxed mb-6">{cta.text}</p>
+      <div className="flex flex-wrap gap-3">
+        {cta.actions.map((action, i) => (
+          <a
+            key={i}
+            href={action.url}
+            target={action.type === "email" ? undefined : "_blank"}
+            rel={action.type === "email" ? undefined : "noopener noreferrer"}
+            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-colors ${
+              i === 0
+                ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm"
+                : "bg-secondary/10 text-secondary hover:bg-secondary/20"
+            }`}
+          >
+            {action.type === "email" ? <Mail className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+            {action.label}
+          </a>
+        ))}
+      </div>
+    </aside>
+  );
+}
+
 function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   return (
     <div className="my-10">
