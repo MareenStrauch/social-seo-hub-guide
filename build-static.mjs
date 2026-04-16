@@ -125,6 +125,8 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .guide-section{margin:3rem 0 0}
 .guide-section h2{color:var(--secondary);margin-bottom:1rem}
 .capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
+.md-link{color:var(--primary);text-decoration:none;font-weight:500;border-bottom:1px solid hsl(12 62% 56% / .25);transition:border-color .2s,color .2s}
+.md-link:hover{color:var(--primary);border-bottom-color:var(--primary);text-decoration:none}
 .guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
 .guide-body p{margin-top:.75rem}
 .data-point{display:flex;align-items:flex-start;gap:.75rem;background:hsl(227 71% 69% / .05);border:1px solid hsl(227 71% 69% / .2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;line-height:1.6;font-weight:500;color:hsl(0 0% 45%)}
@@ -579,8 +581,8 @@ function renderSteps(steps) {
 <div class="steps-list">${steps.map(s => `
   <div class="step-item">
     <h4>${esc(s.title)}</h4>
-    <p>${esc(s.text)}</p>
-    ${s.example ? `<p class="step-example">${esc(s.example)}</p>` : ''}
+    <p>${mdInline(s.text)}</p>
+    ${s.example ? `<p class="step-example">${mdInline(s.example)}</p>` : ''}
   </div>`).join('')}
 </div>`;
 }
@@ -700,14 +702,14 @@ function buildGuide(guide) {
     html += `
 <section class="guide-section" id="${sec.id}">
   <h2>${esc(sec.heading)}</h2>
-  ${sec.capsule ? `<div class="capsule-answer">${esc(sec.capsule)}</div>` : ''}
+  ${sec.capsule ? `<div class="capsule-answer">${mdInline(sec.capsule)}</div>` : ''}
   ${sec.body ? `<div class="guide-body">${nl2p(sec.body)}</div>` : ''}
   ${renderTable(sec.table)}
   ${renderSteps(sec.steps)}
   ${renderToolList(sec.toolList)}
   ${renderCodeExample(sec.codeExample)}
   ${renderSectionCta(sec.cta)}
-  ${sec.dataPoint ? `<div class="data-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16v-5"/><path d="M17 16v-7"/></svg><p>${esc(sec.dataPoint)}</p></div>` : ''}
+  ${sec.dataPoint ? `<div class="data-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16v-5"/><path d="M17 16v-7"/></svg><p>${mdInline(sec.dataPoint)}</p></div>` : ''}
 </section>`;
   }
 
