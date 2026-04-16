@@ -15,6 +15,7 @@ interface GuideSection {
   heading: string;
   capsule?: string;
   body: string;
+  codeExample?: string;
   dataPoint?: string;
   steps?: { number?: number; letter?: string; title: string; text: string; example?: string }[];
   comparison?: GuideComparison;
@@ -393,6 +394,11 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                   </h2>
                   {section.capsule && <AnswerCapsule text={section.capsule} />}
                   {section.body && <BodyText text={section.body} />}
+                  {section.codeExample && (
+                    <pre className="my-6 rounded-xl bg-secondary/5 border border-border p-5 overflow-x-auto text-sm font-mono text-foreground/90 leading-relaxed whitespace-pre">
+                      {section.codeExample}
+                    </pre>
+                  )}
                   {section.steps && <StepsCards steps={section.steps} />}
                   {section.table && <SectionTable table={section.table} />}
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
