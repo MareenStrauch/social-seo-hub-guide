@@ -4,7 +4,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useSeo } from "@/hooks/use-seo";
-import { BarChart3 } from "lucide-react";
+import { BarChart3, Mail, ArrowRight } from "lucide-react";
 
 const SITE_URL = "https://mareensocialup.de";
 
@@ -21,6 +21,11 @@ interface GuideSection {
   comparison?: GuideComparison;
   table?: { headers: string[]; rows: string[][] };
   toolList?: { color: string; name: string; description: string; url?: string }[];
+  cta?: {
+    headline: string;
+    text: string;
+    actions: { label: string; url: string; type: "email" | "link" }[];
+  };
 }
 
 interface GuideComparison {
