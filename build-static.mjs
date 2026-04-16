@@ -125,8 +125,8 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .guide-section{margin:3rem 0 0}
 .guide-section h2{color:var(--secondary);margin-bottom:1rem}
 .capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
-.md-link{color:var(--primary);text-decoration:none;font-weight:500;border-bottom:1px solid hsl(12 62% 56% / .25);transition:border-color .2s,color .2s}
-.md-link:hover{color:var(--primary);border-bottom-color:var(--primary);text-decoration:none}
+.md-link{color:var(--primary);text-decoration:underline;text-decoration-color:hsl(12 62% 56% / .35);text-underline-offset:2px;font-weight:500;transition:text-decoration-color .2s}
+.md-link:hover{text-decoration-color:var(--primary)}
 .guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
 .guide-body p{margin-top:.75rem}
 .data-point{display:flex;align-items:flex-start;gap:.75rem;background:hsl(227 71% 69% / .05);border:1px solid hsl(227 71% 69% / .2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;line-height:1.6;font-weight:500;color:hsl(0 0% 45%)}
@@ -420,13 +420,18 @@ function esc(s) {
 }
 
 // Escape + parse markdown links [text](url) → <a class="md-link" ...>
+// Handles wrapping parens like "([text](url))" → "(link)" and trailing ")"
 function mdInline(s) {
   if (!s) return '';
-  const parts = String(s).split(/(\[[^\]]+\]\([^)]+\))/g);
+  // Match optional leading "(" + [text](url) + optional trailing ")"
+  const parts = String(s).split(/(\(?\[[^\]]+\]\([^)]+\)\)?)/g);
   return parts.map(part => {
-    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    const m = part.match(/^(\()?\[([^\]]+)\]\(([^)]+)\)(\))?$/);
     if (m) {
-      return `<a class="md-link" href="${esc(m[2])}" target="_blank" rel="noopener noreferrer">${esc(m[1])}</a>`;
+      const lead = m[1] || '';
+      const trail = m[4] || '';
+      // If wrapped in parens "(...)" → keep them around the link
+      return `${lead}<a class="md-link" href="${esc(m[3])}" target="_blank" rel="noopener noreferrer">${esc(m[2])}</a>${trail}`;
     }
     return esc(part);
   }).join('');
