@@ -571,16 +571,28 @@ function renderSteps(steps) {
 
 function renderToolList(tools) {
   if (!tools || !tools.length) return '';
-  const colorMap = { red:'#dc2626', cyan:'#06b6d4', blue:'#2563eb', indigo:'#5C7CE2', orange:'#ea580c', green:'#16a34a', purple:'#9333ea', pink:'#ec4899' };
+  const colorMap = {
+    red:    { border: 'hsl(0 84% 60% / .3)',   bg: 'hsl(0 84% 60% / .05)',   icon: '#dc2626' },
+    cyan:   { border: 'hsl(187 85% 43% / .3)', bg: 'hsl(187 85% 43% / .05)', icon: '#06b6d4' },
+    blue:   { border: 'hsl(217 91% 60% / .3)', bg: 'hsl(217 91% 60% / .05)', icon: '#2563eb' },
+    indigo: { border: 'hsl(227 71% 69% / .3)', bg: 'hsl(227 71% 69% / .05)', icon: '#5C7CE2' },
+    orange: { border: 'hsl(25 95% 53% / .3)',  bg: 'hsl(25 95% 53% / .05)',  icon: '#ea580c' },
+    green:  { border: 'hsl(142 71% 45% / .3)', bg: 'hsl(142 71% 45% / .05)', icon: '#16a34a' },
+    purple: { border: 'hsl(271 91% 65% / .3)', bg: 'hsl(271 91% 65% / .05)', icon: '#9333ea' },
+    pink:   { border: 'hsl(330 81% 60% / .3)', bg: 'hsl(330 81% 60% / .05)', icon: '#ec4899' },
+    amber:  { border: 'hsl(38 92% 50% / .3)',  bg: 'hsl(38 92% 50% / .05)',  icon: '#f59e0b' },
+  };
+  const searchSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`;
+  const extSvg = (color) => `<svg viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`;
   return `
+<div class="tool-search">${searchSvg}<span>Keyword eingeben und auf jeder Plattform prüfen ...</span></div>
 <div class="tool-grid">${tools.map(t => {
-    const dot = colorMap[t.color] || 'var(--primary)';
-    return `
-  <div class="tool-card">
-    <h4><span class="tool-dot" style="background:${dot}"></span>${esc(t.name)}</h4>
-    <p>${esc(t.description)}</p>
-    ${t.url ? `<a class="tool-link" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">Tool öffnen ↗</a>` : ''}
-  </div>`;
+    const c = colorMap[t.color] || colorMap.indigo;
+    const inner = `<div class="tool-head">${extSvg(c.icon)}<span class="tool-name">${esc(t.name)}</span></div><p>${esc(t.description)}</p>`;
+    const style = `border-color:${c.border};background:${c.bg}`;
+    return t.url
+      ? `<a class="tool-card" style="${style}" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+      : `<div class="tool-card" style="${style}">${inner}</div>`;
   }).join('')}
 </div>`;
 }
