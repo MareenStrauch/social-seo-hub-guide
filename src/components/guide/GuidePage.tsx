@@ -116,24 +116,41 @@ function PersonalNoteText({ text }: { text: string }) {
   );
 }
 
-/* ─── Answer Capsule – consistent primary border ─── */
+/* ─── Answer Capsule – consistent primary border, supports links ─── */
 function AnswerCapsule({ text }: { text: string }) {
   return (
     <p
       className="text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 border-primary rounded-xl px-5 py-4 mb-6"
       data-ai-summary
     >
-      {text}
+      {renderInlineLinks(text)}
     </p>
   );
 }
 
-/* ─── Data Point Aside ─── */
+/* ─── Steps as visual cards ─── */
+function StepsCards({ steps }: { steps: { title: string; text: string; example?: string }[] }) {
+  return (
+    <div className="my-8 grid gap-4 sm:grid-cols-2">
+      {steps.map((step, i) => (
+        <div key={i} className="rounded-xl border border-border bg-background p-5 shadow-sm">
+          <p className="text-xs font-mono text-primary font-semibold uppercase tracking-wider mb-2">{step.title}</p>
+          <p className="text-foreground leading-relaxed text-sm">{renderInlineLinks(step.text)}</p>
+          {step.example && (
+            <p className="mt-2 text-xs text-muted-foreground italic">{step.example}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─── Data Point Aside – supports links ─── */
 function DataPoint({ text }: { text: string }) {
   return (
     <aside className="my-6 flex items-start gap-3 bg-secondary/5 border border-secondary/20 rounded-xl p-5">
       <BarChart3 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-      <p className="text-sm text-foreground/80 leading-relaxed font-medium">{text}</p>
+      <p className="text-sm text-foreground/80 leading-relaxed font-medium">{renderInlineLinks(text)}</p>
     </aside>
   );
 }
