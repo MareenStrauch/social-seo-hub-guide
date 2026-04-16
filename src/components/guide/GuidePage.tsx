@@ -162,35 +162,58 @@ function DataPoint({ text }: { text: string }) {
   );
 }
 
-/* ─── Tool List with colored accents ─── */
+/* ─── Tool List – Search-style cards ─── */
 const toolColorMap: Record<string, string> = {
-  red: "bg-red-500",
-  cyan: "bg-cyan-500",
-  blue: "bg-blue-500",
-  indigo: "bg-indigo-500",
-  green: "bg-green-500",
-  amber: "bg-amber-500",
+  red: "border-red-500/40 bg-red-500/5",
+  cyan: "border-cyan-500/40 bg-cyan-500/5",
+  blue: "border-blue-500/40 bg-blue-500/5",
+  indigo: "border-indigo-500/40 bg-indigo-500/5",
+  green: "border-green-500/40 bg-green-500/5",
+  amber: "border-amber-500/40 bg-amber-500/5",
+};
+const toolIconColorMap: Record<string, string> = {
+  red: "text-red-500",
+  cyan: "text-cyan-500",
+  blue: "text-blue-500",
+  indigo: "text-indigo-500",
+  green: "text-green-500",
+  amber: "text-amber-500",
 };
 
 function ToolList({ tools }: { tools: { color: string; name: string; description: string; url?: string }[] }) {
   return (
-    <ul className="my-6 space-y-4">
-      {tools.map((tool, i) => (
-        <li key={i} className="flex items-start gap-4">
-          <span className={`mt-1.5 w-3 h-3 rounded-full shrink-0 ${toolColorMap[tool.color] || "bg-primary"}`} />
-          <div>
-            {tool.url ? (
-              <a href={tool.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">
-                {tool.name}
+    <div className="my-8 space-y-4">
+      {/* Decorative search bar */}
+      <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-card/60 backdrop-blur px-4 py-3 shadow-sm">
+        <Search className="w-5 h-5 text-muted-foreground shrink-0" />
+        <span className="text-muted-foreground text-sm select-none">Keyword eingeben und auf jeder Plattform prüfen ...</span>
+      </div>
+      {/* Tool cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {tools.map((tool, i) => {
+          const card = (
+            <div
+              key={i}
+              className={`group relative rounded-xl border p-5 transition-all duration-300 hover:shadow-md hover:scale-[1.02] ${toolColorMap[tool.color] || "border-primary/30 bg-primary/5"}`}
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <ExternalLink className={`w-4 h-4 shrink-0 ${toolIconColorMap[tool.color] || "text-primary"}`} />
+                <span className="font-semibold text-foreground text-[0.95rem] group-hover:text-primary transition-colors">{tool.name}</span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">{tool.description}</p>
+            </div>
+          );
+          if (tool.url) {
+            return (
+              <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" className="block">
+                {card}
               </a>
-            ) : (
-              <span className="font-semibold text-foreground">{tool.name}</span>
-            )}
-            <p className="text-sm text-muted-foreground leading-relaxed mt-0.5">{tool.description}</p>
-          </div>
-        </li>
-      ))}
-    </ul>
+            );
+          }
+          return card;
+        })}
+      </div>
+    </div>
   );
 }
 
