@@ -156,7 +156,37 @@ function DataPoint({ text }: { text: string }) {
   );
 }
 
-/* ─── Comparison Table – classic red/green ─── */
+/* ─── Tool List with colored accents ─── */
+const toolColorMap: Record<string, string> = {
+  red: "bg-red-500",
+  cyan: "bg-cyan-500",
+  blue: "bg-blue-500",
+  indigo: "bg-indigo-500",
+  green: "bg-green-500",
+  amber: "bg-amber-500",
+};
+
+function ToolList({ tools }: { tools: { color: string; name: string; description: string; url?: string }[] }) {
+  return (
+    <ul className="my-6 space-y-4">
+      {tools.map((tool, i) => (
+        <li key={i} className="flex items-start gap-4">
+          <span className={`mt-1.5 w-3 h-3 rounded-full shrink-0 ${toolColorMap[tool.color] || "bg-primary"}`} />
+          <div>
+            {tool.url ? (
+              <a href={tool.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">
+                {tool.name}
+              </a>
+            ) : (
+              <span className="font-semibold text-foreground">{tool.name}</span>
+            )}
+            <p className="text-sm text-muted-foreground leading-relaxed mt-0.5">{tool.description}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
 function ComparisonTable({ comparison }: { comparison: GuideComparison }) {
   return (
     <div className="my-10">
@@ -366,6 +396,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                   {section.steps && <StepsCards steps={section.steps} />}
                   {section.table && <SectionTable table={section.table} />}
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
+                  {section.toolList && <ToolList tools={section.toolList} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
                 </section>
             ))}
