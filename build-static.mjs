@@ -542,6 +542,60 @@ function buildHub() {
 ` + footer() + bodyEnd();
 }
 
+function renderTable(table) {
+  if (!table || !table.headers || !table.rows) return '';
+  return `
+<div class="guide-table-wrap">
+  <table class="guide-table">
+    <thead><tr>${table.headers.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead>
+    <tbody>${table.rows.map(row => `<tr>${row.map(cell => `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
+  </table>
+</div>`;
+}
+
+function renderSteps(steps) {
+  if (!steps || !steps.length) return '';
+  return `
+<div class="steps-list">${steps.map(s => `
+  <div class="step-item">
+    <h4>${esc(s.title)}</h4>
+    <p>${esc(s.text)}</p>
+    ${s.example ? `<p class="step-example">${esc(s.example)}</p>` : ''}
+  </div>`).join('')}
+</div>`;
+}
+
+function renderToolList(tools) {
+  if (!tools || !tools.length) return '';
+  const colorMap = { red:'#dc2626', cyan:'#06b6d4', blue:'#2563eb', indigo:'#5C7CE2', orange:'#ea580c', green:'#16a34a', purple:'#9333ea', pink:'#ec4899' };
+  return `
+<div class="tool-grid">${tools.map(t => {
+    const dot = colorMap[t.color] || 'var(--primary)';
+    return `
+  <div class="tool-card">
+    <h4><span class="tool-dot" style="background:${dot}"></span>${esc(t.name)}</h4>
+    <p>${esc(t.description)}</p>
+    ${t.url ? `<a class="tool-link" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">Tool öffnen ↗</a>` : ''}
+  </div>`;
+  }).join('')}
+</div>`;
+}
+
+function renderCodeExample(code) {
+  if (!code) return '';
+  return `<div class="code-block"><pre>${esc(code)}</pre></div>`;
+}
+
+function renderSectionCta(cta) {
+  if (!cta) return '';
+  return `
+<div class="section-cta">
+  <h3>${esc(cta.headline)}</h3>
+  <p>${esc(cta.text)}</p>
+  ${cta.actions && cta.actions.length ? `<div class="section-cta-actions">${cta.actions.map((a, i) => `<a class="${i === 0 ? 'cta-primary' : 'cta-secondary'}" href="${esc(a.url)}">${esc(a.label)}</a>`).join('')}</div>` : ''}
+</div>`;
+}
+
 function buildGuide(guide) {
   const prevGuide = guide.navigation?.prev
     ? guidesData.guides.find((entry) => entry.id === guide.navigation.prev) ?? null
@@ -550,9 +604,21 @@ function buildGuide(guide) {
     ? guidesData.guides.find((entry) => entry.id === guide.navigation.next) ?? null
     : null;
 
-  const schemaTag = guide.schema
-    ? `<script type="application/ld+json">${JSON.stringify(guide.schema)}</script>`
-    : '';
+  // Fix schema dates: ensure ISO 8601 with timezone for upload/published/modified
+  let schemaTag = '';
+  if (guide.schema) {
+    const schemaCopy = JSON.parse(JSON.stringify(guide.schema));
+    const fixDate = (d) => {
+      if (typeof d !== 'string') return d;
+      if (/T\d{2}:\d{2}.*([+-]\d{2}:?\d{2}|Z)$/.test(d)) return d;
+      if (/^\d{4}-\d{2}-\d{2}$/.test(d)) return `${d}T08:00:00+02:00`;
+      return d;
+    };
+    if (schemaCopy.datePublished) schemaCopy.datePublished = fixDate(schemaCopy.datePublished);
+    if (schemaCopy.dateModified) schemaCopy.dateModified = fixDate(schemaCopy.dateModified);
+    if (schemaCopy.uploadDate) schemaCopy.uploadDate = fixDate(schemaCopy.uploadDate);
+    schemaTag = `<script type="application/ld+json">${JSON.stringify(schemaCopy)}</script>`;
+  }
 
   let html = head(
     guide.meta.title,
@@ -565,11 +631,23 @@ function buildGuide(guide) {
   html += `
 <header class="guide-hero">
   <div class="wrap-narrow">
+    ${guide.lastUpdated ? `<div class="last-updated">Aktualisiert: ${esc(guide.lastUpdated)}</div>` : ''}
     <h1>${esc(guide.hero.headline)}</h1>
     <p class="sub">${esc(guide.hero.subheadline)}</p>
     <p class="guide-intro">${esc(guide.hero.intro)}</p>
   </div>
 </header>`;
+
+  // What's new 2026 banner
+  if (guide.whatsNew2026) {
+    html += `
+<div class="wrap-narrow">
+  <div class="whats-new">
+    <strong>Neu 2026</strong>
+    <p>${esc(guide.whatsNew2026)}</p>
+  </div>
+</div>`;
+  }
 
   // Personal note – lighter bg, subtle border
   if (guide.personalNote) {
@@ -600,7 +678,12 @@ function buildGuide(guide) {
 <section class="guide-section" id="${sec.id}">
   <h2>${esc(sec.heading)}</h2>
   ${sec.capsule ? `<div class="capsule-answer">${esc(sec.capsule)}</div>` : ''}
-  <div class="guide-body">${nl2p(sec.body)}</div>
+  ${sec.body ? `<div class="guide-body">${nl2p(sec.body)}</div>` : ''}
+  ${renderTable(sec.table)}
+  ${renderSteps(sec.steps)}
+  ${renderToolList(sec.toolList)}
+  ${renderCodeExample(sec.codeExample)}
+  ${renderSectionCta(sec.cta)}
   ${sec.dataPoint ? `<div class="data-point">${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
   }
