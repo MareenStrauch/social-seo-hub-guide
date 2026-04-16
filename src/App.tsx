@@ -11,6 +11,7 @@ import GuideYouTubeSeo from "./pages/GuideYouTubeSeo";
 import GuideChatGptMarketing from "./pages/GuideChatGptMarketing";
 import GuideTikTokSeo from "./pages/GuideTikTokSeo";
 import GuideMultiPlatformSeo from "./pages/GuideMultiPlatformSeo";
+import KeywordTool from "./pages/KeywordTool";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
