@@ -327,16 +327,6 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
         {/* Content */}
         <section className="px-4 sm:px-6 lg:px-8 pb-16">
           <div className="max-w-4xl mx-auto">
-            {/* Was ist neu in 2026 */}
-            <aside className="mb-10 bg-accent/30 border border-accent rounded-xl p-6">
-              <h2 className="text-lg font-headline font-bold text-secondary mb-2">🆕 Was ist neu in 2026?</h2>
-              <p className="text-foreground leading-relaxed text-sm">
-                KI-Systeme bevorzugen Quellen, die im Schnitt 25 % frischer sind als klassische Google-Ergebnisse. 
-                Alle Inhalte auf dieser Seite wurden im April 2026 auf aktuelle Algorithmus-Änderungen, neue Plattform-Features 
-                und die neuesten Best Practices überprüft und aktualisiert.
-              </p>
-            </aside>
-
             {/* Personal Note – lighter bg, subtle border */}
             <aside className="my-10 bg-tertiary/20 border border-primary/15 rounded-xl p-6">
               <p className="text-sm font-semibold text-primary/80 mb-2">{guide.personalNote.label}</p>
@@ -372,11 +362,22 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                   </h2>
                   {section.capsule && <AnswerCapsule text={section.capsule} />}
                   {section.body && <BodyText text={section.body} />}
+                  {section.steps && <StepsCards steps={section.steps} />}
                   {section.table && <SectionTable table={section.table} />}
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
                 </section>
             ))}
+
+            {/* Was ist neu in 2026 – positioned after main content */}
+            <aside className="mt-16 mb-10 bg-accent/30 border border-accent rounded-xl p-6">
+              <h2 className="text-lg font-headline font-bold text-secondary mb-2">🆕 Was ist neu in 2026?</h2>
+              <p className="text-foreground leading-relaxed text-sm">
+                KI-Systeme bevorzugen Quellen, die im Schnitt 25 % frischer sind als klassische Google-Ergebnisse. 
+                Alle Inhalte auf dieser Seite wurden im April 2026 auf aktuelle Algorithmus-Änderungen, neue Plattform-Features 
+                und die neuesten Best Practices überprüft und aktualisiert.
+              </p>
+            </aside>
 
             {/* Top-level Comparison */}
             {guide.comparison && <ComparisonTable comparison={guide.comparison} />}
