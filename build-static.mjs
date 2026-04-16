@@ -654,16 +654,7 @@ function buildGuide(guide) {
   </div>
 </header>`;
 
-  // What's new 2026 banner
-  if (guide.whatsNew2026) {
-    html += `
-<div class="wrap-narrow">
-  <div class="whats-new">
-    <strong>Neu 2026</strong>
-    <p>${esc(guide.whatsNew2026)}</p>
-  </div>
-</div>`;
-  }
+  // (Whats-new banner intentionally removed - content lives in sections)
 
   // Personal note – lighter bg, subtle border
   if (guide.personalNote) {
