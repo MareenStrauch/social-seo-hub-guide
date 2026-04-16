@@ -19,6 +19,7 @@ interface GuideSection {
   steps?: { number?: number; letter?: string; title: string; text: string; example?: string }[];
   comparison?: GuideComparison;
   table?: { headers: string[]; rows: string[][] };
+  toolList?: { color: string; name: string; description: string; url?: string }[];
 }
 
 interface GuideComparison {

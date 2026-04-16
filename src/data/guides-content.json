@@ -632,7 +632,13 @@
         {
           "id": "keyword-tools",
           "heading": "Tools für die Keyword-Recherche",
-          "body": "- YouTube Autocomplete: Tippe dein Keyword ein und notiere die Vorschläge.\n- [TikTok Creative Center](https://ads.tiktok.com/business/creativecenter/inspiration/popular/pc/en) (Trend Discovery): Zeigt dir, welche Begriffe gerade gesucht werden.\n- Google Trends (Vergleichsmodus): Vergleiche Suchvolumen über Plattformen.\n- LinkedIn-Suchleiste: Prüfe, ob dein Thema dort diskutiert wird."
+          "body": "",
+          "toolList": [
+            { "color": "red", "name": "YouTube Autocomplete", "description": "Tippe dein Keyword ein und notiere die Vorschläge - direkt in der YouTube-Suche.", "url": "https://www.youtube.com" },
+            { "color": "cyan", "name": "TikTok Creative Center", "description": "Zeigt dir, welche Begriffe und Hashtags gerade auf TikTok gesucht werden.", "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/pc/en" },
+            { "color": "blue", "name": "Google Trends", "description": "Vergleiche Suchvolumen für dein Keyword über verschiedene Plattformen und Zeiträume.", "url": "https://trends.google.de" },
+            { "color": "indigo", "name": "LinkedIn-Suchleiste", "description": "Prüfe, ob dein Thema auf LinkedIn aktiv diskutiert wird und welche Begriffe dort verwendet werden.", "url": "https://www.linkedin.com" }
+          ]
         },
         {
           "id": "schema-website",
