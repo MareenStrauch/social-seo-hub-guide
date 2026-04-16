@@ -127,7 +127,9 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
 .guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
 .guide-body p{margin-top:.75rem}
-.data-point{background:hsl(227 71% 69% / .05);border:1px solid hsl(227 71% 69% / .2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;line-height:1.6;font-weight:500;color:hsl(0 0% 45%)}
+.data-point{display:flex;align-items:flex-start;gap:.75rem;background:hsl(227 71% 69% / .05);border:1px solid hsl(227 71% 69% / .2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;line-height:1.6;font-weight:500;color:hsl(0 0% 45%)}
+.data-point svg{width:1.1rem;height:1.1rem;color:var(--secondary);flex-shrink:0;margin-top:.15rem}
+.data-point p{margin:0}
 
 /* Comparison – red/green */
 .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
@@ -692,7 +694,7 @@ function buildGuide(guide) {
   ${renderToolList(sec.toolList)}
   ${renderCodeExample(sec.codeExample)}
   ${renderSectionCta(sec.cta)}
-  ${sec.dataPoint ? `<div class="data-point">${esc(sec.dataPoint)}</div>` : ''}
+  ${sec.dataPoint ? `<div class="data-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16v-5"/><path d="M17 16v-7"/></svg><p>${esc(sec.dataPoint)}</p></div>` : ''}
 </section>`;
   }
 
