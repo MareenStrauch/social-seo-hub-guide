@@ -65,6 +65,22 @@ function findGuideById(guides: GuideData[], id: string | null) {
   return guides.find((g) => g.id === id) ?? null;
 }
 
+/* ─── Parse markdown-style links [text](url) ─── */
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (match) {
+      return (
+        <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          {match[1]}
+        </a>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
 /* ─── Render body with \n\n as separate <p> tags ─── */
 function BodyText({ text }: { text: string }) {
   const paragraphs = text.split("\n\n");
@@ -72,7 +88,7 @@ function BodyText({ text }: { text: string }) {
     <>
       {paragraphs.map((p, i) => (
         <p key={i} className="text-foreground leading-relaxed mb-4 last:mb-0">
-          {p}
+          {renderInlineLinks(p)}
         </p>
       ))}
     </>
@@ -100,24 +116,41 @@ function PersonalNoteText({ text }: { text: string }) {
   );
 }
 
-/* ─── Answer Capsule – consistent primary border ─── */
+/* ─── Answer Capsule – consistent primary border, supports links ─── */
 function AnswerCapsule({ text }: { text: string }) {
   return (
     <p
       className="text-lg font-semibold leading-relaxed bg-secondary/5 border-l-4 border-primary rounded-xl px-5 py-4 mb-6"
       data-ai-summary
     >
-      {text}
+      {renderInlineLinks(text)}
     </p>
   );
 }
 
-/* ─── Data Point Aside ─── */
+/* ─── Steps as visual cards ─── */
+function StepsCards({ steps }: { steps: { title: string; text: string; example?: string }[] }) {
+  return (
+    <div className="my-8 grid gap-4 sm:grid-cols-2">
+      {steps.map((step, i) => (
+        <div key={i} className="rounded-xl border border-border bg-background p-5 shadow-sm">
+          <p className="text-xs font-mono text-primary font-semibold uppercase tracking-wider mb-2">{step.title}</p>
+          <p className="text-foreground leading-relaxed text-sm">{renderInlineLinks(step.text)}</p>
+          {step.example && (
+            <p className="mt-2 text-xs text-muted-foreground italic">{step.example}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─── Data Point Aside – supports links ─── */
 function DataPoint({ text }: { text: string }) {
   return (
     <aside className="my-6 flex items-start gap-3 bg-secondary/5 border border-secondary/20 rounded-xl p-5">
       <BarChart3 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-      <p className="text-sm text-foreground/80 leading-relaxed font-medium">{text}</p>
+      <p className="text-sm text-foreground/80 leading-relaxed font-medium">{renderInlineLinks(text)}</p>
     </aside>
   );
 }
@@ -294,16 +327,6 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
         {/* Content */}
         <section className="px-4 sm:px-6 lg:px-8 pb-16">
           <div className="max-w-4xl mx-auto">
-            {/* Was ist neu in 2026 */}
-            <aside className="mb-10 bg-accent/30 border border-accent rounded-xl p-6">
-              <h2 className="text-lg font-headline font-bold text-secondary mb-2">🆕 Was ist neu in 2026?</h2>
-              <p className="text-foreground leading-relaxed text-sm">
-                KI-Systeme bevorzugen Quellen, die im Schnitt 25 % frischer sind als klassische Google-Ergebnisse. 
-                Alle Inhalte auf dieser Seite wurden im April 2026 auf aktuelle Algorithmus-Änderungen, neue Plattform-Features 
-                und die neuesten Best Practices überprüft und aktualisiert.
-              </p>
-            </aside>
-
             {/* Personal Note – lighter bg, subtle border */}
             <aside className="my-10 bg-tertiary/20 border border-primary/15 rounded-xl p-6">
               <p className="text-sm font-semibold text-primary/80 mb-2">{guide.personalNote.label}</p>
@@ -339,11 +362,22 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                   </h2>
                   {section.capsule && <AnswerCapsule text={section.capsule} />}
                   {section.body && <BodyText text={section.body} />}
+                  {section.steps && <StepsCards steps={section.steps} />}
                   {section.table && <SectionTable table={section.table} />}
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
                 </section>
             ))}
+
+            {/* Was ist neu in 2026 – positioned after main content */}
+            <aside className="mt-16 mb-10 bg-accent/30 border border-accent rounded-xl p-6">
+              <h2 className="text-lg font-headline font-bold text-secondary mb-2">🆕 Was ist neu in 2026?</h2>
+              <p className="text-foreground leading-relaxed text-sm">
+                KI-Systeme bevorzugen Quellen, die im Schnitt 25 % frischer sind als klassische Google-Ergebnisse. 
+                Alle Inhalte auf dieser Seite wurden im April 2026 auf aktuelle Algorithmus-Änderungen, neue Plattform-Features 
+                und die neuesten Best Practices überprüft und aktualisiert.
+              </p>
+            </aside>
 
             {/* Top-level Comparison */}
             {guide.comparison && <ComparisonTable comparison={guide.comparison} />}
