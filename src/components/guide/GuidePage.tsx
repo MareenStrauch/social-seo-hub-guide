@@ -4,7 +4,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { FAQ } from "@/components/ui/faq";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useSeo } from "@/hooks/use-seo";
-import { BarChart3, Mail, ArrowRight } from "lucide-react";
+import { BarChart3, Mail, ArrowRight, Search, ExternalLink } from "lucide-react";
 
 const SITE_URL = "https://mareensocialup.de";
 
