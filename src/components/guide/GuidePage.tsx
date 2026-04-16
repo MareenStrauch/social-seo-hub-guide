@@ -438,6 +438,7 @@ export function GuidePage({ guide, allGuides }: GuidePageProps) {
                   {section.dataPoint && <DataPoint text={section.dataPoint} />}
                   {section.toolList && <ToolList tools={section.toolList} />}
                   {section.comparison && <ComparisonTable comparison={section.comparison} />}
+                  {section.cta && <CtaBox cta={section.cta} />}
                 </section>
             ))}
 
