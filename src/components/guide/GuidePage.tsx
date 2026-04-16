@@ -65,6 +65,22 @@ function findGuideById(guides: GuideData[], id: string | null) {
   return guides.find((g) => g.id === id) ?? null;
 }
 
+/* ─── Parse markdown-style links [text](url) ─── */
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (match) {
+      return (
+        <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          {match[1]}
+        </a>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
 /* ─── Render body with \n\n as separate <p> tags ─── */
 function BodyText({ text }: { text: string }) {
   const paragraphs = text.split("\n\n");
@@ -72,7 +88,7 @@ function BodyText({ text }: { text: string }) {
     <>
       {paragraphs.map((p, i) => (
         <p key={i} className="text-foreground leading-relaxed mb-4 last:mb-0">
-          {p}
+          {renderInlineLinks(p)}
         </p>
       ))}
     </>
