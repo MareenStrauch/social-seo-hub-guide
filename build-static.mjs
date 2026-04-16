@@ -417,8 +417,21 @@ function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
+// Escape + parse markdown links [text](url) → <a class="md-link" ...>
+function mdInline(s) {
+  if (!s) return '';
+  const parts = String(s).split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map(part => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (m) {
+      return `<a class="md-link" href="${esc(m[2])}" target="_blank" rel="noopener noreferrer">${esc(m[1])}</a>`;
+    }
+    return esc(part);
+  }).join('');
+}
+
 function nl2p(text) {
-  return text.split('\n\n').map(p => `<p>${p.replace(/\n/g,' ')}</p>`).join('\n');
+  return text.split('\n\n').map(p => `<p>${mdInline(p).replace(/\n/g,' ')}</p>`).join('\n');
 }
 
 // --- Page builders ---
