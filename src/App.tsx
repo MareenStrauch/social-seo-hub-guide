@@ -32,6 +32,7 @@ const App = () => (
           <Route path="/guides/chatgpt-marketing-roi-prompt" element={<GuideChatGptMarketing />} />
           <Route path="/guides/tiktok-seo-2025" element={<GuideTikTokSeo />} />
           <Route path="/guides/multi-platform-seo-2026" element={<GuideMultiPlatformSeo />} />
+          <Route path="/tools/keyword-recherche" element={<KeywordTool />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
