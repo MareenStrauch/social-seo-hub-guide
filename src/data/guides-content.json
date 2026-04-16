@@ -677,7 +677,14 @@
               "text": "Array mit deinen Profil-URLs (YouTube, TikTok, LinkedIn) als E-E-A-T-Signal"
             }
           ],
-          "dataPoint": "Du möchtest VideoObject-Schema auf deiner Website implementieren? Ich unterstütze dich gerne dabei - [schreib mir für eine Beratung](https://mareensocialup.de/#kontakt)."
+          "cta": {
+            "headline": "Schema-Markup klingt komplex?",
+            "text": "Ich helfe dir, VideoObject und strukturierte Daten sauber auf deiner Website einzurichten - damit deine Videos in den Suchergebnissen mit Thumbnail, Laufzeit und Titel erscheinen.",
+            "actions": [
+              { "label": "E-Mail schreiben", "url": "mailto:mareen@mareensocialup.de?subject=Beratung%20VideoObject%20Schema", "type": "email" },
+              { "label": "Kontakt aufnehmen", "url": "https://mareensocialup.de/#kontakt", "type": "link" }
+            ]
+          }
         },
         {
           "id": "quellen",
