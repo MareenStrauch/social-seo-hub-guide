@@ -24,7 +24,7 @@ interface GuideSection {
   cta?: {
     headline: string;
     text: string;
-    actions: { label: string; url: string; type: "email" | "link" }[];
+    actions: { label: string; url: string; type: string }[];
   };
 }
 
