@@ -202,14 +202,17 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .nav-pill-primary{background:rgba(210,96,76,.1);color:var(--primary)}
 .nav-pill-primary:hover{background:rgba(210,96,76,.16)}
 
-/* Tables (Plattform-Matrix) */
-.guide-table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:.75rem;border:1px solid var(--border);background:var(--card)}
-.guide-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:640px}
-.guide-table th,.guide-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
-.guide-table thead th{background:rgba(92,124,226,.08);color:var(--secondary);font-weight:700;font-family:var(--font-headline);font-size:.85rem;text-transform:uppercase;letter-spacing:.03em}
-.guide-table tbody tr:last-child td{border-bottom:none}
-.guide-table tbody td:first-child{font-weight:600;color:var(--text);background:rgba(0,0,0,.015)}
-.guide-table tbody tr:hover{background:rgba(92,124,226,.03)}
+/* Tables (Plattform-Matrix) – matches React: tertiary/30 header, no card wrap */
+.guide-table-wrap{overflow-x:auto;margin:2rem 0;-webkit-overflow-scrolling:touch}
+.guide-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
+.guide-table th,.guide-table td{padding:.85rem 1rem;text-align:left;line-height:1.55;vertical-align:top}
+.guide-table thead th{background:hsl(20 100% 93% / .5);color:var(--secondary);font-weight:600;font-family:var(--font-headline);border-bottom:1px solid var(--border)}
+.guide-table thead th:first-child{border-top-left-radius:.5rem}
+.guide-table thead th:last-child{border-top-right-radius:.5rem}
+.guide-table tbody tr{border-bottom:1px solid hsl(0 0% 91% / .5)}
+.guide-table tbody tr:last-child{border-bottom:none}
+.guide-table tbody td{color:var(--muted)}
+.guide-table tbody td:first-child{font-weight:500;color:var(--text)}
 
 /* Steps (Keyword-Strategie / Schema-Felder) */
 .steps-list{display:flex;flex-direction:column;gap:.85rem;margin:1.5rem 0}
@@ -218,34 +221,35 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .step-item p{margin:.15rem 0;font-size:.92rem;color:var(--text);line-height:1.55}
 .step-item .step-example{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:.4rem}
 
-/* Tool list (Keyword-Tools) */
-.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
-.tool-card{background:var(--card);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;display:flex;flex-direction:column;gap:.5rem;transition:transform .2s,box-shadow .2s}
-.tool-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px -10px rgba(0,0,0,.12)}
-.tool-card .tool-dot{width:.65rem;height:.65rem;border-radius:50%;display:inline-block;margin-right:.45rem;vertical-align:middle}
-.tool-card h4{font-family:var(--font-headline);font-size:1rem;font-weight:700;color:var(--secondary);margin:0;display:flex;align-items:center}
-.tool-card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.55;flex:1}
-.tool-card a.tool-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.82rem;font-weight:600;color:var(--primary);text-decoration:none;margin-top:.25rem}
-.tool-card a.tool-link:hover{text-decoration:underline}
+/* Tool list (Keyword-Tools) – matches React with search bar + colored cards */
+.tool-search{display:flex;align-items:center;gap:.75rem;border:1px solid hsl(0 0% 91% / .6);background:hsl(0 0% 100% / .6);backdrop-filter:blur(6px);border-radius:.75rem;padding:.75rem 1rem;margin:2rem 0 1rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.tool-search svg{width:1.1rem;height:1.1rem;color:var(--muted);flex-shrink:0}
+.tool-search span{color:var(--muted);font-size:.88rem;user-select:none}
+.tool-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:.75rem;margin:0 0 2rem}
+@media(min-width:640px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tool-card{position:relative;border:1px solid;border-radius:.75rem;padding:1.25rem;transition:transform .25s,box-shadow .25s;display:block;text-decoration:none}
+.tool-card:hover{transform:scale(1.02);box-shadow:0 6px 16px -8px rgba(0,0,0,.12)}
+.tool-card .tool-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem}
+.tool-card .tool-head svg{width:1rem;height:1rem;flex-shrink:0}
+.tool-card .tool-name{font-weight:600;color:var(--text);font-size:.95rem}
+.tool-card:hover .tool-name{color:var(--primary)}
+.tool-card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.55}
 
 /* Code example (VideoObject Schema) */
 .code-block{background:#1e293b;color:#e2e8f0;border-radius:.75rem;padding:1.25rem;margin:1.25rem 0;overflow-x:auto;font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.82rem;line-height:1.6}
 .code-block pre{margin:0;white-space:pre}
 
-/* Section CTA (Schema-Hilfe) */
-.section-cta{background:linear-gradient(135deg,rgba(210,96,76,.08),rgba(92,124,226,.08));border:1px solid rgba(210,96,76,.2);border-radius:1rem;padding:1.75rem;margin:2rem 0;text-align:center}
-.section-cta h3{font-family:var(--font-headline);color:var(--secondary);font-size:1.25rem;margin:0 0 .5rem}
-.section-cta p{color:var(--text);font-size:.95rem;margin:0 0 1rem;line-height:1.6}
-.section-cta-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-.section-cta-actions a{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.25rem;border-radius:2rem;font-weight:600;font-size:.9rem;text-decoration:none;transition:transform .2s,opacity .2s}
-.section-cta-actions a.cta-primary{background:var(--gradient-primary);color:#fff}
-.section-cta-actions a.cta-secondary{background:rgba(92,124,226,.1);color:var(--secondary);border:1px solid rgba(92,124,226,.2)}
-.section-cta-actions a:hover{transform:translateY(-1px);text-decoration:none}
+/* Section CTA (Schema-Hilfe) – matches React CtaBox: subtle gradient, left-aligned */
+.section-cta{background:linear-gradient(135deg,hsl(12 62% 56% / .05),hsl(20 100% 93% / .3),var(--bg));border:1px solid hsl(12 62% 56% / .2);border-radius:.75rem;padding:1.75rem;margin:2.5rem 0;text-align:left}
+.section-cta h3{font-family:var(--font-headline);color:var(--secondary);font-size:1.25rem;font-weight:700;margin:0 0 .5rem}
+.section-cta p{color:var(--text);font-size:.95rem;margin:0 0 1.25rem;line-height:1.6;opacity:.85}
+.section-cta-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.section-cta-actions a{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:500;font-size:.88rem;text-decoration:none;transition:opacity .2s,background .2s}
+.section-cta-actions a.cta-primary{background:var(--primary);color:#fff}
+.section-cta-actions a.cta-primary:hover{opacity:.9}
+.section-cta-actions a.cta-secondary{background:hsl(227 71% 69% / .1);color:var(--secondary)}
+.section-cta-actions a.cta-secondary:hover{background:hsl(227 71% 69% / .2)}
 
-/* What's new banner */
-.whats-new{background:linear-gradient(135deg,rgba(255,223,216,.4),rgba(92,124,226,.05));border:1px solid rgba(210,96,76,.15);border-radius:.75rem;padding:1.25rem 1.5rem;margin:1.5rem 0}
-.whats-new strong{display:block;color:var(--primary);font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem;font-family:var(--font-headline)}
-.whats-new p{margin:0;color:var(--text);font-size:.95rem;line-height:1.6}
 .last-updated{display:inline-block;font-size:.8rem;color:var(--muted);background:rgba(0,0,0,.04);padding:.25rem .65rem;border-radius:1rem;margin-bottom:1rem}
 
 /* Cookie banner */
@@ -567,16 +571,28 @@ function renderSteps(steps) {
 
 function renderToolList(tools) {
   if (!tools || !tools.length) return '';
-  const colorMap = { red:'#dc2626', cyan:'#06b6d4', blue:'#2563eb', indigo:'#5C7CE2', orange:'#ea580c', green:'#16a34a', purple:'#9333ea', pink:'#ec4899' };
+  const colorMap = {
+    red:    { border: 'hsl(0 84% 60% / .3)',   bg: 'hsl(0 84% 60% / .05)',   icon: '#dc2626' },
+    cyan:   { border: 'hsl(187 85% 43% / .3)', bg: 'hsl(187 85% 43% / .05)', icon: '#06b6d4' },
+    blue:   { border: 'hsl(217 91% 60% / .3)', bg: 'hsl(217 91% 60% / .05)', icon: '#2563eb' },
+    indigo: { border: 'hsl(227 71% 69% / .3)', bg: 'hsl(227 71% 69% / .05)', icon: '#5C7CE2' },
+    orange: { border: 'hsl(25 95% 53% / .3)',  bg: 'hsl(25 95% 53% / .05)',  icon: '#ea580c' },
+    green:  { border: 'hsl(142 71% 45% / .3)', bg: 'hsl(142 71% 45% / .05)', icon: '#16a34a' },
+    purple: { border: 'hsl(271 91% 65% / .3)', bg: 'hsl(271 91% 65% / .05)', icon: '#9333ea' },
+    pink:   { border: 'hsl(330 81% 60% / .3)', bg: 'hsl(330 81% 60% / .05)', icon: '#ec4899' },
+    amber:  { border: 'hsl(38 92% 50% / .3)',  bg: 'hsl(38 92% 50% / .05)',  icon: '#f59e0b' },
+  };
+  const searchSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`;
+  const extSvg = (color) => `<svg viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`;
   return `
+<div class="tool-search">${searchSvg}<span>Keyword eingeben und auf jeder Plattform prüfen ...</span></div>
 <div class="tool-grid">${tools.map(t => {
-    const dot = colorMap[t.color] || 'var(--primary)';
-    return `
-  <div class="tool-card">
-    <h4><span class="tool-dot" style="background:${dot}"></span>${esc(t.name)}</h4>
-    <p>${esc(t.description)}</p>
-    ${t.url ? `<a class="tool-link" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">Tool öffnen ↗</a>` : ''}
-  </div>`;
+    const c = colorMap[t.color] || colorMap.indigo;
+    const inner = `<div class="tool-head">${extSvg(c.icon)}<span class="tool-name">${esc(t.name)}</span></div><p>${esc(t.description)}</p>`;
+    const style = `border-color:${c.border};background:${c.bg}`;
+    return t.url
+      ? `<a class="tool-card" style="${style}" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+      : `<div class="tool-card" style="${style}">${inner}</div>`;
   }).join('')}
 </div>`;
 }
@@ -638,16 +654,7 @@ function buildGuide(guide) {
   </div>
 </header>`;
 
-  // What's new 2026 banner
-  if (guide.whatsNew2026) {
-    html += `
-<div class="wrap-narrow">
-  <div class="whats-new">
-    <strong>Neu 2026</strong>
-    <p>${esc(guide.whatsNew2026)}</p>
-  </div>
-</div>`;
-  }
+  // (Whats-new banner intentionally removed - content lives in sections)
 
   // Personal note – lighter bg, subtle border
   if (guide.personalNote) {
