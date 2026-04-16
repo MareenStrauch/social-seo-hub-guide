@@ -202,6 +202,52 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .nav-pill-primary{background:rgba(210,96,76,.1);color:var(--primary)}
 .nav-pill-primary:hover{background:rgba(210,96,76,.16)}
 
+/* Tables (Plattform-Matrix) */
+.guide-table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:.75rem;border:1px solid var(--border);background:var(--card)}
+.guide-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:640px}
+.guide-table th,.guide-table td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
+.guide-table thead th{background:rgba(92,124,226,.08);color:var(--secondary);font-weight:700;font-family:var(--font-headline);font-size:.85rem;text-transform:uppercase;letter-spacing:.03em}
+.guide-table tbody tr:last-child td{border-bottom:none}
+.guide-table tbody td:first-child{font-weight:600;color:var(--text);background:rgba(0,0,0,.015)}
+.guide-table tbody tr:hover{background:rgba(92,124,226,.03)}
+
+/* Steps (Keyword-Strategie / Schema-Felder) */
+.steps-list{display:flex;flex-direction:column;gap:.85rem;margin:1.5rem 0}
+.step-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem}
+.step-item h4{font-family:var(--font-headline);font-size:1rem;font-weight:700;color:var(--secondary);margin:0 0 .35rem}
+.step-item p{margin:.15rem 0;font-size:.92rem;color:var(--text);line-height:1.55}
+.step-item .step-example{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:.4rem}
+
+/* Tool list (Keyword-Tools) */
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;display:flex;flex-direction:column;gap:.5rem;transition:transform .2s,box-shadow .2s}
+.tool-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px -10px rgba(0,0,0,.12)}
+.tool-card .tool-dot{width:.65rem;height:.65rem;border-radius:50%;display:inline-block;margin-right:.45rem;vertical-align:middle}
+.tool-card h4{font-family:var(--font-headline);font-size:1rem;font-weight:700;color:var(--secondary);margin:0;display:flex;align-items:center}
+.tool-card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.55;flex:1}
+.tool-card a.tool-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.82rem;font-weight:600;color:var(--primary);text-decoration:none;margin-top:.25rem}
+.tool-card a.tool-link:hover{text-decoration:underline}
+
+/* Code example (VideoObject Schema) */
+.code-block{background:#1e293b;color:#e2e8f0;border-radius:.75rem;padding:1.25rem;margin:1.25rem 0;overflow-x:auto;font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.82rem;line-height:1.6}
+.code-block pre{margin:0;white-space:pre}
+
+/* Section CTA (Schema-Hilfe) */
+.section-cta{background:linear-gradient(135deg,rgba(210,96,76,.08),rgba(92,124,226,.08));border:1px solid rgba(210,96,76,.2);border-radius:1rem;padding:1.75rem;margin:2rem 0;text-align:center}
+.section-cta h3{font-family:var(--font-headline);color:var(--secondary);font-size:1.25rem;margin:0 0 .5rem}
+.section-cta p{color:var(--text);font-size:.95rem;margin:0 0 1rem;line-height:1.6}
+.section-cta-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.section-cta-actions a{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.25rem;border-radius:2rem;font-weight:600;font-size:.9rem;text-decoration:none;transition:transform .2s,opacity .2s}
+.section-cta-actions a.cta-primary{background:var(--gradient-primary);color:#fff}
+.section-cta-actions a.cta-secondary{background:rgba(92,124,226,.1);color:var(--secondary);border:1px solid rgba(92,124,226,.2)}
+.section-cta-actions a:hover{transform:translateY(-1px);text-decoration:none}
+
+/* What's new banner */
+.whats-new{background:linear-gradient(135deg,rgba(255,223,216,.4),rgba(92,124,226,.05));border:1px solid rgba(210,96,76,.15);border-radius:.75rem;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.whats-new strong{display:block;color:var(--primary);font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem;font-family:var(--font-headline)}
+.whats-new p{margin:0;color:var(--text);font-size:.95rem;line-height:1.6}
+.last-updated{display:inline-block;font-size:.8rem;color:var(--muted);background:rgba(0,0,0,.04);padding:.25rem .65rem;border-radius:1rem;margin-bottom:1rem}
+
 /* Cookie banner */
 .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:100;padding:1rem}
 .cookie-banner[hidden]{display:none}
