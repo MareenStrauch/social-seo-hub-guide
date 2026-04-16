@@ -15,6 +15,7 @@ interface GuideSection {
   heading: string;
   capsule?: string;
   body: string;
+  codeExample?: string;
   dataPoint?: string;
   steps?: { number?: number; letter?: string; title: string; text: string; example?: string }[];
   comparison?: GuideComparison;
