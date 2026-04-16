@@ -127,7 +127,7 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
 .guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
 .guide-body p{margin-top:.75rem}
-.data-point{display:flex;align-items:center;gap:.75rem;background:rgba(92,124,226,.05);border:1px solid rgba(92,124,226,.2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;font-weight:500;color:var(--text)}
+.data-point{background:hsl(227 71% 69% / .05);border:1px solid hsl(227 71% 69% / .2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;line-height:1.6;font-weight:500;color:hsl(0 0% 45%)}
 
 /* Comparison – red/green */
 .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
@@ -214,12 +214,13 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .guide-table tbody td{color:var(--muted)}
 .guide-table tbody td:first-child{font-weight:500;color:var(--text)}
 
-/* Steps (Keyword-Strategie / Schema-Felder) */
-.steps-list{display:flex;flex-direction:column;gap:.85rem;margin:1.5rem 0}
-.step-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem}
-.step-item h4{font-family:var(--font-headline);font-size:1rem;font-weight:700;color:var(--secondary);margin:0 0 .35rem}
-.step-item p{margin:.15rem 0;font-size:.92rem;color:var(--text);line-height:1.55}
-.step-item .step-example{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:.4rem}
+/* Steps (Keyword-Strategie / Schema-Felder) – 2-column grid, monospace title */
+.steps-list{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:1rem;margin:2rem 0}
+@media(min-width:640px){.steps-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.step-item{background:var(--bg);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.step-item h4{font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.72rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 .5rem}
+.step-item p{margin:0;font-size:.88rem;color:var(--text);line-height:1.6}
+.step-item .step-example{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:.5rem}
 
 /* Tool list (Keyword-Tools) – matches React with search bar + colored cards */
 .tool-search{display:flex;align-items:center;gap:.75rem;border:1px solid hsl(0 0% 91% / .6);background:hsl(0 0% 100% / .6);backdrop-filter:blur(6px);border-radius:.75rem;padding:.75rem 1rem;margin:2rem 0 1rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
@@ -235,8 +236,8 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .tool-card:hover .tool-name{color:var(--primary)}
 .tool-card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.55}
 
-/* Code example (VideoObject Schema) */
-.code-block{background:#1e293b;color:#e2e8f0;border-radius:.75rem;padding:1.25rem;margin:1.25rem 0;overflow-x:auto;font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.82rem;line-height:1.6}
+/* Code example (VideoObject Schema) – matches React: subtle secondary tint, foreground text */
+.code-block{background:hsl(227 71% 69% / .05);border:1px solid var(--border);color:hsl(0 0% 20%);border-radius:.75rem;padding:1.25rem;margin:1.5rem 0;overflow-x:auto;font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.82rem;line-height:1.65}
 .code-block pre{margin:0;white-space:pre}
 
 /* Section CTA (Schema-Hilfe) – matches React CtaBox: subtle gradient, left-aligned */
