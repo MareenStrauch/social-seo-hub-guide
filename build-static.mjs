@@ -125,13 +125,9 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .guide-section{margin:3rem 0 0}
 .guide-section h2{color:var(--secondary);margin-bottom:1rem}
 .capsule-answer{font-size:1.05rem;font-weight:600;line-height:1.6;background:rgba(92,124,226,.05);border-left:4px solid var(--primary);border-radius:.75rem;padding:1rem 1.25rem;margin:0 0 1.5rem}
-.md-link{color:var(--primary);text-decoration:underline;text-decoration-color:hsl(12 62% 56% / .35);text-underline-offset:2px;font-weight:500;transition:text-decoration-color .2s}
-.md-link:hover{text-decoration-color:var(--primary)}
 .guide-body{color:var(--text);font-size:.95rem;line-height:1.7}
 .guide-body p{margin-top:.75rem}
-.data-point{display:flex;align-items:flex-start;gap:.75rem;background:hsl(227 71% 69% / .05);border:1px solid hsl(227 71% 69% / .2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;line-height:1.6;font-weight:500;color:hsl(0 0% 45%)}
-.data-point svg{width:1.1rem;height:1.1rem;color:var(--secondary);flex-shrink:0;margin-top:.15rem}
-.data-point p{margin:0}
+.data-point{display:flex;align-items:center;gap:.75rem;background:rgba(92,124,226,.05);border:1px solid rgba(92,124,226,.2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;font-weight:500;color:var(--text)}
 
 /* Comparison – red/green */
 .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
@@ -205,57 +201,6 @@ ul,ol{margin:0.75rem 0 0 1.5rem}li{margin-top:0.35rem}
 .nav-pill-secondary:hover{background:rgba(92,124,226,.16)}
 .nav-pill-primary{background:rgba(210,96,76,.1);color:var(--primary)}
 .nav-pill-primary:hover{background:rgba(210,96,76,.16)}
-
-/* Tables (Plattform-Matrix) – matches React: tertiary/30 header, no card wrap */
-.guide-table-wrap{overflow-x:auto;margin:2rem 0;-webkit-overflow-scrolling:touch}
-.guide-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
-.guide-table th,.guide-table td{padding:.85rem 1rem;text-align:left;line-height:1.55;vertical-align:top}
-.guide-table thead th{background:hsl(20 100% 93% / .5);color:var(--secondary);font-weight:600;font-family:var(--font-headline);border-bottom:1px solid var(--border)}
-.guide-table thead th:first-child{border-top-left-radius:.5rem}
-.guide-table thead th:last-child{border-top-right-radius:.5rem}
-.guide-table tbody tr{border-bottom:1px solid hsl(0 0% 91% / .5)}
-.guide-table tbody tr:last-child{border-bottom:none}
-.guide-table tbody td{color:var(--muted)}
-.guide-table tbody td:first-child{font-weight:500;color:var(--text)}
-
-/* Steps (Keyword-Strategie / Schema-Felder) – 2-column grid, monospace title */
-.steps-list{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:1rem;margin:2rem 0}
-@media(min-width:640px){.steps-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.step-item{background:var(--bg);border:1px solid var(--border);border-radius:.75rem;padding:1.25rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.step-item h4{font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.72rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 .5rem}
-.step-item p{margin:0;font-size:.88rem;color:var(--text);line-height:1.6}
-.step-item .step-example{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:.5rem}
-
-/* Tool list (Keyword-Tools) – matches React with search bar + colored cards */
-.tool-search{display:flex;align-items:center;gap:.75rem;border:1px solid hsl(0 0% 91% / .6);background:hsl(0 0% 100% / .6);backdrop-filter:blur(6px);border-radius:.75rem;padding:.75rem 1rem;margin:2rem 0 1rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.tool-search svg{width:1.1rem;height:1.1rem;color:var(--muted);flex-shrink:0}
-.tool-search span{color:var(--muted);font-size:.88rem;user-select:none}
-.tool-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:.75rem;margin:0 0 2rem}
-@media(min-width:640px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.tool-card{position:relative;border:1px solid;border-radius:.75rem;padding:1.25rem;transition:transform .25s,box-shadow .25s;display:block;text-decoration:none}
-.tool-card:hover{transform:scale(1.02);box-shadow:0 6px 16px -8px rgba(0,0,0,.12)}
-.tool-card .tool-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem}
-.tool-card .tool-head svg{width:1rem;height:1rem;flex-shrink:0}
-.tool-card .tool-name{font-weight:600;color:var(--text);font-size:.95rem}
-.tool-card:hover .tool-name{color:var(--primary)}
-.tool-card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.55}
-
-/* Code example (VideoObject Schema) – matches React: subtle secondary tint, foreground text */
-.code-block{background:hsl(227 71% 69% / .05);border:1px solid var(--border);color:hsl(0 0% 20%);border-radius:.75rem;padding:1.25rem;margin:1.5rem 0;overflow-x:auto;font-family:'SF Mono','Consolas','Monaco',monospace;font-size:.82rem;line-height:1.65}
-.code-block pre{margin:0;white-space:pre}
-
-/* Section CTA (Schema-Hilfe) – matches React CtaBox: subtle gradient, left-aligned */
-.section-cta{background:linear-gradient(135deg,hsl(12 62% 56% / .05),hsl(20 100% 93% / .3),var(--bg));border:1px solid hsl(12 62% 56% / .2);border-radius:.75rem;padding:1.75rem;margin:2.5rem 0;text-align:left}
-.section-cta h3{font-family:var(--font-headline);color:var(--secondary);font-size:1.25rem;font-weight:700;margin:0 0 .5rem}
-.section-cta p{color:var(--text);font-size:.95rem;margin:0 0 1.25rem;line-height:1.6;opacity:.85}
-.section-cta-actions{display:flex;gap:.75rem;flex-wrap:wrap}
-.section-cta-actions a{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.25rem;border-radius:.75rem;font-weight:500;font-size:.88rem;text-decoration:none;transition:opacity .2s,background .2s}
-.section-cta-actions a.cta-primary{background:var(--primary);color:#fff}
-.section-cta-actions a.cta-primary:hover{opacity:.9}
-.section-cta-actions a.cta-secondary{background:hsl(227 71% 69% / .1);color:var(--secondary)}
-.section-cta-actions a.cta-secondary:hover{background:hsl(227 71% 69% / .2)}
-
-.last-updated{display:inline-block;font-size:.8rem;color:var(--muted);background:rgba(0,0,0,.04);padding:.25rem .65rem;border-radius:1rem;margin-bottom:1rem}
 
 /* Cookie banner */
 .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:100;padding:1rem}
@@ -419,26 +364,8 @@ function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-// Escape + parse markdown links [text](url) → <a class="md-link" ...>
-// Handles wrapping parens like "([text](url))" → "(link)" and trailing ")"
-function mdInline(s) {
-  if (!s) return '';
-  // Match optional leading "(" + [text](url) + optional trailing ")"
-  const parts = String(s).split(/(\(?\[[^\]]+\]\([^)]+\)\)?)/g);
-  return parts.map(part => {
-    const m = part.match(/^(\()?\[([^\]]+)\]\(([^)]+)\)(\))?$/);
-    if (m) {
-      const lead = m[1] || '';
-      const trail = m[4] || '';
-      // If wrapped in parens "(...)" → keep them around the link
-      return `${lead}<a class="md-link" href="${esc(m[3])}" target="_blank" rel="noopener noreferrer">${esc(m[2])}</a>${trail}`;
-    }
-    return esc(part);
-  }).join('');
-}
-
 function nl2p(text) {
-  return text.split('\n\n').map(p => `<p>${mdInline(p).replace(/\n/g,' ')}</p>`).join('\n');
+  return text.split('\n\n').map(p => `<p>${p.replace(/\n/g,' ')}</p>`).join('\n');
 }
 
 // --- Page builders ---
@@ -558,7 +485,6 @@ function buildHub() {
       <div class="card" style="border-radius:0.75rem"><a href="/guides/youtube-seo-2025/">${iconCircle(ICONS.youtube, '#fee2e2')}<h3>YouTube-SEO</h3><p>Titel, Chapters &amp; Schema – so rankt dein nächstes Video auf Platz 1-10.</p></a></div>
       <div class="card" style="border-radius:0.75rem"><a href="/guides/chatgpt-marketing-roi-prompt/">${iconCircle(ICONS.messageSquare, '#dbeafe')}<h3>ChatGPT-Marketing</h3><p>Prompts, Rollen &amp; Workflow: KI-Content in 30 Min statt 3 Stunden.</p></a></div>
       <div class="card" style="border-radius:0.75rem"><a href="/guides/tiktok-seo-2025/">${iconCircle(ICONS.trendingUp, '#ffedd5')}<h3>TikTok-SEO</h3><p>Caption-Keyword, CC-Index &amp; Clips: nutze TikTok als Suchmaschine.</p></a></div>
-      <div class="card" style="border-radius:0.75rem"><a href="/guides/multi-platform-seo-2026/">${iconCircle(ICONS.chart, '#e0e7ff')}<h3>Multi-Platform SEO</h3><p>Ein Video – vier Plattformen. So maximierst du Reichweite auf Google, YouTube, TikTok &amp; LinkedIn.</p></a></div>
       <div class="card" style="border-radius:0.75rem">${iconCircle(ICONS.brain, '#f3e8ff')}<h3>AI Overviews</h3><p>90% der Google-Suchen zeigen KI-Antworten. Werde zur zitierten Quelle.</p></div>
       <div class="card" style="border-radius:0.75rem">${iconCircle(ICONS.mousePointer, '#dcfce7')}<h3>Zero-Click Search</h3><p>Antworten ohne Klick – kurzer, zitierfähiger Content sichert Sichtbarkeit.</p></div>
       <div class="card" style="border-radius:0.75rem">${iconCircle(ICONS.smartphone, '#fce7f3')}<h3>Social Search</h3><p>TikTok &amp; Reels werden zur Suchmaschine. Deine Kurzvideos brauchen SEO.</p></div>
@@ -569,72 +495,6 @@ function buildHub() {
 ` + footer() + bodyEnd();
 }
 
-function renderTable(table) {
-  if (!table || !table.headers || !table.rows) return '';
-  return `
-<div class="guide-table-wrap">
-  <table class="guide-table">
-    <thead><tr>${table.headers.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead>
-    <tbody>${table.rows.map(row => `<tr>${row.map(cell => `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
-  </table>
-</div>`;
-}
-
-function renderSteps(steps) {
-  if (!steps || !steps.length) return '';
-  return `
-<div class="steps-list">${steps.map(s => `
-  <div class="step-item">
-    <h4>${esc(s.title)}</h4>
-    <p>${mdInline(s.text)}</p>
-    ${s.example ? `<p class="step-example">${mdInline(s.example)}</p>` : ''}
-  </div>`).join('')}
-</div>`;
-}
-
-function renderToolList(tools) {
-  if (!tools || !tools.length) return '';
-  const colorMap = {
-    red:    { border: 'hsl(0 84% 60% / .3)',   bg: 'hsl(0 84% 60% / .05)',   icon: '#dc2626' },
-    cyan:   { border: 'hsl(187 85% 43% / .3)', bg: 'hsl(187 85% 43% / .05)', icon: '#06b6d4' },
-    blue:   { border: 'hsl(217 91% 60% / .3)', bg: 'hsl(217 91% 60% / .05)', icon: '#2563eb' },
-    indigo: { border: 'hsl(227 71% 69% / .3)', bg: 'hsl(227 71% 69% / .05)', icon: '#5C7CE2' },
-    orange: { border: 'hsl(25 95% 53% / .3)',  bg: 'hsl(25 95% 53% / .05)',  icon: '#ea580c' },
-    green:  { border: 'hsl(142 71% 45% / .3)', bg: 'hsl(142 71% 45% / .05)', icon: '#16a34a' },
-    purple: { border: 'hsl(271 91% 65% / .3)', bg: 'hsl(271 91% 65% / .05)', icon: '#9333ea' },
-    pink:   { border: 'hsl(330 81% 60% / .3)', bg: 'hsl(330 81% 60% / .05)', icon: '#ec4899' },
-    amber:  { border: 'hsl(38 92% 50% / .3)',  bg: 'hsl(38 92% 50% / .05)',  icon: '#f59e0b' },
-  };
-  const searchSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`;
-  const extSvg = (color) => `<svg viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`;
-  return `
-<div class="tool-search">${searchSvg}<span>Keyword eingeben und auf jeder Plattform prüfen ...</span></div>
-<div class="tool-grid">${tools.map(t => {
-    const c = colorMap[t.color] || colorMap.indigo;
-    const inner = `<div class="tool-head">${extSvg(c.icon)}<span class="tool-name">${esc(t.name)}</span></div><p>${esc(t.description)}</p>`;
-    const style = `border-color:${c.border};background:${c.bg}`;
-    return t.url
-      ? `<a class="tool-card" style="${style}" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${inner}</a>`
-      : `<div class="tool-card" style="${style}">${inner}</div>`;
-  }).join('')}
-</div>`;
-}
-
-function renderCodeExample(code) {
-  if (!code) return '';
-  return `<div class="code-block"><pre>${esc(code)}</pre></div>`;
-}
-
-function renderSectionCta(cta) {
-  if (!cta) return '';
-  return `
-<div class="section-cta">
-  <h3>${esc(cta.headline)}</h3>
-  <p>${esc(cta.text)}</p>
-  ${cta.actions && cta.actions.length ? `<div class="section-cta-actions">${cta.actions.map((a, i) => `<a class="${i === 0 ? 'cta-primary' : 'cta-secondary'}" href="${esc(a.url)}">${esc(a.label)}</a>`).join('')}</div>` : ''}
-</div>`;
-}
-
 function buildGuide(guide) {
   const prevGuide = guide.navigation?.prev
     ? guidesData.guides.find((entry) => entry.id === guide.navigation.prev) ?? null
@@ -643,21 +503,9 @@ function buildGuide(guide) {
     ? guidesData.guides.find((entry) => entry.id === guide.navigation.next) ?? null
     : null;
 
-  // Fix schema dates: ensure ISO 8601 with timezone for upload/published/modified
-  let schemaTag = '';
-  if (guide.schema) {
-    const schemaCopy = JSON.parse(JSON.stringify(guide.schema));
-    const fixDate = (d) => {
-      if (typeof d !== 'string') return d;
-      if (/T\d{2}:\d{2}.*([+-]\d{2}:?\d{2}|Z)$/.test(d)) return d;
-      if (/^\d{4}-\d{2}-\d{2}$/.test(d)) return `${d}T08:00:00+02:00`;
-      return d;
-    };
-    if (schemaCopy.datePublished) schemaCopy.datePublished = fixDate(schemaCopy.datePublished);
-    if (schemaCopy.dateModified) schemaCopy.dateModified = fixDate(schemaCopy.dateModified);
-    if (schemaCopy.uploadDate) schemaCopy.uploadDate = fixDate(schemaCopy.uploadDate);
-    schemaTag = `<script type="application/ld+json">${JSON.stringify(schemaCopy)}</script>`;
-  }
+  const schemaTag = guide.schema
+    ? `<script type="application/ld+json">${JSON.stringify(guide.schema)}</script>`
+    : '';
 
   let html = head(
     guide.meta.title,
@@ -670,14 +518,11 @@ function buildGuide(guide) {
   html += `
 <header class="guide-hero">
   <div class="wrap-narrow">
-    ${guide.lastUpdated ? `<div class="last-updated">Aktualisiert: ${esc(guide.lastUpdated)}</div>` : ''}
     <h1>${esc(guide.hero.headline)}</h1>
     <p class="sub">${esc(guide.hero.subheadline)}</p>
     <p class="guide-intro">${esc(guide.hero.intro)}</p>
   </div>
 </header>`;
-
-  // (Whats-new banner intentionally removed - content lives in sections)
 
   // Personal note – lighter bg, subtle border
   if (guide.personalNote) {
@@ -707,14 +552,9 @@ function buildGuide(guide) {
     html += `
 <section class="guide-section" id="${sec.id}">
   <h2>${esc(sec.heading)}</h2>
-  ${sec.capsule ? `<div class="capsule-answer">${mdInline(sec.capsule)}</div>` : ''}
-  ${sec.body ? `<div class="guide-body">${nl2p(sec.body)}</div>` : ''}
-  ${renderTable(sec.table)}
-  ${renderSteps(sec.steps)}
-  ${renderToolList(sec.toolList)}
-  ${renderCodeExample(sec.codeExample)}
-  ${renderSectionCta(sec.cta)}
-  ${sec.dataPoint ? `<div class="data-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16V9"/><path d="M12 16v-5"/><path d="M17 16v-7"/></svg><p>${mdInline(sec.dataPoint)}</p></div>` : ''}
+  ${sec.capsule ? `<div class="capsule-answer">${esc(sec.capsule)}</div>` : ''}
+  <div class="guide-body">${nl2p(sec.body)}</div>
+  ${sec.dataPoint ? `<div class="data-point">${esc(sec.dataPoint)}</div>` : ''}
 </section>`;
   }
 
