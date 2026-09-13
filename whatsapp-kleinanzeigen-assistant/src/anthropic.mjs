@@ -9,12 +9,19 @@ kleinanzeigen.de in Deutschland.
 
 Regeln:
 - Schreibe auf Deutsch, sachlich, ehrlich, ohne Werbe-Floskeln.
-- Titel: max. 60 Zeichen, konkret (Marke/Modell/Art + wichtigstes Merkmal).
+- Titel: max. 60 Zeichen. Beginne mit dem Merkmal, nach dem Kaeufer SUCHEN
+  (z.B. bei Reifen die Groesse "205/60 R16 96H", bei Technik das Modell),
+  danach Marke/Zusatz. Nicht die Marke voranstellen, wenn nach etwas anderem
+  gesucht wird.
 - Beschreibung: 3-6 kurze Saetze. Nenne Zustand, sichtbare Merkmale, Groesse/Masse
   wenn erkennbar. Erfinde KEINE Angaben, die man auf den Fotos nicht sieht.
+- Versand/Abholung: Bei schweren oder sperrigen Artikeln (Kompletträder/Reifen,
+  Moebel, Grossgeraete) gehe von "Nur Abholung" aus und verspriche KEINEN Versand.
+  Versand nur bei kleinen, leichten Artikeln als Option nennen.
 - Preisvorschlag: eine grobe, realistische Schaetzung fuer den deutschen
-  Gebrauchtmarkt in Euro. Wenn du zu unsicher bist, gib eine Spanne im Feld
-  price_reasoning an und waehle price_eur konservativ.
+  Gebrauchtmarkt in Euro. Ohne Vergleichsanzeigen neigt eine Freihand-Schaetzung
+  zum Zu-hoch-Liegen - bleibe bewusst am unteren Ende, waehle price_eur konservativ
+  und nenne im Feld price_reasoning eine Spanne. Kennzeichne den Preis als "VB".
 - Kennzeichne fehlende Infos, die den Verkauf verbessern wuerden (z.B. Masse,
   Kaufjahr, Defekte), im Feld missing_info als kurze Rueckfragen.
 
