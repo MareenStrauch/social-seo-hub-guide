@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://mareensocialup.de/</loc>
     <changefreq>weekly</changefreq>
@@ -19,14 +19,49 @@
     <loc>https://mareensocialup.de/guides/youtube-seo-2025/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/vLrZ988pPRk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>YouTube-SEO 2025: 40-Zeichen-Formel (82% Retention)</video:title>
+      <video:description>Wie du mit der 40-Zeichen-Formel dein YouTube-Ranking und deine Klickrate steigerst - erklärt von Mareen Strauch.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/vLrZ988pPRk</video:player_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2025-01-15T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://mareensocialup.de/guides/tiktok-seo-2025/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ruO63jNcTdk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>TikTok SEO 2025: 3 Schritte für die In-App-Suche</video:title>
+      <video:description>Keyword-Caption in den ersten 60 Zeichen, Auto-Untertitel aktivieren und mit einer Frage starten.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ruO63jNcTdk</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-02-01T10:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://mareensocialup.de/guides/chatgpt-marketing-roi-prompt/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>R-O-I Promptformel: Rolle, Output, Input</video:title>
+      <video:description>Mareen Strauch erklärt die R-O-I-Prompt-Formel für punktgenaue KI-Inhalte ohne Korrekturschleifen.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/AjXVOQ2P7jQ</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-01-20T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://mareensocialup.de/guides/multi-platform-seo-2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
