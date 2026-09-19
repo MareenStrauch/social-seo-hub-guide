@@ -1,76 +1,59 @@
-
 interface VideoMasonryProps {
   count: number | "all";
   lazy?: boolean;
 }
 
-const mockVideos = [
+const videos = [
   {
-    id: "abc123",
-    title: "YouTube SEO in 5 Minuten erklärt",
-    thumbnail: "https://img.youtube.com/vi/abc123/maxresdefault.jpg",
-    duration: "5:24",
-    slug: "youtube-seo-basics"
+    id: "vLrZ988pPRk",
+    title: "YouTube-SEO 2025: 40-Zeichen-Formel",
+    text: "Warum die ersten 40 Zeichen deines Titels über Klick und Ranking entscheiden.",
+    thumbnail: "https://i.ytimg.com/vi/vLrZ988pPRk/hqdefault.jpg",
+    duration: "0:27",
+    href: "/guides/youtube-seo-2025",
   },
   {
-    id: "def456", 
-    title: "TikTok als Suchmaschine nutzen",
-    thumbnail: "https://img.youtube.com/vi/def456/maxresdefault.jpg",
-    duration: "8:17",
-    slug: "tiktok-seo-guide"
+    id: "ruO63jNcTdk",
+    title: "TikTok SEO 2025: 3 Schritte für die In-App-Suche",
+    text: "Keyword-Caption, Auto-Untertitel und Frage-Hook - sofort umsetzbar.",
+    thumbnail: "https://i.ytimg.com/vi/ruO63jNcTdk/hqdefault.jpg",
+    duration: "0:30",
+    href: "/guides/tiktok-seo-2025",
   },
   {
-    id: "ghi789",
-    title: "ChatGPT für Content Marketing",
-    thumbnail: "https://img.youtube.com/vi/ghi789/maxresdefault.jpg", 
-    duration: "12:45",
-    slug: "chatgpt-marketing"
+    id: "AjXVOQ2P7jQ",
+    title: "R-O-I Promptformel: Rolle, Output, Input",
+    text: "Die 3-Schritt-Formel für KI-Inhalte ohne Korrekturschleifen.",
+    thumbnail: "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
+    duration: "0:30",
+    href: "/guides/chatgpt-marketing-roi-prompt",
   },
-  {
-    id: "jkl012",
-    title: "AI Overviews optimieren",
-    thumbnail: "https://img.youtube.com/vi/jkl012/maxresdefault.jpg",
-    duration: "6:33",
-    slug: "ai-overviews"
-  },
-  {
-    id: "mno345",
-    title: "Zero-Click Search verstehen", 
-    thumbnail: "https://img.youtube.com/vi/mno345/maxresdefault.jpg",
-    duration: "9:12",
-    slug: "zero-click-search"
-  },
-  {
-    id: "pqr678",
-    title: "Schema Markup für Videos",
-    thumbnail: "https://img.youtube.com/vi/pqr678/maxresdefault.jpg",
-    duration: "15:28",
-    slug: "schema-markup"
-  }
 ];
 
 export function VideoMasonry({ count, lazy = true }: VideoMasonryProps) {
-  const displayVideos = count === "all" ? mockVideos : mockVideos.slice(0, count);
+  const displayVideos = count === "all" ? videos : videos.slice(0, count);
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {displayVideos.map((video) => (
-        <div key={video.id} className="group cursor-pointer">
-          <a href={`/videos/${video.slug}`} className="block">
-            <div className="relative aspect-[9/16] bg-muted rounded-soft overflow-hidden mb-3 group-hover:shadow-float transition-all duration-300">
-              <img 
+        <div key={video.id} className="group">
+          <a href={video.href} className="block">
+            <div className="relative aspect-video bg-muted rounded-soft overflow-hidden mb-3 group-hover:shadow-float transition-all duration-300">
+              <img
                 src={video.thumbnail}
                 alt={video.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading={lazy ? "lazy" : "eager"}
+                width={480}
+                height={360}
               />
               <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded font-numbers">
                 {video.duration}
               </div>
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center opacity-90 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
+                    <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
               </div>
@@ -78,6 +61,7 @@ export function VideoMasonry({ count, lazy = true }: VideoMasonryProps) {
             <h3 className="font-medium text-foreground group-hover:text-secondary transition-colors line-clamp-2">
               {video.title}
             </h3>
+            <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{video.text}</p>
           </a>
         </div>
       ))}
