@@ -618,7 +618,43 @@ function buildGuide(guide) {
   return html;
 }
 
+const VIDEO_INDEX = [
+  {
+    id: 'vLrZ988pPRk',
+    title: 'YouTube-SEO 2025: 40-Zeichen-Formel',
+    text: 'Warum die ersten 40 Zeichen deines Titels über Klick und Ranking entscheiden.',
+    duration: '0:27',
+    href: '/guides/youtube-seo-2025/'
+  },
+  {
+    id: 'ruO63jNcTdk',
+    title: 'TikTok SEO 2025: 3 Schritte für die In-App-Suche',
+    text: 'Keyword-Caption, Auto-Untertitel und Frage-Hook - sofort umsetzbar.',
+    duration: '0:30',
+    href: '/guides/tiktok-seo-2025/'
+  },
+  {
+    id: 'AjXVOQ2P7jQ',
+    title: 'R-O-I Promptformel: Rolle, Output, Input',
+    text: 'Die 3-Schritt-Formel für KI-Inhalte ohne Korrekturschleifen.',
+    duration: '0:30',
+    href: '/guides/chatgpt-marketing-roi-prompt/'
+  }
+];
+
 function buildVideos() {
+  const cards = VIDEO_INDEX.map(v => `
+      <div class="card" style="border-radius:0.75rem;overflow:hidden">
+        <a href="${v.href}">
+          <span style="position:relative;display:block;border-radius:0.5rem;overflow:hidden">
+            <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${esc(v.title)}" width="480" height="360" loading="lazy" style="width:100%;height:auto;display:block">
+            <span style="position:absolute;right:.5rem;bottom:.5rem;background:rgba(0,0,0,.7);color:#fff;font-size:.75rem;padding:.15rem .4rem;border-radius:.25rem">${v.duration}</span>
+          </span>
+          <h3 style="margin-top:.85rem">${esc(v.title)}</h3>
+          <p>${esc(v.text)}</p>
+        </a>
+      </div>`).join('');
+
   return head(
     'Video-Bibliothek – MareenSocialUp',
     'Alle Videos zu Social SEO, YouTube-Optimierung, TikTok-SEO und KI-Content-Strategien auf einen Blick.',
@@ -627,11 +663,9 @@ function buildVideos() {
 
 <section class="section" style="padding-top:5rem">
   <div class="wrap">
-    <h1 style="text-align:center;margin-bottom:2rem">Video-Bibliothek</h1>
-    <div class="grid3">
-      <div class="video-embed"><iframe src="https://www.youtube.com/embed/vLrZ988pPRk" title="YouTube-SEO 2025" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>YouTube-SEO 2025: 40-Zeichen-Formel</p></div>
-      <div class="video-embed"><iframe src="https://www.youtube.com/embed/ruO63jNcTdk" title="TikTok SEO 2025" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>TikTok SEO 2025: 3 Schritte</p></div>
-      <div class="video-embed"><iframe src="https://www.youtube.com/embed/AjXVOQ2P7jQ" title="R-O-I Promptformel" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>R-O-I Promptformel</p></div>
+    <h1 style="text-align:center;margin-bottom:1rem">Video-Bibliothek</h1>
+    <p style="text-align:center;max-width:42rem;margin:0 auto 2.5rem">Jedes Video gehört zu einem ausführlichen Guide. Klicke auf ein Video, um es dort anzusehen - inklusive Transkript, Schritt-für-Schritt-Anleitung und Checkliste.</p>
+    <div class="grid3">${cards}
     </div>
   </div>
 </section>

@@ -58,7 +58,7 @@ export interface GuideData {
   comparison?: GuideComparison;
   checklist: string[];
   faq: { question: string; answer: string }[];
-  schema: Record<string, unknown>;
+  schema: Record<string, unknown> | Record<string, unknown>[];
   navigation: { prev: string | null; next: string | null };
 }
 

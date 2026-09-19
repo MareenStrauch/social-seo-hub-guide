@@ -451,30 +451,33 @@
           "answer": "Iteratives Prompting bedeutet, den ersten ChatGPT-Output als Ausgangspunkt zu nutzen und gezielt nachzufeinern - mit konkretem Feedback (\"kürze auf 120 Zeichen\") statt neuen Prompts. So entsteht ein präzises Ergebnis statt eines generischen Entwurfs."
         }
       ],
-      "schema": {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
-        "description": "Rolle-Output-Input: die 3-Schritt-Prompt-Formel für KI-Content ohne Korrekturschleifen. Lerne, wie du mit der R-O-I-Struktur in Minuten statt Stunden präzise Marketing-Inhalte erstellst.",
-        "image": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Mareen Strauch",
-          "sameAs": "https://www.youtube.com/@MareenSocialUp"
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "ChatGPT-Marketing: R-O-I-Prompt für punktgenaue Inhalte",
+          "description": "Rolle-Output-Input: die 3-Schritt-Prompt-Formel für KI-Content ohne Korrekturschleifen. Lerne, wie du mit der R-O-I-Struktur in Minuten statt Stunden präzise Marketing-Inhalte erstellst.",
+          "image": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
+          "author": {
+            "@type": "Person",
+            "name": "Mareen Strauch",
+            "sameAs": "https://www.youtube.com/@MareenSocialUp"
+          },
+          "datePublished": "2025-01-20",
+          "dateModified": "2026-04-08",
+          "publisher": {
+            "@type": "Organization",
+            "name": "MareenSocialUp",
+            "url": "https://mareen-socialup.de"
+          },
+          "inLanguage": "de",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mareensocialup.de/guides/chatgpt-marketing-roi-prompt"
+          }
         },
-        "datePublished": "2025-01-20",
-        "dateModified": "2026-04-08",
-        "publisher": {
-          "@type": "Organization",
-          "name": "MareenSocialUp",
-          "url": "https://mareen-socialup.de"
-        },
-        "inLanguage": "de",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://mareensocialup.de/guides/chatgpt-marketing-roi-prompt"
-        },
-        "video": {
+        {
+          "@context": "https://schema.org",
           "@type": "VideoObject",
           "name": "R-O-I Promptformel: Rolle → Output → Input",
           "description": "Mareen Strauch erklärt die R-O-I-Prompt-Formel: Rolle, Output, Input – für punktgenaue KI-Inhalte ohne Korrekturschleifen.",
@@ -482,9 +485,20 @@
           "contentUrl": "https://www.youtube.com/shorts/AjXVOQ2P7jQ",
           "thumbnailUrl": "https://i.ytimg.com/vi/AjXVOQ2P7jQ/hqdefault.jpg",
           "duration": "PT0M30S",
-          "uploadDate": "2025-01-20T08:00:00+01:00"
+          "uploadDate": "2025-01-20T08:00:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "Mareen Strauch",
+            "sameAs": "https://www.youtube.com/@MareenSocialUp"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "MareenSocialUp",
+            "url": "https://mareensocialup.de"
+          },
+          "inLanguage": "de"
         }
-      },
+      ],
       "navigation": {
         "prev": "tiktok-seo-2025",
         "next": "multi-platform-seo-2026"
@@ -634,10 +648,30 @@
           "heading": "Tools für die Keyword-Recherche",
           "body": "",
           "toolList": [
-            { "color": "red", "name": "YouTube Autocomplete", "description": "Tippe dein Keyword ein und notiere die Vorschläge - direkt in der YouTube-Suche.", "url": "https://www.youtube.com" },
-            { "color": "cyan", "name": "TikTok Creative Center", "description": "Zeigt dir, welche Begriffe und Hashtags gerade auf TikTok gesucht werden.", "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/pc/en" },
-            { "color": "blue", "name": "Google Trends", "description": "Vergleiche Suchvolumen für dein Keyword über verschiedene Plattformen und Zeiträume.", "url": "https://trends.google.de" },
-            { "color": "indigo", "name": "LinkedIn-Suchleiste", "description": "Prüfe, ob dein Thema auf LinkedIn aktiv diskutiert wird und welche Begriffe dort verwendet werden.", "url": "https://www.linkedin.com" }
+            {
+              "color": "red",
+              "name": "YouTube Autocomplete",
+              "description": "Tippe dein Keyword ein und notiere die Vorschläge - direkt in der YouTube-Suche.",
+              "url": "https://www.youtube.com"
+            },
+            {
+              "color": "cyan",
+              "name": "TikTok Creative Center",
+              "description": "Zeigt dir, welche Begriffe und Hashtags gerade auf TikTok gesucht werden.",
+              "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/pc/en"
+            },
+            {
+              "color": "blue",
+              "name": "Google Trends",
+              "description": "Vergleiche Suchvolumen für dein Keyword über verschiedene Plattformen und Zeiträume.",
+              "url": "https://trends.google.de"
+            },
+            {
+              "color": "indigo",
+              "name": "LinkedIn-Suchleiste",
+              "description": "Prüfe, ob dein Thema auf LinkedIn aktiv diskutiert wird und welche Begriffe dort verwendet werden.",
+              "url": "https://www.linkedin.com"
+            }
           ]
         },
         {
@@ -681,8 +715,16 @@
             "headline": "Schema-Markup klingt komplex?",
             "text": "Ich helfe dir, VideoObject und strukturierte Daten sauber auf deiner Website einzurichten - damit deine Videos in den Suchergebnissen mit Thumbnail, Laufzeit und Titel erscheinen.",
             "actions": [
-              { "label": "E-Mail schreiben", "url": "mailto:mareen@mareensocialup.de?subject=Beratung%20VideoObject%20Schema", "type": "email" },
-              { "label": "Kontakt aufnehmen", "url": "https://mareensocialup.de/#kontakt", "type": "link" }
+              {
+                "label": "E-Mail schreiben",
+                "url": "mailto:mareen@mareensocialup.de?subject=Beratung%20VideoObject%20Schema",
+                "type": "email"
+              },
+              {
+                "label": "Kontakt aufnehmen",
+                "url": "https://mareensocialup.de/#kontakt",
+                "type": "link"
+              }
             ]
           }
         },
